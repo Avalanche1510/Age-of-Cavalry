@@ -1,8 +1,11 @@
-# 炎热群系 - 4
+# 炎热群系 - 6
 execute if biome ~ ~ ~ terralith:caldera run function main:squad/reinforced_squad/undead_region/nether_general
 execute if biome ~ ~ ~ terralith:basalt_cliffs run function main:squad/reinforced_squad/undead_region/nether_general
 execute if biome ~ ~ ~ terralith:volcanic_peaks run function main:squad/reinforced_squad/undead_region/nether_general
 execute if biome ~ ~ ~ terralith:volcanic_crater run function main:squad/reinforced_squad/undead_region/nether_general
+execute if biome ~ ~ ~ terralith:cave/mantle_caves run function main:squad/reinforced_squad/undead_region/nether_general
+execute if biome ~ ~ ~ terralith:cave/frostfire_caves run function main:squad/reinforced_squad/undead_region/nether_general
+
 
 # 冰雪群系 - 10
 execute if biome ~ ~ ~ terralith:frozen_cliffs run function main:squad/reinforced_squad/undead_region/north_rider
@@ -28,7 +31,13 @@ execute if biome ~ ~ ~ terralith:savanna_badlands run function main:squad/reinfo
 execute if biome ~ ~ ~ terralith:snowy_badlands run function main:squad/reinforced_squad/undead_region/desert_rider
 execute if biome ~ ~ ~ terralith:warm_river run function main:squad/reinforced_squad/undead_region/desert_rider
 execute if biome ~ ~ ~ terralith:sandstone_valley run function main:squad/reinforced_squad/undead_region/desert_rider
+execute if biome ~ ~ ~ terralith:bryce_canyon run function main:squad/reinforced_squad/undead_region/desert_rider
+
 
 # 沼泽群系 - 2
 execute if biome ~ ~ ~ terralith:orchid_swamp run function main:squad/reinforced_squad/undead_region/swamp_rider
 execute if biome ~ ~ ~ terralith:ice_marsh run function main:squad/reinforced_squad/undead_region/swamp_rider
+
+execute if biome ~ ~ ~ terralith:cave/fungal_caves run function main:squad/reinforced_squad/undead_region/swamp_rider
+execute if biome ~ ~ ~ terralith:cave/infested_caves run function main:squad/reinforced_squad/undead_region/swamp_rider
+execute if biome ~ ~ ~ terralith:cave/underground_jungle run function main:squad/reinforced_squad/undead_region/swamp_rider

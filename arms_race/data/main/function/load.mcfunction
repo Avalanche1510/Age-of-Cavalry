@@ -32,6 +32,7 @@ scoreboard objectives add height dummy "height"
 scoreboard objectives add squadNum dummy "squad Num"
 scoreboard objectives add MinPeriod dummy "Minute Period"
 scoreboard objectives add AlreadySpawned dummy "Already Spawned"
+scoreboard objectives add Isquad dummy "illager squad"
 
 execute unless entity @e[type=armor_stand,tag=record] run say 数据包尚未完成手动初始化，部分功能可能无法生效！
 

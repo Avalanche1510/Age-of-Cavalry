@@ -1,4 +1,5 @@
 scoreboard players set @s AlreadySpawned 0
+execute if score @s AlreadySpawned matches 0 store result score @s height run data get entity @s Pos[1] 1.0
 # 地狱 - 1
 execute if dimension minecraft:the_nether run function main:squad/reinforced_squad/undead_region/nether_general
 
@@ -26,5 +27,7 @@ execute if biome ~ ~ ~ minecraft:mangrove_swamp run function main:squad/reinforc
 # terralith群系 - 27
 function main:squad/reinforced_squad/undead_region/select_by_biome_terralith
 
-execute if score @s AlreadySpawned matches 0 run function main:squad/reinforced_squad/undead_rider
+
+execute if score @s AlreadySpawned matches 0 if score @s height matches 63.. if dimension minecraft:overworld run function main:squad/reinforced_squad/undead_rider
+execute if score @s AlreadySpawned matches 0 if score @s height matches ..62 if dimension minecraft:overworld run function main:squad/reinforced_squad/undead_general
 execute if score @s AlreadySpawned matches 1 run scoreboard players set @s AlreadySpawned 0
