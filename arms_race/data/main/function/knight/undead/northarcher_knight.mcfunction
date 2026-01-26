@@ -1,0 +1,1 @@
+summon skeleton_horse ~ ~ ~ {Passengers:[{Tags:["cavalry"],equipment:{mainhand:{id:"minecraft:bow",count:1b}},id:"minecraft:stray"}]}

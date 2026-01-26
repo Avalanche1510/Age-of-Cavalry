@@ -1,0 +1,73 @@
+{
+    "pools": [
+        {
+            "rolls": 3,
+            "conditions":[
+                {
+                    "condition":"inverted",
+                    "term":
+                    {
+                        "condition":"entity_properties",
+                        "entity":"direct_attacker",
+                        "predicate":{"team":"undead-arthropod_party"}
+                    }
+                },
+                {
+                    "condition":"killed_by_player"
+                }
+                
+            ],
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:gold_ingot",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 16,
+                                "min": 9
+                            }
+                        }
+                    ],
+                    "weight": 40
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:gold_ingot",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 32,
+                                "min": 17
+                            }
+                        }
+                    ],
+                    "weight": 20
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:netherite_scrap",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 6,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 3
+                },
+                {
+                    "type":"minecraft:empty",
+                    "weight":5
+                }
+            ]
+        }
+    ]
+}

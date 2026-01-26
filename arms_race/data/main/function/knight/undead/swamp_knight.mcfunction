@@ -1,0 +1,1 @@
+summon cave_spider ~ ~ ~ {Passengers:[{Tags:["cavalry"],equipment:{mainhand:{id:"minecraft:bow",count:1b}},id:"minecraft:bogged"}]}

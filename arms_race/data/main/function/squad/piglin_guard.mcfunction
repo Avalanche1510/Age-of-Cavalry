@@ -1,0 +1,1 @@
+summon piglin_brute ~ ~ ~ {IsImmuneToZombification:1b,Tags:["piglin_guard"],equipment:{mainhand:{id:"minecraft:golden_sword",count:1b}},attributes:[{id:"minecraft:max_health",base:36.0f},{id:"minecraft:attack_damage",base:5.0f},{id:"minecraft:scale",base:0.95f}],Health:36.0f}

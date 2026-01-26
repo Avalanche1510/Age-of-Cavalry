@@ -1,0 +1,1 @@
+summon ravager ~ ~ ~ {Passengers:[{Tags:["cavalry"],id:"minecraft:evoker"}]}
