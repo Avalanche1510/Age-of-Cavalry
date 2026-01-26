@@ -10,3 +10,36 @@ A relatively lightweight, vanilla-like modpack in the lastest version of minecra
 ## Non-Essential Dependencies (only count the core mod, dependent mods(e.g. sodium) are not included)
 1. first-person animation mod "Hold My Items"(recommended) / "Locomotion"（only for combat）
 2. mob & creatures animation mod "Better Animations"
+
+
+## About the datapacks
+### functions added:
+1. anyone with tag "need_light" can have moving light source implemented by command(has some bug with fluids)
+waited for completion...
+
+### recipes added:
+1. name tag
+2. smithing template
+3. heavy core
+4. enchanted golden apple
+5. copper horse armor
+6. golden horse armor
+7. iron horse armor
+8. diamond horse armor
+
+### loot tables added:
+"lumberjack" for collector mobs in overworld and nether
+      - drop wood and saplings
+"miner" for collector mobs in overworld and nether
+      - drop raw minerals
+"farmer" for collector mobs in overworld and nether
+      - drop food
+"undead" for all undead&anthropod party mobs except wither skeleton and zombified piglin
+      - can only drop emerald
+"nether" for all piglin party mobs and wither skeleton and zombified piglin
+      - can drop netherite scrap, specifically
+"illager" for all illager party mobs
+      - can drop diamond, specifically
+
+### features added
+waited for completion...
