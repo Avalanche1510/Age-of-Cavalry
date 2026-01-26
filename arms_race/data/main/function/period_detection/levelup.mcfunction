@@ -1,0 +1,21 @@
+execute as @a if entity @s[level=..4] run attribute @s minecraft:max_health base set 20
+execute as @a if entity @s[level=..4] run attribute @s minecraft:movement_speed base set 0.105
+execute as @a if entity @s[level=..4] run attribute @s minecraft:attack_damage base set 1.5
+execute as @a if entity @s[level=5..9] run attribute @s minecraft:max_health base set 24 
+execute as @a if entity @s[level=..4] run attribute @s minecraft:movement_speed base set 0.110
+execute as @a if entity @s[level=5..9] run attribute @s minecraft:attack_damage base set 2
+execute as @a if entity @s[level=10..14] run attribute @s minecraft:max_health base set 28 
+execute as @a if entity @s[level=..4] run attribute @s minecraft:movement_speed base set 0.115
+execute as @a if entity @s[level=10..14] run attribute @s minecraft:attack_damage base set 2.5
+execute as @a if entity @s[level=15..19] run attribute @s minecraft:max_health base set 32 
+execute as @a if entity @s[level=..4] run attribute @s minecraft:movement_speed base set 0.120
+execute as @a if entity @s[level=15..19] run attribute @s minecraft:attack_damage base set 3
+execute as @a if entity @s[level=20..29] run attribute @s minecraft:max_health base set 36 
+execute as @a if entity @s[level=20..29] run attribute @s minecraft:movement_speed base set 0.125
+execute as @a if entity @s[level=20..29] run attribute @s minecraft:attack_damage base set 3.5
+execute as @a if entity @s[level=30..] run attribute @s minecraft:max_health base set 40 
+execute as @a if entity @s[level=30..] run attribute @s minecraft:movement_speed base set 0.130
+execute as @a if entity @s[level=30..] run attribute @s minecraft:attack_damage base set 4
+
+execute as @a if entity @s[level=..29] run attribute @s minecraft:attack_speed modifier remove attack_speed
+execute as @a if entity @s[level=30..] run attribute @s minecraft:attack_speed modifier add attack_speed 0.24 add_multiplied_total

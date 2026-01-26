@@ -1,0 +1,140 @@
+{
+    "pools": [
+        {
+            "rolls": 4,
+            "conditions":[
+                {
+                    "condition":"entity_properties",
+                    "entity":"attacking_player",
+                    "predicate":{}
+                }
+            ],
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:coal",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 64,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 10
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:raw_copper",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 32,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 10
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:flint",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 24,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 10
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:raw_iron",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 16,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 7
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:lapis_lazuli",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 12,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 7
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:raw_gold",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 8,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 7
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:amethyst_shard",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 6,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 3
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:diamond",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 4,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 3
+                },
+                {
+                    "type":"minecraft:empty",
+                    "weight":10
+                }
+            ]
+        }
+    ]
+}

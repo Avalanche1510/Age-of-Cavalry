@@ -1,0 +1,1 @@
+summon skeleton_horse ~ ~ ~ {SkeletonTrap:1b}

@@ -1,0 +1,1 @@
+execute as @e[type=happy_ghast] at @s run effect give @a[distance=..7] slow_falling 2 0

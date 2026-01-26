@@ -1,0 +1,70 @@
+{
+    "pools": [
+        {
+            "rolls": 2,
+            "conditions":[
+                {
+                    "condition":"inverted",
+                    "term":
+                    {
+                        "condition":"entity_properties",
+                        "entity":"direct_attacker",
+                        "predicate":{"team":"illager_party"}
+                    }
+                }
+                
+            ],
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:emerald",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 6,
+                                "min": 3
+                            }
+                        }
+                    ],
+                    "weight": 40
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:emerald",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 10,
+                                "min": 7
+                            }
+                        }
+                    ],
+                    "weight": 20
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:diamond",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 3,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 3
+                },
+                {
+                    "type":"minecraft:empty",
+                    "weight":10
+                }
+            ]
+        }
+    ]
+}

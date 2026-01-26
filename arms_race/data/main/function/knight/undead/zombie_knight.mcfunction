@@ -1,0 +1,1 @@
+summon zombie_horse ~ ~ ~ {Passengers:[{Tags:["cavalry"],equipment:{mainhand:{id:"minecraft:copper_spear",count:1b}},id:"minecraft:zombie",Tags:["spear"]}]}
