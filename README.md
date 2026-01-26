@@ -6,3 +6,7 @@ A relatively lightweight, vanilla-like modpack in the lastest version of minecra
 2. fabric & fabric api 
 3. other 2 datapakcs "special_loot_table" & "special_recipe"
 4. mod "Terralith"
+
+## Non-Essential Dependencies (only count the core mod, dependent mods(e.g. sodium) are not included)
+1. first-person animation mod "Hold My Items"(recommended) / "Locomotion"（only for combat）
+2. mob & creatures animation mod "Better Animations"
