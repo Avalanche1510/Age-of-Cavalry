@@ -1,6 +1,21 @@
 {
-    "pack":{
-        "pack_format":10,
-        "description":"New Items!"
+    "pack": {
+        "id": "Special Recipe(Arms Race addon)",
+        "min_format": 94.1,
+        "max_format": 94.1,
+        "description": [
+            {
+                "text": "Special Recipe",
+                "color": "gold"
+            },
+            {
+                "text": " - A supportive pack adding reasonable but missing recipes\nCreated by ",
+                "color": "gray"
+            },
+            {
+                "text": "Avalanche1510",
+                "color": "green"
+            }
+        ]
     }
 }

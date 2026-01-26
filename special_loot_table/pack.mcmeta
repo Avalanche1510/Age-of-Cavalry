@@ -1,6 +1,21 @@
 {
-    "pack":{
-        "pack_format":10,
-        "description":"New Loot Tables!"
+    "pack": {
+        "id": "Special Loot Table(Arms Race addon)",
+        "min_format": 94.1,
+        "max_format": 94.1,
+        "description": [
+            {
+                "text": "Special Loot Table",
+                "color": "aqua"
+            },
+            {
+                "text": " - A supportive pack adding loot tables for powerful mobs\nCreated by ",
+                "color": "gray"
+            },
+            {
+                "text": "Avalanche1510",
+                "color": "green"
+            }
+        ]
     }
 }

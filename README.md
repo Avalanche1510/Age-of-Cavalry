@@ -1,19 +1,27 @@
 # Age-of-Cavalry
 A relatively lightweight, vanilla-like modpacks in the lastest version of minecraft 1.21.11. It is designed to provide the BEST VANILLA EXPERIENCE (in my own opinion). The core datapack "arms_race" improves many disappointing vanilla features and try to utilize more unpopular and mediocre items to create an interconnected mechanism for better playability. 
 
-The first reason for calling the core datapack "arms_race" is that both players and mobs can get more resources to arm themselves, and hence the survival became more strategic and challenging. Those unpopular items now have a chance to revive.
-The second reason for calling the core datapack "arms_race" is quite simple: mobs form 4 main alliances, and they are automatically hostile to each other now. Players are no longer fighting alone.
-The final reason for calling the whole modpack "Age of Cavalry" is that not only can players have much more practical mounts like camels, horses, and happy ghast, but mobs can also have various new cavalry units. The combat mechanism of vanilla Minecraft will undergo a drastic reform!
+ * The first reason for calling the core datapack "arms_race" is that both players and mobs can get more resources to arm themselves, and hence the survival became more strategic and challenging. Those unpopular items now have a chance to revive.
+ * The second reason for calling the core datapack "arms_race" is quite simple: mobs form 4 main alliances, and they are automatically hostile to each other now. Players are no longer fighting alone.
+ * The final reason for calling the whole modpack "Age of Cavalry" is that not only can players have much more practical mounts like camels, horses, and happy ghast, but mobs can also have various new cavalry units. The combat mechanism of vanilla Minecraft will undergo a drastic reform!
+
+## How to use
+ * Datapacks "arms_race", "special_loot_tables", and "special_recipe" must be enabled at the same time
+ * Mod "Terralith" are strongly reconmmended, while doesn't affect the core function of datapack "arms_race" if not installed
+ * A modpack in 1.21.11 is provided as recommendation. The compatibility with extra mods or datapacks has not yet been tested.
 
 ## Essential Dependencies
 1. java edition minecraft, 1.21.11 (not compatible with earlier version, but possibly for later version)
-2. fabric & fabric api 
-3. other 2 datapakcs "special_loot_table" & "special_recipe"
-4. mod "Terralith"
+2. other 2 datapakcs "special_loot_table" & "special_recipe"
+
+## Strongly-Recommended Dependencies
+1. fabric & fabric api 
+2. mod "Terralith"
 
 ## Non-Essential Dependencies (only count the core mod, dependent mods(e.g. sodium) are not included)
 1. first-person animation mod "Hold My Items"(recommended) / "Locomotion"（only for combat）
-2. mob & creatures animation mod "Better Animations"
+2. mob & creatures animation# mod "Better Animations"
+
 
 
 ## About the datapacks
@@ -45,5 +53,5 @@ The final reason for calling the whole modpack "Age of Cavalry" is that not only
 * "illager" for all illager party mobs
       * can drop diamond, specifically
 
-### features added
+### features added:
 1. waited for completion...

@@ -1,6 +1,21 @@
 {
-    "pack":{
-        "pack_format":10,
-        "description":"Arms Race Test Pack"
+    "pack": {
+        "id": "Arms Race",
+        "min_format": 94.1,
+        "max_format": 94.1,
+        "description": [
+            {
+                "text": "Arms Race",
+                "color": "dark_red"
+            },
+            {
+                "text": " - A vanilla-like reinforced combat pack\nCreated by ",
+                "color": "gray"
+            },
+            {
+                "text": "Avalanche1510",
+                "color": "green"
+            }
+        ]
     }
 }
