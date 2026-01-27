@@ -1,11 +1,11 @@
 {
     "pack": {
-        "id": "Arms Race",
+        "id": "Age of Cavalry",
         "min_format": 94.1,
         "max_format": 94.1,
         "description": [
             {
-                "text": "Arms Race",
+                "text": "Age of Cavalry\n",
                 "color": "dark_red"
             },
             {

@@ -1,6 +1,7 @@
 # 加载提示
-title @a title {"text":"Arms Race","color":"green","italic": 1b}
-say 已加载 军备竞赛v1.0 数据包！
+title @a title {"text":"Age of Cavalry","color":"green","italic": 1b}
+say 已加载 骑兵时代 v1.0 数据包！
+say 作者: Avalanche1510
 playsound entity.player.levelup master @a ~ ~ ~ 1 1 1
 
 # 初始化计分板
@@ -34,7 +35,9 @@ scoreboard objectives add MinPeriod dummy "Minute Period"
 scoreboard objectives add AlreadySpawned dummy "Already Spawned"
 scoreboard objectives add Isquad dummy "illager squad"
 
-execute unless entity @e[type=armor_stand,tag=record] run say 数据包尚未完成手动初始化，部分功能可能无法生效！
+execute unless entity @e[type=armor_stand,tag=record] run say 数据包尚未完成手动初始化。
+execute unless entity @e[type=armor_stand,tag=record] run say 请在创造模式下输入 function main:initiate/create_bot 以完成初始化。
+
 
 team add rest "CD team"
 team modify rest color aqua

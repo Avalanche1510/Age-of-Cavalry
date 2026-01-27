@@ -10,3 +10,5 @@ execute if entity @e[type=armor_stand,tag=record] run execute if entity @e[type=
 #execute as @e[type=ender_pearl] at @s run data modify entity @s Owner[3] set from entity @n[type=!item,type=!ender_pearl,type=!armor_stand] UUID[3]
 
 
+execute as @e[type=armor_stand,tag=record] at @s if entity @p[distance=..16] run data merge entity @s {Invisible:0b,CustomNameVisible:1b}
+execute as @e[type=armor_stand,tag=record] at @s unless entity @p[distance=..16] run data merge entity @s {Invisible:1b,CustomNameVisible:0b}
