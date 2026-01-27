@@ -8,7 +8,7 @@ A relatively lightweight, vanilla-like modpacks in the lastest version of minecr
 
 ## How to use
  * Datapacks **age_of_cavalry**, **special_loot_table**, and **special_recipe** MUST be enabled *at the same time*
- * Mod "Terralith" are *strongly reconmmended*, while doesn't affect the core function of datapack **age_of_cavalry** if not installed
+ * Mod **Terralith** are *strongly reconmmended*, while doesn't affect the core function of datapack **age_of_cavalry** if not installed
  * A *modpack in 1.21.11* is provided as recommendation. The compatibility with extra mods or datapacks has not yet been tested.
 
 ## Essential Dependencies
@@ -20,8 +20,8 @@ A relatively lightweight, vanilla-like modpacks in the lastest version of minecr
 2. mod **Terralith**
 
 ## Non-Essential Dependencies (only count the core mod, dependent mods(e.g. sodium) are not included)
-1. first-person animation mod **Hold My Items**(recommended) / "Locomotion"（only for combat）
-2. mob & creatures animation# mod **Better Animations**
+1. first-person animation mod **Hold My Items**(recommended) / **Locomotion**（only for combat）
+2. mob & creatures animation mod **Better Animations**
 
 ---
 ---
