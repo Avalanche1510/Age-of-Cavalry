@@ -1,14 +1,14 @@
 # Age-of-Cavalry
-A relatively lightweight, vanilla-like modpacks in the lastest version of minecraft 1.21.11. It is designed to provide the BEST VANILLA EXPERIENCE (in my own opinion). The core datapack "arms_race" improves many disappointing vanilla features and try to utilize more unpopular and mediocre items to create an interconnected mechanism for better playability. 
+A relatively lightweight, vanilla-like modpacks in the lastest version of minecraft **1.21.11**. It is designed to provide the **BEST VANILLA EXPERIENCE** (in my own opinion). The core datapack **age_of_cavalry** improves many **disappointing vanilla features** and try to utilize more unpopular and mediocre items to create an interconnected mechanism for better playability. 
 
- * The first reason for calling the core datapack "arms_race" is that both players and mobs can get more resources to arm themselves, and hence the survival became more strategic and challenging. Those unpopular items now have a chance to revive.
- * The second reason for calling the core datapack "arms_race" is quite simple: mobs form 4 main alliances, and they are automatically hostile to each other now. Players are no longer fighting alone.
- * The final reason for calling the whole modpack "Age of Cavalry" is that not only can players have much more practical mounts like camels, horses, and happy ghast, but mobs can also have various new cavalry units. The combat mechanism of vanilla Minecraft will undergo a drastic reform!
+ * Both players and mobs can get **more resources** to arm themselves, and hence the survival became more strategic and challenging. Those *unpopular items* now have a chance to **revive**.
+ * Mobs form **3 main alliances**, and they are automatically *hostile* to each other now. Players are no longer fighting alone.
+ * Not only the players can have much more **practical**, **enhanced** mounts like camels, horses, and happy ghast, but mobs can also have *various new cavalry units*. The combat mechanism of vanilla Minecraft will undergo a **drastic reform**!
 
 ## How to use
- * Datapacks "arms_race", "special_loot_tables", and "special_recipe" must be enabled at the same time
- * Mod "Terralith" are strongly reconmmended, while doesn't affect the core function of datapack "arms_race" if not installed
- * A modpack in 1.21.11 is provided as recommendation. The compatibility with extra mods or datapacks has not yet been tested.
+ * Datapacks **age_of_cavalry**, **special_loot_table**, and **special_recipe** MUST be enabled *at the same time*
+ * Mod "Terralith" are *strongly reconmmended*, while doesn't affect the core function of datapack **age_of_cavalry** if not installed
+ * A *modpack in 1.21.11* is provided as recommendation. The compatibility with extra mods or datapacks has not yet been tested.
 
 ## Essential Dependencies
 1. java edition minecraft, 1.21.11 (not compatible with earlier version, but possibly for later version)
@@ -22,7 +22,8 @@ A relatively lightweight, vanilla-like modpacks in the lastest version of minecr
 1. first-person animation mod "Hold My Items"(recommended) / "Locomotion"（only for combat）
 2. mob & creatures animation# mod "Better Animations"
 
-
+---
+---
 
 ## About the datapacks
 ### functions added:
@@ -41,17 +42,39 @@ A relatively lightweight, vanilla-like modpacks in the lastest version of minecr
 
 ### loot tables added:
 * "lumberjack" for collector mobs in overworld and nether
-      * drop wood and saplings
+     * drop wood and saplings
 * "miner" for collector mobs in overworld and nether
-      * drop raw minerals
+     * drop raw minerals
 * "farmer" for collector mobs in overworld and nether
-      * drop food
+     * drop food
 * "undead" for all undead&anthropod party mobs except wither skeleton and zombified piglin
-      * can only drop emerald
+     * can only drop emerald
 * "nether" for all piglin party mobs and wither skeleton and zombified piglin
-      * can drop netherite scrap, specifically
+     * can drop netherite scrap, specifically
 * "illager" for all illager party mobs
-      * can drop diamond, specifically
+     * can drop diamond, specifically
+* "creeper" for all creeper
+     * can drop much more gun powder, or even TNT!
+      
 
 ### features added:
-1. waited for completion...
+1. item upgrading:
+   * generally, players can drop some of their items together on the ground to upgrade.
+   * All **swords** can be upgraded to have ability to *block the attack*, while cost much damage to itself. Compared with shields, they can be *lifted faster* while have a *limit of harm immunity* related to their base atk. Apart from that, players can use their offhand in various ways other than simply lifting a boring shield.
+        * wooden sword + stick
+        * golden sword + gold ingot
+        * copper sword + copper ingot
+        * stone sword + cobblestone
+        * iron sword + iron ingot
+        * diamond sword + diamond
+        * netherite sword + netherite_scrap
+        * ??? sword + nether star
+   * Also, the players can upgrade their compass to detect which team the mobs belong to. This can be seen from their color.
+        * compass + spectral arrow
+2. experience system reform:
+   * Now, **EXPERIENCE** indeed means **POWER**!
+   * From level 0 ~ 30, player's base health, movement speed, base damage will gradually increase in order to adapt to **increasingly fierce battle**! After level 30, players can have an ultimate upgrade on their attack speed.
+   * Under maximum circumstances, players will have +100% base health, +30% movement speed, +3 base atk, and +24% attack speed!
+   * By the way, players' basic attributes might drop if their experience level goes down!
+3. mounts modification:
+   *
