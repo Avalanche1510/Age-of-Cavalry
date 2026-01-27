@@ -1,3 +1,4 @@
+# This project is still in early stage of development!
 # Age-of-Cavalry
 A relatively lightweight, vanilla-like modpacks in the lastest version of minecraft **1.21.11**. It is designed to provide the **BEST VANILLA EXPERIENCE** (in my own opinion). The core datapack **age_of_cavalry** improves many **disappointing vanilla features** and try to utilize more unpopular and mediocre items to create an interconnected mechanism for better playability. 
 
@@ -12,15 +13,15 @@ A relatively lightweight, vanilla-like modpacks in the lastest version of minecr
 
 ## Essential Dependencies
 1. java edition minecraft, 1.21.11 (not compatible with earlier version, but possibly for later version)
-2. other 2 datapakcs "special_loot_table" & "special_recipe"
+2. other 2 datapacks **special_loot_table** & **special_recipe**
 
 ## Strongly-Recommended Dependencies
-1. fabric & fabric api 
-2. mod "Terralith"
+1. **fabric & fabric api**
+2. mod **Terralith**
 
 ## Non-Essential Dependencies (only count the core mod, dependent mods(e.g. sodium) are not included)
-1. first-person animation mod "Hold My Items"(recommended) / "Locomotion"（only for combat）
-2. mob & creatures animation# mod "Better Animations"
+1. first-person animation mod **Hold My Items**(recommended) / "Locomotion"（only for combat）
+2. mob & creatures animation# mod **Better Animations**
 
 ---
 ---
