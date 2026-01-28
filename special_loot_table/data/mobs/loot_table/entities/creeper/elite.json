@@ -1,7 +1,7 @@
 {
     "pools": [
         {
-            "rolls": 2,
+            "rolls": 3,
             "conditions":[
                 {
                     "condition":"entity_properties",

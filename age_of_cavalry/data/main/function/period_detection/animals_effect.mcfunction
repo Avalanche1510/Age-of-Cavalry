@@ -11,6 +11,7 @@ execute as @e[type=camel_husk] run attribute @s minecraft:movement_speed modifie
 execute as @e[type=camel_husk] run attribute @s minecraft:max_health modifier add max_health 16 add_value
 execute as @e[type=happy_ghast] run attribute @s minecraft:max_health modifier add max_health 40 add_value
 effect give @e[type=happy_ghast] regeneration 3 0
+execute as @e[type=happy_ghast] run attribute @s minecraft:flying_speed base set 0.09
 
 
 # 更强大的女巫
