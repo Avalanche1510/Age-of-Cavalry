@@ -1,1 +1,1 @@
-summon ravager ~ ~ ~ {Passengers:[{Tags:["cavalry"],id:"minecraft:witch"}]}
+summon ravager ~ ~ ~ {Passengers:[{Tags:["cavalry","notCaptain"],id:"minecraft:witch"}]}

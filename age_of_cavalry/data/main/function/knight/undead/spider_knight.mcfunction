@@ -1,1 +1,1 @@
-summon spider ~ ~ ~ {Passengers:[{Tags:["cavalry"],equipment:{mainhand:{id:"minecraft:bow",count:1b}},id:"minecraft:skeleton"}]}
+summon spider ~ ~ ~ {Passengers:[{Tags:["cavalry","notCaptain"],equipment:{mainhand:{id:"minecraft:bow",count:1b}},id:"minecraft:skeleton"}]}

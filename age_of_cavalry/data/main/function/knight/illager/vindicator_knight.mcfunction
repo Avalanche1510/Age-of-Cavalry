@@ -1,1 +1,1 @@
-summon ravager ~ ~ ~ {Passengers:[{Tags:["cavalry"],equipment:{mainhand:{id:"minecraft:iron_axe",count:1b}},id:"minecraft:vindicator"}]}
+summon ravager ~ ~ ~ {Passengers:[{Tags:["cavalry","notCaptain"],equipment:{mainhand:{id:"minecraft:iron_axe",count:1b}},id:"minecraft:vindicator"}]}

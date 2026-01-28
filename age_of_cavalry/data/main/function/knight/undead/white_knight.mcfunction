@@ -1,1 +1,1 @@
-summon skeleton_horse ~ ~ ~ {SkeletonTrap:1b}
+summon skeleton_horse ~ ~ ~ {Passengers:[{Tags:["cavalry","notCaptain"],equipment:{head:{id:"minecraft:iron_helmet",count:1b,components:{"minecraft:enchantments":{"minecraft:protection":2,"minecraft:unbreaking":1}}},mainhand:{id:"minecraft:bow",count:1b,components:{"minecraft:enchantments":{"minecraft:power":1}}}},id:"minecraft:skeleton"}]}

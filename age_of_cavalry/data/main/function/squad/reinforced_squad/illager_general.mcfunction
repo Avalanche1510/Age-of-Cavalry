@@ -1,8 +1,8 @@
-summon pillager ~ ~ ~ {equipment:{mainhand:{id:"minecraft:crossbow",count:1b}}}
-summon pillager ~ ~ ~ {equipment:{mainhand:{id:"minecraft:crossbow",count:1b}}}
-summon pillager ~ ~ ~ {equipment:{mainhand:{id:"minecraft:crossbow",count:1b}}}
-summon pillager ~ ~ ~ {equipment:{mainhand:{id:"minecraft:crossbow",count:1b}}}
-summon vindicator ~ ~ ~ {equipment:{mainhand:{id:"minecraft:iron_axe",count:1b}}}
-summon vindicator ~ ~ ~ {equipment:{mainhand:{id:"minecraft:iron_axe",count:1b}}}
-summon evoker ~ ~ ~
+summon pillager ~ ~ ~ {Tags:["notCaptain"],equipment:{mainhand:{id:"minecraft:crossbow",count:1b}}}
+summon pillager ~ ~ ~ {Tags:["notCaptain"],equipment:{mainhand:{id:"minecraft:crossbow",count:1b}}}
+summon pillager ~ ~ ~ {Tags:["notCaptain"],equipment:{mainhand:{id:"minecraft:crossbow",count:1b}}}
+summon pillager ~ ~ ~ {Tags:["notCaptain"],equipment:{mainhand:{id:"minecraft:crossbow",count:1b}}}
+summon vindicator ~ ~ ~ {Tags:["notCaptain"],equipment:{mainhand:{id:"minecraft:iron_axe",count:1b}}}
+summon vindicator ~ ~ ~ {Tags:["notCaptain"],equipment:{mainhand:{id:"minecraft:iron_axe",count:1b}}}
+summon evoker ~ ~ ~ {Tags:["notCaptain"]}
 summon witch ~ ~ ~ {Tags:["captain","has_squad"]}

@@ -1,1 +1,1 @@
-summon hoglin ~ ~ ~ {IsImmuneToZombification:1b,Passengers:[{equipment:{mainhand:{id:"minecraft:golden_spear",count:1b}},id:"minecraft:piglin",Tags:["has_guard","cavalry"],IsImmuneToZombification:1b}]}
+summon hoglin ~ ~ ~ {IsImmuneToZombification:1b,Passengers:[{equipment:{mainhand:{id:"minecraft:golden_spear",count:1b}},id:"minecraft:piglin",Tags:["has_guard","cavalry","notCaptain"],IsImmuneToZombification:1b}]}
