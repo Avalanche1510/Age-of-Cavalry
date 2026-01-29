@@ -51,12 +51,17 @@ A relatively lightweight, vanilla-like modpacks in the lastest version of minecr
 * "undead" for all undead&anthropod party mobs except wither skeleton and zombified piglin
      * can only drop emerald
 * "nether" for all piglin party mobs and wither skeleton and zombified piglin
-     * can drop netherite scrap, specifically
+     * can drop gold nugget, gold block and even netherite scrap
 * "illager" for all illager party mobs
-     * can drop diamond, specifically
+     * can drop emerald and diamond
 * "creeper" for all creeper
      * can drop much more gun powder, or even TNT!
-      
+* "enderman" for all enderman
+     * can drop much more ender pearl.
+* "blaze" for all blaze
+     * can drop much more ender blaze_rod.
+* "breeze" for all breeze
+     * can drop much more ender breeze_rod.
 
 ### features added:
 1. item upgrading:

@@ -9,7 +9,6 @@ team join piglin_party @e[type=piglin]
 team join piglin_party @e[type=blaze]
 team join piglin_party @e[type=hoglin]
 team join piglin_party @e[type=piglin_brute]
-team join piglin_party @e[type=magma_cube]
 
 team join villager_party @e[type=villager]
 team join villager_party @e[type=wandering_trader]

@@ -1,0 +1,65 @@
+{
+    "pools": [
+        {
+            "rolls": 3,
+            "conditions":[
+                {
+                    "condition":"entity_properties",
+                    "entity":"attacking_player",
+                    "predicate":{}
+                }
+            ],
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:ender_pearl",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 3,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 40
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:ender_pearl",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 5,
+                                "min": 2
+                            }
+                        }
+                    ],
+                    "weight": 20
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:ender_pearl",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 7,
+                                "min": 3
+                            }
+                        }
+                    ],
+                    "weight": 6
+                },
+                {
+                    "type":"minecraft:empty",
+                    "weight":10
+                }
+            ]
+        }
+    ]
+}

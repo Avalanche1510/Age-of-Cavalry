@@ -5,6 +5,7 @@ execute as @e[type=!player,team=piglin_party,type=!magma_cube,type=!hoglin,type=
 execute as @e[type=creeper] at @s unless score @s isGifted matches -1..1 run function main:gifted_mobs/gifted_level
 execute as @e[type=enderman] at @s unless score @s isGifted matches -1..1 run function main:gifted_mobs/gifted_level
 execute as @e[type=ghast] at @s unless score @s isGifted matches -1..1 run function main:gifted_mobs/gifted_level
+execute as @e[type=breeze] at @s unless score @s isGifted matches -1..1 run function main:gifted_mobs/gifted_level
 
 execute as @e[type=!player,team=illager_party,type=!vex] at @s unless score @s isGifted matches -1..1 run function main:gifted_mobs/gifted_level
 execute as @e[type=!player,team=villager_party,type=!villager,type=!wandering_trader] at @s unless score @s isGifted matches -1..1 run function main:gifted_mobs/gifted_level
