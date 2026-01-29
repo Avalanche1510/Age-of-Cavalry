@@ -17,7 +17,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:gold_ingot",
+                    "name": "minecraft:gold_nugget",
                     "functions": [
                         {
                             "function": "set_count",
@@ -32,7 +32,7 @@
                 },
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:gold_ingot",
+                    "name": "minecraft:gold_nugget",
                     "functions": [
                         {
                             "function": "set_count",
@@ -47,7 +47,7 @@
                 },
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:gold_ingot",
+                    "name": "minecraft:gold_nugget",
                     "functions": [
                         {
                             "function": "set_count",
