@@ -7,5 +7,7 @@ execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:wooden_sword"}}] at @s 
 execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:diamond_sword"}}] at @s if entity @n[distance=..1,type=item,nbt={Item:{count:1,id:"minecraft:diamond"}}] run function main:refinement/diamond_sword
 execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:netherite_sword"}}] at @s if entity @n[distance=..1,type=item,nbt={Item:{count:1,id:"minecraft:netherite_scrap"}}] run function main:refinement/netherite_sword
 execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:iron_sword"}}] at @s if entity @n[distance=..1,type=item,nbt={Item:{count:1,id:"minecraft:nether_star"}}] run function main:refinement/easter
-
+# 检测是否存在可以升级猎人指南针的材料
 execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:compass"}}] at @s if entity @n[distance=..1,type=item,nbt={Item:{count:1,id:"minecraft:spectral_arrow"}}] run function main:refinement/hunter_compass
+# 检测是否存在可以升级集结号的材料
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:goat_horn"}}] at @s if entity @n[distance=..1,type=item,nbt={Item:{count:1,id:"minecraft:ender_pearl"}}] run function main:refinement/assembly_horn

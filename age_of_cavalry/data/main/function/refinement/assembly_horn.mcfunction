@@ -1,0 +1,5 @@
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:goat_horn"}}] unless score @s isrefined matches 1 run data merge entity @s {Item:{components:{"minecraft:custom_name":"集结号","minecraft:rarity":epic,"minecraft:lore":[{"text":"可召唤","color":"green","bold":true},{"text":"可以将除了玩家外，任何被加载的，且名为servant的实体召唤过来","color":"gray"},{"text":"召唤花费: 基础为3级经验，此外每个被召唤的实体都会额外消耗100点经验","color":"gray"}],"minecraft:enchantments":{"minecraft:vanishing_curse":1}}}}
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:goat_horn"}}] at @s unless score @s isrefined matches 1 run kill @n[type=item,nbt={Item:{count:1,id:"minecraft:ender_pearl"}}]
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:goat_horn"}}] at @s unless score @s isrefined matches 1 run particle minecraft:wax_on ~ ~ ~ 0.24 0.24 0.24 0.3 12 force
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:goat_horn"}}] at @s unless score @s isrefined matches 1 run execute as @a[distance=..8] run playsound minecraft:block.anvil.use master @s ~ ~ ~ 1 1 0.1
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:goat_horn"}}] unless score @s isrefined matches 1 run scoreboard players add @s isrefined 1

@@ -20,6 +20,7 @@ execute if biome ~ ~ ~ minecraft:badlands run function main:squad/reinforced_squ
 execute if biome ~ ~ ~ minecraft:eroded_badlands run function main:squad/reinforced_squad/undead_region/desert_rider
 execute if biome ~ ~ ~ minecraft:wooded_badlands run function main:squad/reinforced_squad/undead_region/desert_rider
 
+
 # 沼泽群系 - 2
 execute if biome ~ ~ ~ minecraft:swamp run function main:squad/reinforced_squad/undead_region/swamp_rider
 execute if biome ~ ~ ~ minecraft:mangrove_swamp run function main:squad/reinforced_squad/undead_region/swamp_rider

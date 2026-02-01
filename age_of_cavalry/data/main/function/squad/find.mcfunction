@@ -5,5 +5,16 @@ execute at @s if score @s squadNum matches 1.. if entity @s[team=piglin_party,ta
 execute at @s if score @s squadNum matches 1.. if entity @s[team=undead-arthropod_party,tag=captain,tag=normal_mob] run execute as @n[tag=!cavalry,type=!player,tag=normal_mob,team=undead-arthropod_party,tag=!captain,distance=8..40] at @s unless entity @n[tag=captain,team=undead-arthropod_party,distance=..8] run function main:squad/reply
 execute at @s if score @s squadNum matches 1.. if entity @s[team=illager_party,tag=captain,tag=normal_mob] run execute as @n[tag=!cavalry,type=!player,tag=normal_mob,team=illager_party,tag=!captain,distance=8..40] at @s unless entity @n[tag=captain,team=illager_party,distance=..8] run function main:squad/reply
 execute at @s if score @s squadNum matches 1.. if entity @s[team=piglin_party,tag=captain,tag=normal_mob] run execute as @n[tag=!cavalry,type=!player,tag=normal_mob,team=piglin_party,tag=!captain,distance=8..40] at @s unless entity @n[tag=captain,team=piglin_party,distance=..8] run function main:squad/reply
+
+
+execute at @s if score @s squadNum matches 1.. if entity @s[team=undead-arthropod_party,tag=captain,tag=!normal_mob] run execute as @n[tag=cavalry,type=!player,tag=!legend_mob,team=undead-arthropod_party,tag=!captain,distance=8..64] on vehicle at @s unless entity @n[distance=..8] run function main:squad/reply
+execute at @s if score @s squadNum matches 1.. if entity @s[team=illager_party,tag=captain,tag=!normal_mob] run execute as @n[tag=cavalry,type=!player,tag=!legend_mob,team=illager_party,tag=!captain,distance=8..64] on vehicle at @s unless entity @n[distance=..8] run function main:squad/reply
+execute at @s if score @s squadNum matches 1.. if entity @s[team=piglin_party,tag=captain,tag=!normal_mob] run execute as @n[tag=cavalry,type=!player,tag=!legend_mob,team=piglin_party,tag=!captain,distance=8..64] on vehicle at @s unless entity @n[distance=..8] run function main:squad/reply
+
+execute at @s if score @s squadNum matches 1.. if entity @s[team=undead-arthropod_party,tag=captain,tag=normal_mob] run execute as @n[tag=cavalry,type=!player,tag=normal_mob,team=undead-arthropod_party,tag=!captain,distance=8..40] on vehicle at @s unless entity @n[distance=..8] run function main:squad/reply
+execute at @s if score @s squadNum matches 1.. if entity @s[team=illager_party,tag=captain,tag=normal_mob] run execute as @n[tag=cavalry,type=!player,tag=normal_mob,team=illager_party,tag=!captain,distance=8..40] on vehicle at @s unless entity @n[distance=..8] run function main:squad/reply
+execute at @s if score @s squadNum matches 1.. if entity @s[team=piglin_party,tag=captain,tag=normal_mob] run execute as @n[tag=cavalry,type=!player,tag=normal_mob,team=piglin_party,tag=!captain,distance=8..40] on vehicle at @s unless entity @n[distance=..8] run function main:squad/reply
+
+
 scoreboard players remove @s squadNum 1
 execute at @s if score @s squadNum matches 1.. run function main:squad/find

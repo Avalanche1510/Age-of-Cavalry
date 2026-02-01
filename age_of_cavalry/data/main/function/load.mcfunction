@@ -2,7 +2,7 @@
 title @a title {"text":"Age of Cavalry","color":"green","italic": 1b}
 say 已加载 骑兵时代 v1.0 数据包！
 say 作者: Avalanche1510
-playsound entity.player.levelup master @a ~ ~ ~ 1 1 1
+execute as @a at @s run playsound entity.player.levelup master @s ~ ~ ~ 1 1 1
 
 # 初始化计分板
 scoreboard objectives add period dummy "Period"
@@ -34,6 +34,12 @@ scoreboard objectives add squadNum dummy "squad Num"
 scoreboard objectives add MinPeriod dummy "Minute Period"
 scoreboard objectives add AlreadySpawned dummy "Already Spawned"
 scoreboard objectives add Isquad dummy "illager squad"
+scoreboard objectives add IsCavalry dummy "Is Cavalry"
+scoreboard objectives add cost dummy "Cost"
+scoreboard objectives add RidePeriod dummy "Ride Period"
+scoreboard objectives add PotionRandom dummy "Random Potion"
+scoreboard objectives add GuardRandom dummy "Guard Random"
+scoreboard objectives add IsUsingGoatHorn minecraft.used:minecraft.goat_horn "Using goat horn"
 
 execute unless entity @e[type=armor_stand,tag=record] run say 数据包尚未完成手动初始化。
 execute unless entity @e[type=armor_stand,tag=record] run say 请在创造模式下输入 function main:initiate/create_bot 以完成初始化。
