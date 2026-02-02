@@ -1,6 +1,7 @@
 {
     "pools": [
         {
+            
             "rolls": 2,
             "conditions":[
                 {
@@ -12,6 +13,7 @@
                         "predicate":{"team":"illager_party"}
                     }
                 }
+                
                 
             ],
             "entries": [
@@ -59,6 +61,47 @@
                         }
                     ],
                     "weight": 3
+                },
+                {
+                    "type":"minecraft:empty",
+                    "weight":10
+                }
+            ]
+        },
+        {
+            
+            "rolls": 2,
+            "conditions":[
+                {
+                    "condition":"entity_properties",
+                    "entity":"this",
+                    "predicate":{"team":"illager_party","type":"minecraft:evoker"}
+                },
+                {
+                    "condition":"inverted",
+                    "term":
+                    {
+                        "condition":"entity_properties",
+                        "entity":"direct_attacker",
+                        "predicate":{"team":"illager_party"}
+                    }
+                }    
+            ],
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:totem_of_undying",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 1,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 30
                 },
                 {
                     "type":"minecraft:empty",
