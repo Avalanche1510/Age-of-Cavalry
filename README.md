@@ -43,17 +43,17 @@ A relatively lightweight, vanilla-like modpacks in the lastest version of minecr
 
 ### loot tables added:
 * "lumberjack" for collector mobs in overworld and nether
-     * drop wood and saplings
+     * drop wood and saplings.
 * "miner" for collector mobs in overworld and nether
-     * drop raw minerals
+     * drop raw minerals.
 * "farmer" for collector mobs in overworld and nether
-     * drop food
+     * drop food.
 * "undead" for all undead&anthropod party mobs except wither skeleton and zombified piglin
-     * can only drop emerald
+     * can only drop emerald.
 * "nether" for all piglin party mobs and wither skeleton and zombified piglin
-     * can drop gold nugget, gold block and even netherite scrap
+     * can drop gold nugget, gold block and even netherite scrap.
 * "illager" for all illager party mobs
-     * can drop emerald and diamond
+     * can drop emerald and diamond. Evokers can also drop totem of undying(they should!).
 * "creeper" for all creeper
      * can drop much more gun powder, or even TNT!
 * "enderman" for all enderman
@@ -77,10 +77,26 @@ A relatively lightweight, vanilla-like modpacks in the lastest version of minecr
         * ??? sword + nether star
    * Also, the players can upgrade their compass to detect which team the mobs belong to. This can be seen from their color.
         * compass + spectral arrow
+   * Now, players can upgrade normal goat horn to **assembly horn**. It can teleport your horse, happy ghast or dogs(any entities named 'servant', except for players) from *any dimension*, *any where* to your current position, as long as they are **loaded**(so you need to build a simple ender pearl loader to maintain their loading).
+   * However, players need to pay experience as cost. The basic initiation cost are *3 levels*, and each entities being *recruited* will cost you extra *100 points experience*. If you paid 3 levels and run out of experience, your **servant** will still be teleported, but each of them will cost you **1 HEART(2 DAMAGE)**! 
+        * goat horn + ender pearl
 2. experience system reform:
    * Now, **EXPERIENCE** indeed means **POWER**!
    * From level 0 ~ 30, player's base health, movement speed, base damage will gradually increase in order to adapt to **increasingly fierce battle**! After level 30, players can have an ultimate upgrade on their attack speed.
    * Under maximum circumstances, players will have +100% base health, +30% movement speed, +3 base atk, and +24% attack speed!
    * By the way, players' basic attributes might drop if their experience level goes down!
 3. mounts modification:
-   *
+   * 
+   * Attributes Modification:
+       * Zombie horse has 120% speed, 20 additional health.
+       * Skeleton horse has 180% speed. (They cannot easily regenerate!)
+       * Horse has 160% speed and effect regeneration I.
+       * Camel has 140% speed and 8 additional health, and effect regeneration I.
+       * Camel husk has 120% speed, 16 additional health.
+       * Happy Ghast has 40 addtional health, and 180% flying speed.
+   * Functions Modification:
+       * **Now, all the mounts that can be ridden by players(except for pigs) can BREAK LEAVES! Forests are not obstacles now!**
+       * Happy Ghast looks like a *gigantic balloon*, so it should be able to **be blown by wind charge**. If no one is standing or sitting on a happy ghast, it can achieve instantaneous rapid movement by using wind charge close to it. The recommended usage is to sit on a pig on a boat tied to a happy ghast and throw the wind charge to the direction you want to move.
+       * **PEACE LOVING HAPPY GHAST can replace a TNT ITEM being dropped nearby by a TNT ENTITY each 2 SECONDS. BOMBARDMENT!**
+       * To allow players sitting on the happy ghast to easily go down for combat, **players nearby will have slow falling** effect.
+       * Zombie horse, skeleton horse, camel husk, cave spider and spider, hoglin and ravager can be automatically *ridden by the suitable mobs nearby* now! *More natural mob knights!*
