@@ -1,1 +1,1 @@
-summon skeleton_horse ~ ~ ~ {equipment:{saddle:{id:"minecraft:saddle"}},Passengers:[{Tags:["cavalry","notCaptain"],equipment:{mainhand:{id:"minecraft:stone_sword",count:1b}},id:"minecraft:stray"}]}
+summon skeleton_horse ~ ~ ~ {equipment:{saddle:{id:"minecraft:saddle"}},Passengers:[{Tags:["battle_unit","notCaptain"],equipment:{mainhand:{id:"minecraft:stone_sword",count:1b}},id:"minecraft:stray"}]}

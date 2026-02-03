@@ -1,1 +1,1 @@
-summon camel_husk ~ ~ ~ {Passengers:[{equipment:{mainhand:{id:"minecraft:stone_spear",count:1b}},id:"minecraft:husk",Tags:["spear","cavalry","notCaptain"]},{Tags:["cavalry","notCaptain"],equipment:{mainhand:{id:"minecraft:bow",count:1b}},id:"minecraft:parched"}]}
+summon camel_husk ~ ~ ~ {Passengers:[{equipment:{mainhand:{id:"minecraft:stone_spear",count:1b}},id:"minecraft:husk",Tags:["spear","battle_unit","notCaptain"]},{Tags:["battle_unit","notCaptain"],equipment:{mainhand:{id:"minecraft:bow",count:1b}},id:"minecraft:parched"}]}

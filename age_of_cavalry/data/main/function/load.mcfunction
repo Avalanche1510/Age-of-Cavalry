@@ -2,6 +2,7 @@
 title @a title {"text":"Age of Cavalry","color":"green","italic": 1b}
 say 已加载 骑兵时代 v1.0 数据包！
 say 作者: Avalanche1510
+say 需要调整怪物血量显示方式请按 I 键
 execute as @a at @s run playsound entity.player.levelup master @s ~ ~ ~ 1 1 1
 
 # 初始化计分板

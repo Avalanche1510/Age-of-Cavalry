@@ -1,6 +1,6 @@
 function main:knight/piglin/guard_knight
-summon piglin ~ ~ ~ {IsImmuneToZombification:1b,Tags:["has_guard","notCaptain"],equipment:{mainhand:{id:"minecraft:crossbow",count:1b}}}
-summon piglin ~ ~ ~ {IsImmuneToZombification:1b,Tags:["has_guard","notCaptain"],equipment:{mainhand:{id:"minecraft:crossbow",count:1b}}}
+summon piglin ~ ~ ~ {IsImmuneToZombification:1b,Tags:["has_guard","notCaptain","battle_unit"],equipment:{mainhand:{id:"minecraft:crossbow",count:1b}}}
+summon piglin ~ ~ ~ {IsImmuneToZombification:1b,Tags:["has_guard","notCaptain","battle_unit"],equipment:{mainhand:{id:"minecraft:crossbow",count:1b}}}
 summon blaze ~ ~ ~
 summon blaze ~ ~ ~
 summon blaze ~ ~ ~

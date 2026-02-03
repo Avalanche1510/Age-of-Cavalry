@@ -98,20 +98,20 @@ execute if entity @s[type=creeper] run data merge entity @s {ExplosionRadius:6,F
 
 
 
-execute store result score @s[tag=armor,team=!illager_party,tag=!captain,tag=!cavalry] itemRandom run random value 1..120
-execute store result score @s[tag=armor,team=!illager_party,tag=!captain,tag=!cavalry] height run data get entity @s[tag=armor] Pos[1] 1
+execute store result score @s[tag=armor,team=!illager_party,tag=!captain,tag=!battle_unit] itemRandom run random value 1..120
+execute store result score @s[tag=armor,team=!illager_party,tag=!captain,tag=!battle_unit] height run data get entity @s[tag=armor] Pos[1] 1
 
-execute at @s if score @s[tag=armor,team=!illager_party,tag=!captain,tag=!cavalry] itemRandom matches 1..15 if score @s height matches ..62 if dimension minecraft:overworld run tag @s add miner
-execute at @s if score @s[tag=armor,team=!illager_party,tag=!captain,tag=!cavalry] itemRandom matches 16..18 if score @s height matches ..62 if dimension minecraft:overworld run tag @s add lumberjack
-execute at @s if score @s[tag=armor,team=!illager_party,tag=!captain,tag=!cavalry] itemRandom matches 19..21 if score @s height matches ..62 if dimension minecraft:overworld run tag @s add farmer
+execute at @s if score @s[tag=armor,team=!illager_party,tag=!captain,tag=!battle_unit] itemRandom matches 1..15 if score @s height matches ..62 if dimension minecraft:overworld run tag @s add miner
+execute at @s if score @s[tag=armor,team=!illager_party,tag=!captain,tag=!battle_unit] itemRandom matches 16..18 if score @s height matches ..62 if dimension minecraft:overworld run tag @s add lumberjack
+execute at @s if score @s[tag=armor,team=!illager_party,tag=!captain,tag=!battle_unit] itemRandom matches 19..21 if score @s height matches ..62 if dimension minecraft:overworld run tag @s add farmer
 
-execute at @s if score @s[tag=armor,team=!illager_party,tag=!captain,tag=!cavalry] itemRandom matches 1..3 if score @s height matches 63.. if dimension minecraft:overworld run tag @s add miner
-execute at @s if score @s[tag=armor,team=!illager_party,tag=!captain,tag=!cavalry] itemRandom matches 4..14 if score @s height matches 63.. if dimension minecraft:overworld run tag @s add lumberjack
-execute at @s if score @s[tag=armor,team=!illager_party,tag=!captain,tag=!cavalry] itemRandom matches 15..24 if score @s height matches 63.. if dimension minecraft:overworld run tag @s add farmer
+execute at @s if score @s[tag=armor,team=!illager_party,tag=!captain,tag=!battle_unit] itemRandom matches 1..3 if score @s height matches 63.. if dimension minecraft:overworld run tag @s add miner
+execute at @s if score @s[tag=armor,team=!illager_party,tag=!captain,tag=!battle_unit] itemRandom matches 4..14 if score @s height matches 63.. if dimension minecraft:overworld run tag @s add lumberjack
+execute at @s if score @s[tag=armor,team=!illager_party,tag=!captain,tag=!battle_unit] itemRandom matches 15..24 if score @s height matches 63.. if dimension minecraft:overworld run tag @s add farmer
 
-execute at @s if score @s[tag=armor,team=!illager_party,tag=!captain,tag=!cavalry] itemRandom matches 1..7 if dimension minecraft:the_nether run tag @s add miner
-execute at @s if score @s[tag=armor,team=!illager_party,tag=!captain,tag=!cavalry] itemRandom matches 8..14 if dimension minecraft:the_nether run tag @s add lumberjack
-execute at @s if score @s[tag=armor,team=!illager_party,tag=!captain,tag=!cavalry] itemRandom matches 15..21 if dimension minecraft:the_nether run tag @s add farmer
+execute at @s if score @s[tag=armor,team=!illager_party,tag=!captain,tag=!battle_unit] itemRandom matches 1..7 if dimension minecraft:the_nether run tag @s add miner
+execute at @s if score @s[tag=armor,team=!illager_party,tag=!captain,tag=!battle_unit] itemRandom matches 8..14 if dimension minecraft:the_nether run tag @s add lumberjack
+execute at @s if score @s[tag=armor,team=!illager_party,tag=!captain,tag=!battle_unit] itemRandom matches 15..21 if dimension minecraft:the_nether run tag @s add farmer
 
 execute unless entity @s[tag=!miner,tag=!lumberjack,tag=!farmer] run tag @s add collecter
 

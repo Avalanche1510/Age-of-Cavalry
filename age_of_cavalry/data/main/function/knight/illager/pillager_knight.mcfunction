@@ -1,1 +1,1 @@
-summon ravager ~ ~ ~ {Passengers:[{Tags:["cavalry","notCaptain"],equipment:{mainhand:{id:"minecraft:crossbow",count:1b}},id:"minecraft:pillager"}]}
+summon ravager ~ ~ ~ {Passengers:[{Tags:["battle_unit","notCaptain"],equipment:{mainhand:{id:"minecraft:crossbow",count:1b}},id:"minecraft:pillager"}]}
