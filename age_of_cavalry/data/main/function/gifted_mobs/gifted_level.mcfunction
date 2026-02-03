@@ -23,6 +23,7 @@ execute if score @s[type=zombified_piglin,tag=armor,tag=!diy_tools] isGifted mat
 execute if score @s[type=wither_skeleton,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_suits/assign_armor_nether
 execute if score @s[team=piglin_party,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_suits/assign_armor_nether
 execute if score @s[team=illager_party,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_suits/assign_armor_illager
+function main:gifted_mobs/assign_suits/assign_horse_armor
 execute if entity @s[tag=captain] run function main:squad/flags
 
 execute if score @s isGifted matches 1 run scoreboard players set @s skillRandom 0
