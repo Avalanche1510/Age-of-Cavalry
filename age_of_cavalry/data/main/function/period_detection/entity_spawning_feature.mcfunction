@@ -24,3 +24,6 @@ execute as @e[type=zombified_piglin,tag=!has_guard] at @s if dimension minecraft
 # execute as @e[type=zombified_piglin,tag=!has_guard] at @s if dimension minecraft:the_nether if score @s GuardRandom matches 1 run tp ~ -50 ~
 # execute as @e[type=zombified_piglin,tag=!has_guard] at @s if dimension minecraft:the_nether if score @s GuardRandom matches 1 run kill @s
 execute as @e[type=zombified_piglin,tag=!has_guard] at @s if dimension minecraft:the_nether if score @s GuardRandom matches 6..10 run tag @s add has_guard
+
+execute as @e[type=zombie_horse,tag=!has_horse_armor,tag=has_rider] run function main:gifted_mobs/assign_suits/assign_horse_armor
+execute as @e[type=skeleton_horse,tag=!has_horse_armor,tag=has_rider] run function main:gifted_mobs/assign_suits/assign_horse_armor
