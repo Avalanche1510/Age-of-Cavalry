@@ -41,6 +41,11 @@ scoreboard objectives add RidePeriod dummy "Ride Period"
 scoreboard objectives add PotionRandom dummy "Random Potion"
 scoreboard objectives add GuardRandom dummy "Guard Random"
 scoreboard objectives add IsUsingGoatHorn minecraft.used:minecraft.goat_horn "Using goat horn"
+scoreboard objectives add row dummy "row"
+scoreboard objectives add col dummy "column"
+scoreboard objectives add c_row dummy "current row"
+scoreboard objectives add c_col dummy "current column"
+scoreboard objectives add SoldierType dummy "soldier type"
 
 execute unless entity @e[type=armor_stand,tag=record] run say 数据包尚未完成手动初始化。
 execute unless entity @e[type=armor_stand,tag=record] run say 请在创造模式下输入 function main:initiate/create_bot 以完成初始化。

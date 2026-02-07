@@ -1,4 +1,9 @@
 # 坐骑动物获得更高属性，且需要在提高血量上限后设置完整的初始血量
+execute as @e[team=undead-arthropod_party,tag=!upgraded] run attribute @s minecraft:follow_range base set 24
+execute as @e[team=illager_party,tag=!upgraded] run attribute @s minecraft:follow_range base set 24
+execute as @e[team=villager_party,type=!villager,tag=!upgraded] run attribute @s minecraft:follow_range base set 24
+execute as @e[team=piglin_party,tag=!upgraded] run attribute @s minecraft:follow_range base set 24
+
 execute as @e[type=camel,tag=!upgraded] run attribute @s minecraft:movement_speed modifier add movement_speed 0.4 add_multiplied_total
 execute as @e[type=camel,tag=!upgraded] run attribute @s minecraft:max_health modifier add max_health 8 add_value
 execute as @e[type=camel,tag=!upgraded] run data merge entity @s {Health:1000}
@@ -24,6 +29,8 @@ execute as @e[type=skeleton_horse,tag=!upgraded] run tag @s add upgraded
 
 execute as @e[type=horse,tag=!upgraded] run attribute @s minecraft:movement_speed modifier add movement_speed 0.6 add_multiplied_total
 execute as @e[type=horse,tag=!upgraded] run tag @s add upgraded
+
+
 
 # 女巫有相当大的概率在生成的时候附带生成一只劫掠者小队，与女巫等级有关
 execute as @e[type=witch,tag=!has_squad] store result score @s Isquad run random value 1..100

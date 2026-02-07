@@ -1,0 +1,1 @@
+execute if score @s SoldierType matches 1 at @s run function main:army/soldiers/zombie

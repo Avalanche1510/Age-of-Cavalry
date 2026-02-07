@@ -1,0 +1,1 @@
+summon zombie ~ ~ ~ {Tags:["diy_attributes","diy_tools"],equipment:{head:{id:"minecraft:iron_helmet"},chest:{id:"minecraft:iron_chestplate"},legs:{id:"minecraft:iron_leggings"},feet:{id:"minecraft:iron_boots"},mainhand:{id:"minecraft:iron_sword"},offhand:{id:"minecraft:shield"}}}
