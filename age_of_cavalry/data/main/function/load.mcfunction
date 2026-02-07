@@ -46,6 +46,8 @@ scoreboard objectives add col dummy "column"
 scoreboard objectives add c_row dummy "current row"
 scoreboard objectives add c_col dummy "current column"
 scoreboard objectives add SoldierType dummy "soldier type"
+scoreboard objectives add track dummy "success tracking?"
+scoreboard objectives add TrackCD dummy "tracking CD"
 
 execute unless entity @e[type=armor_stand,tag=record] run say 数据包尚未完成手动初始化。
 execute unless entity @e[type=armor_stand,tag=record] run say 请在创造模式下输入 function main:initiate/create_bot 以完成初始化。

@@ -1,22 +1,19 @@
-execute as @e[team=undead-arthropod_party] at @s if entity @a[distance=..128] positioned ~-20 ~-2 ~-20 if entity @e[dx=48,dz=48,dy=8,team=illager_party,limit=1,sort=nearest] run damage @s 0.0 minecraft:explosion by @e[dx=48,dz=48,dy=8,team=illager_party,limit=1,sort=nearest]
-execute as @e[team=undead-arthropod_party] at @s if entity @a[distance=..128] positioned ~-20 ~-2 ~-20 if entity @e[dx=48,dz=48,dy=8,team=villager_party,limit=1,sort=nearest] run damage @s 0.0 minecraft:explosion by @e[dx=48,dz=48,dy=8,team=villager_party,limit=1,sort=nearest]
-execute as @e[team=undead-arthropod_party] at @s if entity @a[distance=..128] positioned ~-20 ~-2 ~-20 if entity @e[dx=48,dz=48,dy=8,team=piglin_party,limit=1,sort=nearest] run damage @s 0.0 minecraft:explosion by @e[dx=48,dz=48,dy=8,team=piglin_party,limit=1,sort=nearest]
+scoreboard players set @s track 0
+execute if entity @s[team=undead-arthropod_party,tag=!captain] at @s store success score @s track run damage @s 0.0 minecraft:explosion by @n[distance=..12,team=illager_party]
+execute if entity @s[team=undead-arthropod_party,tag=!captain] at @s store success score @s track run damage @s 0.0 minecraft:explosion by @n[distance=..12,team=villager_party]
+execute if entity @s[team=undead-arthropod_party,tag=!captain] at @s store success score @s track run damage @s 0.0 minecraft:explosion by @n[distance=..12,team=piglin_party]
 
+execute if entity @s[team=illager_party,tag=!captain] at @s store success score @s track run damage @s 0.0 minecraft:explosion by @n[distance=..12,team=undead-arthropod_party]
+execute if entity @s[team=illager_party,tag=!captain] at @s store success score @s track run damage @s 0.0 minecraft:explosion by @n[distance=..12,team=villager_party]
+execute if entity @s[team=illager_party,tag=!captain] at @s store success score @s track run damage @s 0.0 minecraft:explosion by @n[distance=..12,team=piglin_party]
 
-execute as @e[team=illager_party] at @s if entity @a[distance=..128] positioned ~-20 ~-2 ~-20 if entity @e[dx=48,dz=48,dy=8,team=undead-arthropod_party,limit=1,sort=nearest] run damage @s 0.0 minecraft:explosion by @e[dx=48,dz=48,dy=8,team=undead-arthropod_party,limit=1,sort=nearest]
-execute as @e[team=illager_party] at @s if entity @a[distance=..128] positioned ~-20 ~-2 ~-20 if entity @e[dx=48,dz=48,dy=8,team=villager_party,limit=1,sort=nearest] run damage @s 0.0 minecraft:explosion by @e[dx=48,dz=48,dy=8,team=villager_party,limit=1,sort=nearest]
-execute as @e[team=illager_party] at @s if entity @a[distance=..128] positioned ~-20 ~-2 ~-20 if entity @e[dx=48,dz=48,dy=8,team=piglin_party,limit=1,sort=nearest] run damage @s 0.0 minecraft:explosion by @e[dx=48,dz=48,dy=8,team=piglin_party,limit=1,sort=nearest]
+execute if entity @s[team=villager_party,type=!villager] at @s store success score @s track run damage @s 0.0 minecraft:explosion by @n[distance=..12,team=undead-arthropod_party]
+execute if entity @s[team=villager_party,type=!villager] at @s store success score @s track run damage @s 0.0 minecraft:explosion by @n[distance=..12,team=illager_party]
+execute if entity @s[team=villager_party,type=!villager] at @s store success score @s track run damage @s 0.0 minecraft:explosion by @n[distance=..12,team=piglin_party]
 
-
-execute as @e[team=villager_party,type=!villager] at @s if entity @a[distance=..128] positioned ~-20 ~-2 ~-20 if entity @e[dx=48,dz=48,dy=8,team=undead-arthropod_party,limit=1,sort=nearest] run damage @s 0.0 minecraft:explosion by @e[dx=48,dz=48,dy=8,team=undead-arthropod_party,limit=1,sort=nearest]
-execute as @e[team=villager_party,type=!villager] at @s if entity @a[distance=..128] positioned ~-20 ~-2 ~-20 if entity @e[dx=48,dz=48,dy=8,team=illager_party,limit=1,sort=nearest] run damage @s 0.0 minecraft:explosion by @e[dx=48,dz=48,dy=8,team=illager_party,limit=1,sort=nearest]
-execute as @e[team=villager_party,type=!villager] at @s if entity @a[distance=..128] positioned ~-20 ~-2 ~-20 if entity @e[dx=48,dz=48,dy=8,team=piglin_party,limit=1,sort=nearest] run damage @s 0.0 minecraft:explosion by @e[dx=48,dz=48,dy=8,team=piglin_party,limit=1,sort=nearest]
-
-
-execute as @e[team=piglin_party] at @s if entity @a[distance=..128] positioned ~-20 ~-2 ~-20 if entity @e[dx=48,dz=48,dy=8,team=undead-arthropod_party,limit=1,sort=nearest] run damage @s 0.0 minecraft:explosion by @e[dx=48,dz=48,dy=8,team=undead-arthropod_party,limit=1,sort=nearest]
-execute as @e[team=piglin_party] at @s if entity @a[distance=..128] positioned ~-20 ~-2 ~-20 if entity @e[dx=48,dz=48,dy=8,team=illager_party,limit=1,sort=nearest] run damage @s 0.0 minecraft:explosion by @e[dx=48,dz=48,dy=8,team=illager_party,limit=1,sort=nearest]
-execute as @e[team=piglin_party] at @s if entity @a[distance=..128] positioned ~-20 ~-2 ~-20 if entity @e[dx=48,dz=48,dy=8,team=villager_party,limit=1,sort=nearest] run damage @s 0.0 minecraft:explosion by @e[dx=48,dz=48,dy=8,team=villager_party,limit=1,sort=nearest]
-
+execute if entity @s[team=piglin_party,tag=!captain] at @s store success score @s track run damage @s 0.0 minecraft:explosion by @n[distance=..12,team=undead-arthropod_party]
+execute if entity @s[team=piglin_party,tag=!captain] at @s store success score @s track run damage @s 0.0 minecraft:explosion by @n[distance=..12,team=illager_party]
+execute if entity @s[team=piglin_party,tag=!captain] at @s store success score @s track run damage @s 0.0 minecraft:explosion by @n[distance=..12,team=villager_party]
 
 
 #execute at @a run effect give @e[team=undead-arthropod_party,distance=..20] glowing 3 0 true
