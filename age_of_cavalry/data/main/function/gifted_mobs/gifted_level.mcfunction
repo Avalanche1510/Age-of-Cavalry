@@ -1,3 +1,4 @@
+execute if entity @s[tag=soldier] run scoreboard players set @s isGifted -1
 execute unless score @s isGifted matches -1..1 run execute store result score @s isGifted run random value 101..200
 execute if score @n[type=armor_stand,tag=record] difficulty matches 1 run execute if score @s isGifted matches 101..112 run scoreboard players set @s isGifted 1
 execute if score @n[type=armor_stand,tag=record] difficulty matches 2 run execute if score @s isGifted matches 101..124 run scoreboard players set @s isGifted 1

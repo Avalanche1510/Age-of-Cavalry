@@ -15,6 +15,8 @@ execute as @n[type=armor_stand,tag=col,tag=initialized] at @s if score @s c_col 
 
 # 当前行列未满则递归执行
 execute as @n[type=armor_stand,tag=col,tag=initialized] at @s unless score @s c_col = @s col run function main:army/formation/dense_square
+execute as @n[type=armor_stand,tag=col,tag=initialized] at @s if score @s c_col = @s col run function main:instant_detection/team_join
+execute as @n[type=armor_stand,tag=col,tag=initialized] at @s if score @s c_col = @s col run execute as @e[distance=..64,tag=soldier,tag=!has_loot] run function main:gifted_mobs/assign_loot
 execute as @n[type=armor_stand,tag=col,tag=initialized] at @s if score @s c_col = @s col run kill @s 
 
 
