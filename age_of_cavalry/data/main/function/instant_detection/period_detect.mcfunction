@@ -11,6 +11,7 @@ execute if score @s period matches 12 run function main:period_detection/cost
 execute if score @s period matches 13 run function main:period_detection/entity_spawning_feature
 execute if score @s period matches 15 run function main:period_detection/clear_arrows
 execute if score @s period matches 17 run function main:period_detection/team_clash
+execute if score @s period matches 19 run function main:period_detection/near_death_experience
 execute if score @s period matches 20 run scoreboard players set @s period 0
 # 320tick 计时检测
 scoreboard players add @s longPeriod 1

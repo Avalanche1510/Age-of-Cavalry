@@ -16,6 +16,10 @@ execute as @a if entity @s[level=20..29] run attribute @s minecraft:attack_damag
 execute as @a if entity @s[level=30..] run attribute @s minecraft:max_health base set 40 
 execute as @a if entity @s[level=30..] run attribute @s minecraft:movement_speed base set 0.130
 execute as @a if entity @s[level=30..] run attribute @s minecraft:attack_damage base set 4
+execute as @a if entity @s[level=50..,tag=!near-death] run tellraw @s {"text":"重伤濒死对你而言，已不过是一种司空见惯的日常了。","color":"red"}
+execute as @a if entity @s[level=50..,tag=!near-death] run tellraw @s {"text":"[濒死体验]生效: 血量越低，抗性越高...","color":"gold"}
+execute as @a if entity @s[level=50..] run tag @s add near-death
 
+execute as @a if entity @s[level=..49] run tag @s remove near-death
 execute as @a if entity @s[level=..29] run attribute @s minecraft:attack_speed modifier remove attack_speed
 execute as @a if entity @s[level=30..] run attribute @s minecraft:attack_speed modifier add attack_speed 0.24 add_multiplied_total
