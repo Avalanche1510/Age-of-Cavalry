@@ -6,10 +6,10 @@ execute as @n[type=armor_stand,tag=row,tag=!initialized] run scoreboard players 
 execute as @n[type=armor_stand,tag=row,tag=!initialized] run tag @s add initialized
 
 # 执行
-execute as @n[type=armor_stand,tag=row,tag=initialized] at @s if score @s c_row < @s row run tp ~1 ~ ~
+execute as @n[type=armor_stand,tag=row,tag=initialized] at @s if score @s c_row < @s row run tp ~3 ~ ~
 execute as @n[type=armor_stand,tag=row,tag=initialized] at @s if score @s c_row < @s row run function main:army/soldiers/select_soldiers
 execute as @n[type=armor_stand,tag=row,tag=initialized] at @s if score @s c_row < @s row run scoreboard players add @s c_row 1
 
 # 当前行列未满则递归执行
-execute as @n[type=armor_stand,tag=row,tag=initialized] at @s unless score @s c_row = @s row run function main:army/formation/dense_line
+execute as @n[type=armor_stand,tag=row,tag=initialized] at @s unless score @s c_row = @s row run function main:army/formation/sparse_line
 execute as @n[type=armor_stand,tag=row,tag=initialized] at @s if score @s c_row = @s row run kill @s 

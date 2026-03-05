@@ -5,12 +5,12 @@ execute if entity @e[type=armor_stand,tag=record] run execute as @e[type=armor_s
 execute if entity @e[type=armor_stand,tag=record] run execute as @e[type=armor_stand,tag=record] at @s run function main:instant_detection/lightsource_detect
 execute if entity @e[type=armor_stand,tag=record] run execute as @e[type=armor_stand,tag=record] at @s run function main:instant_detection/ride
 execute if entity @e[type=armor_stand,tag=record] run execute as @e[type=armor_stand,tag=record] at @s run function main:instant_detection/horn
+execute if entity @e[type=armor_stand,tag=record] run execute as @e[type=armor_stand,tag=record] at @s run function main:instant_detection/defined_entities
 execute if entity @e[type=armor_stand,tag=record] run execute if entity @e[type=happy_ghast] as @e[type=armor_stand,tag=record] at @s run function main:instant_detection/happy_ghast
 #execute as @e[type=ender_pearl] at @s run data modify entity @s Owner[0] set from entity @n[type=!item,type=!ender_pearl,type=!armor_stand] UUID[0]
 #execute as @e[type=ender_pearl] at @s run data modify entity @s Owner[1] set from entity @n[type=!item,type=!ender_pearl,type=!armor_stand] UUID[1]
 #execute as @e[type=ender_pearl] at @s run data modify entity @s Owner[2] set from entity @n[type=!item,type=!ender_pearl,type=!armor_stand] UUID[2]
 #execute as @e[type=ender_pearl] at @s run data modify entity @s Owner[3] set from entity @n[type=!item,type=!ender_pearl,type=!armor_stand] UUID[3]
-
 
 execute as @e[type=armor_stand,tag=record] at @s if entity @p[distance=..16] run data merge entity @s {Invisible:0b,CustomNameVisible:1b}
 execute as @e[type=armor_stand,tag=record] at @s unless entity @p[distance=..16] run data merge entity @s {Invisible:1b,CustomNameVisible:0b}

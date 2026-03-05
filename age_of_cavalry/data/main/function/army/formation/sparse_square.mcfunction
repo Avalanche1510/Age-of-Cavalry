@@ -8,12 +8,12 @@ execute as @n[type=armor_stand,tag=col,tag=!initialized] run scoreboard players 
 execute as @n[type=armor_stand,tag=col,tag=!initialized] run tag @s add initialized
 
 # 执行
-execute as @n[type=armor_stand,tag=col,tag=initialized] at @s if score @s c_col < @s col run tp ~ ~ ~1
-execute as @n[type=armor_stand,tag=col,tag=initialized] at @s if score @s c_col < @s col run function main:army/formation/dense_line
+execute as @n[type=armor_stand,tag=col,tag=initialized] at @s if score @s c_col < @s col run tp ~ ~ ~3
+execute as @n[type=armor_stand,tag=col,tag=initialized] at @s if score @s c_col < @s col run function main:army/formation/sparse_line
 execute as @n[type=armor_stand,tag=col,tag=initialized] at @s if score @s c_col < @s col run scoreboard players add @s c_col 1
 
 # 当前行列未满则递归执行
-execute as @n[type=armor_stand,tag=col,tag=initialized] at @s unless score @s c_col = @s col run function main:army/formation/dense_square
+execute as @n[type=armor_stand,tag=col,tag=initialized] at @s unless score @s c_col = @s col run function main:army/formation/sparse_square
 execute as @n[type=armor_stand,tag=col,tag=initialized] at @s if score @s c_col = @s col run function main:instant_detection/team_join
 execute as @n[type=armor_stand,tag=col,tag=initialized] at @s if score @s c_col = @s col run execute as @e[distance=..64,tag=soldier,tag=!has_attributes,tag=normal_mob] run function main:army/attribute_type/normal
 execute as @n[type=armor_stand,tag=col,tag=initialized] at @s if score @s c_col = @s col run execute as @e[distance=..64,tag=soldier,tag=!has_attributes,tag=elite_mob] run function main:army/attribute_type/elite

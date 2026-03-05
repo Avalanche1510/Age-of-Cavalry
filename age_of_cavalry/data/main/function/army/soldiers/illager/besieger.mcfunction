@@ -1,0 +1,1 @@
+summon ravager ~ ~ ~ {Tags:["soldier","normal_mob","assassin"],Passengers:[{id:"minecraft:pillager",Tags:["soldier","elite_mob","balanced","besieger"],CustomName:"攻城者"}]}

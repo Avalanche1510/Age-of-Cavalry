@@ -1,0 +1,1 @@
+summon ravager ~ ~ ~ {Tags:["soldier","normal_mob","berserker"],Passengers:[{id:"minecraft:evoker",Tags:["soldier","normal_mob","archer","omen_evoker"],CustomName:"灾厄主教"}]}
