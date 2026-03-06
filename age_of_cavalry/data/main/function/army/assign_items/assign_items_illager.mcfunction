@@ -4,7 +4,7 @@ execute if entity @s[tag=firework_pillager] run data modify entity @s equipment.
 execute if entity @s[tag=firework_pillager] run data modify entity @s equipment.legs set value {id:"minecraft:iron_leggings",components:{"minecraft:enchantments":{"minecraft:blast_protection":4,"minecraft:unbreaking":3}}}
 execute if entity @s[tag=firework_pillager] run data modify entity @s equipment.feet set value {id:"minecraft:iron_boots",components:{"minecraft:enchantments":{"minecraft:blast_protection":4,"minecraft:unbreaking":3}}}
 execute if entity @s[tag=firework_pillager] run data modify entity @s equipment.mainhand set value {id:"minecraft:crossbow",components:{"minecraft:lore":[{"text":"反改装","color":"red","bold":true}],"minecraft:custom_name":"炮弩","minecraft:rarity":rare,"minecraft:repair_cost":99999,"minecraft:enchantments":{"minecraft:quick_charge":2,"minecraft:unbreaking":3,"minecraft:punch":2,"minecraft:flame":1,"minecraft:power":5,"minecraft:piercing":5}}}
-execute if entity @s[tag=firework_pillager] run data modify entity @s equipment.offhand set value {id:"minecraft:firework_rocket",count:8b,components:{"minecraft:rarity":epic,"minecraft:custom_name":'"弩炮散弹"'}}
+execute if entity @s[tag=firework_pillager] run data modify entity @s equipment.offhand set value {id:"minecraft:firework_rocket",count:8b,components:{"minecraft:rarity":epic,"minecraft:custom_name":"弩炮散弹"}}
 execute if entity @s[tag=firework_pillager] run effect give @s regeneration infinite 1
 execute if entity @s[tag=firework_pillager] on vehicle run effect give @s regeneration infinite 1
 
@@ -50,7 +50,6 @@ execute if entity @s[tag=besieger] run data modify entity @s equipment.legs set 
 execute if entity @s[tag=besieger] run data modify entity @s equipment.feet set value {id:"minecraft:iron_boots",components:{"minecraft:enchantments":{"minecraft:blast_protection":4,"minecraft:unbreaking":3}}}
 execute if entity @s[tag=besieger] run data modify entity @s equipment.mainhand set value {id:"minecraft:crossbow",components:{"minecraft:enchantments":{"minecraft:quick_charge":2}}}
 execute if entity @s[tag=besieger] run data modify entity @s equipment.offhand set value {id:"minecraft:spectral_arrow",count:16b,components:{"minecraft:rarity":"epic","minecraft:custom_name":"爆炸箭"}}
-
 
 #data merge entity @s {equipment:{chest:{components:{"minecraft:trim":{material:"minecraft:resin",pattern:"minecraft:snout"}}}}}
 #data merge entity @s {equipment:{chest:{components:{"minecraft:trim":{material:"minecraft:emerald",pattern:"minecraft:tide"}}}}}

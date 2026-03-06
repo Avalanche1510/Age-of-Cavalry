@@ -1,0 +1,5 @@
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:spectral_arrow"}}] unless score @s isrefined matches 1 run data merge entity @s {Item:{components:{"minecraft:rarity":"epic","minecraft:custom_name":"爆炸箭"}}}
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:spectral_arrow"}}] at @s unless score @s isrefined matches 1 run kill @n[type=item,nbt={Item:{count:1,id:"minecraft:fire_charge"}}]
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:spectral_arrow"}}] at @s unless score @s isrefined matches 1 run particle minecraft:flame ~ ~ ~ 0.24 0.24 0.24 0.3 12 force
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:spectral_arrow"}}] at @s unless score @s isrefined matches 1 run execute as @a[distance=..8] run playsound minecraft:item.firecharge.use master @s ~ ~ ~ 1 1 0.1
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:spectral_arrow"}}] unless score @s isrefined matches 1 run scoreboard players add @s isrefined 1

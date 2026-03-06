@@ -1,0 +1,5 @@
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:firework_rocket"}}] unless score @s isrefined matches 1 run data merge entity @s {Item:{components:{"minecraft:rarity":epic,"minecraft:custom_name":"弩炮散弹"}}}
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:firework_rocket"}}] at @s unless score @s isrefined matches 1 run kill @n[type=item,nbt={Item:{count:1,id:"minecraft:tnt"}}]
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:firework_rocket"}}] at @s unless score @s isrefined matches 1 run particle minecraft:explosion ~ ~ ~ 0.24 0.24 0.24 0.3 12 force
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:firework_rocket"}}] at @s unless score @s isrefined matches 1 run execute as @a[distance=..8] run playsound minecraft:entity.generic.explode master @s ~ ~ ~ 1 1 0.1
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:firework_rocket"}}] unless score @s isrefined matches 1 run scoreboard players add @s isrefined 1
