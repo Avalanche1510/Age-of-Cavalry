@@ -1,8 +1,8 @@
-summon pillager ~ ~ ~ {Tags:["notCaptain"],equipment:{mainhand:{id:"minecraft:crossbow",count:1b}}}
-summon pillager ~ ~ ~ {Tags:["notCaptain"],equipment:{mainhand:{id:"minecraft:crossbow",count:1b}}}
-summon pillager ~ ~ ~ {Tags:["notCaptain"],equipment:{mainhand:{id:"minecraft:crossbow",count:1b}}}
-summon pillager ~ ~ ~ {Tags:["notCaptain"],equipment:{mainhand:{id:"minecraft:crossbow",count:1b}}}
-summon vindicator ~ ~ ~ {Tags:["notCaptain"],equipment:{mainhand:{id:"minecraft:iron_axe",count:1b}}}
-summon vindicator ~ ~ ~ {Tags:["notCaptain"],equipment:{mainhand:{id:"minecraft:iron_axe",count:1b}}}
 summon evoker ~ ~ ~ {Tags:["captain"]}
-summon witch ~ ~ ~ {Tags:["has_squad","notCaptain"]}
+execute as @n[tag=captain,type=evoker,tag=!summon_squad] at @s run function main:squad/reinforced_squad/unit/illager_unit/select_general
+execute as @n[tag=captain,type=evoker,tag=!summon_squad] at @s run function main:squad/reinforced_squad/unit/illager_unit/select_general
+execute as @n[tag=captain,type=evoker,tag=!summon_squad] at @s run function main:squad/reinforced_squad/unit/illager_unit/select_general
+execute as @n[tag=captain,type=evoker,tag=!summon_squad] at @s run function main:squad/reinforced_squad/unit/illager_unit/select_general
+execute as @n[tag=captain,type=evoker,tag=!summon_squad] at @s run function main:squad/reinforced_squad/unit/illager_unit/select_general
+execute as @n[tag=captain,type=evoker,tag=!summon_squad] at @s run function main:squad/reinforced_squad/unit/illager_unit/select_general
+execute as @n[tag=captain,type=evoker,tag=!summon_squad] run tag @s add summon_squad

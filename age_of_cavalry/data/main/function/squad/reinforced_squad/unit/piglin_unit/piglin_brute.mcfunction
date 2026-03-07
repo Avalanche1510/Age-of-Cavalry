@@ -1,0 +1,1 @@
+summon piglin_brute ~ ~ ~ {Tags:["notCaptain"],IsImmuneToZombification:1b,equipment:{mainhand:{id:"minecraft:golden_axe",count:1b}}}

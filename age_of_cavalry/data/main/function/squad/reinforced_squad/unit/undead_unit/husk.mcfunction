@@ -1,0 +1,1 @@
+summon husk ~ ~ ~ {Tags:["notCaptain","battle_unit"],equipment:{mainhand:{id:"minecraft:stone_spear",count:1b}}}

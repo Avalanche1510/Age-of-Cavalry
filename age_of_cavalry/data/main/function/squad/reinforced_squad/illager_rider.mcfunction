@@ -1,3 +1,5 @@
-function main:knight/illager/pillager_knight
-function main:knight/illager/pillager_knight
-summon evoker ~ ~ ~ {Tags:["captain"]}
+summon ravager ~ ~ ~ {Passengers:[{Tags:["battle_unit","captain"],id:"minecraft:evoker"}]}
+execute as @n[type=ravager,tag=!summon_squad] at @s run function main:squad/reinforced_squad/unit/illager_unit/select_knights
+execute as @n[type=ravager,tag=!summon_squad] at @s run function main:squad/reinforced_squad/unit/illager_unit/select_knights
+execute as @n[type=ravager,tag=!summon_squad] at @s run function main:squad/reinforced_squad/unit/illager_unit/select_knights
+execute as @n[type=ravager,tag=!summon_squad] run tag @s add summon_squad

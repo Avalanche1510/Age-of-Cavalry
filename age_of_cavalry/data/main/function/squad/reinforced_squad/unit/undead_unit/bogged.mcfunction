@@ -1,0 +1,1 @@
+summon bogged ~ ~ ~ {Tags:["notCaptain","battle_unit"],equipment:{mainhand:{id:"minecraft:bow",count:1b}}}

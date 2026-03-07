@@ -1,0 +1,1 @@
+summon piglin ~ ~ ~ {IsImmuneToZombification:1b,Tags:["has_guard","notCaptain","battle_unit"],equipment:{mainhand:{id:"minecraft:golden_spear",count:1b}}}

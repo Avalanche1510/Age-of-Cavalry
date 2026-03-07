@@ -48,9 +48,11 @@ scoreboard objectives add c_col dummy "current column"
 scoreboard objectives add SoldierType dummy "soldier type"
 scoreboard objectives add track dummy "success tracking?"
 scoreboard objectives add TrackCD dummy "tracking CD"
+scoreboard objectives add squadNum dummy "random squad"
 
 execute unless entity @e[type=armor_stand,tag=record] run say 数据包尚未完成手动初始化。
 execute unless entity @e[type=armor_stand,tag=record] run say 请在创造模式下输入 function main:initiate/create_bot 以完成初始化。
+
 
 
 team add rest "CD team"
@@ -64,3 +66,14 @@ team add illager_party "illager party"
 team modify illager_party color dark_blue
 team add piglin_party "piglin party"
 team modify piglin_party color gold
+
+# 世界动荡等级初始化
+bossbar add world_turbulence {text:"世界动荡等级",color:"white"}
+bossbar set world_turbulence max 600
+bossbar set world_turbulence style notched_6
+# 田园时代
+# 边疆来信
+# 风起云涌
+# 山雨欲来
+# 大厦将倾
+# 战争前夜

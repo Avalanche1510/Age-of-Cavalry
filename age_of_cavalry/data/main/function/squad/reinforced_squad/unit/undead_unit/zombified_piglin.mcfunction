@@ -1,0 +1,1 @@
+summon zombified_piglin ~ ~ ~ {Tags:["notCaptain","battle_unit"],equipment:{mainhand:{id:"minecraft:golden_sword",count:1b}}}

@@ -1,0 +1,1 @@
+summon drowned ~ ~ ~ {Tags:["notCaptain","battle_unit"],equipment:{mainhand:{id:"minecraft:copper_axe",count:1b}}}
