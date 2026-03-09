@@ -30,6 +30,7 @@ execute if entity @s[tag=captain] run function main:squad/flags
 execute if score @s isGifted matches 1 run scoreboard players set @s skillRandom 0
 execute if score @s isGifted matches 1 run scoreboard players set @s skillCD 0
 execute if score @s isGifted matches 1 run data merge entity @s {Health:1000.0f,drop_chances:{feet:0.5f,legs:0.5f,chest:0.5f,head:0.5f,mainhand:0.5f,offhand:0.5f},ArmorDropChances:[0.25f,0.25f,0.25f,0.25f]}
+execute if score @s isGifted matches 1 store result score @s maxHealth run data get entity @s Health 0.5
 execute if entity @s[tag=armor,tag=!collecter] run data merge entity @s {CanPickUpLoot:true}
 execute if entity @s[tag=collecter] run data merge entity @s {CanPickUpLoot:false}
 execute if score @s isGifted matches 1 run scoreboard players set @s isGifted -1

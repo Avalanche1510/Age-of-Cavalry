@@ -118,4 +118,6 @@ execute unless entity @s[tag=!miner,tag=!lumberjack,tag=!farmer] run tag @s add 
 
 execute store result score @s[tag=armor,tag=!collecter,tag=!notCaptain] itemRandom run random value 1..100
 execute at @s if score @s[tag=armor,tag=!collecter,tag=!notCaptain] itemRandom matches 1..10 run tag @s add captain 
+execute if entity @s[tag=captain,team=illager_party] run data modify entity @s PatrolLeader set value 1b
+execute if entity @s[tag=captain,team=illager_party] run data modify entity @s Patrolling set value 1b
 execute at @s if entity @s[tag=!collecter,tag=captain] run function main:squad/recruit_teammate

@@ -33,5 +33,9 @@ execute if entity @s[tag=normal_mob,type=breeze] run data merge entity @s {Death
 execute if entity @s[tag=elite_mob,type=breeze] run data merge entity @s {DeathLootTable:"mobs:entities/breeze/elite"}
 execute if entity @s[tag=legend_mob,type=breeze] run data merge entity @s {DeathLootTable:"mobs:entities/breeze/legend"}
 
+execute if entity @s[tag=normal_mob,type=iron_golem] run data merge entity @s {DeathLootTable:"mobs:entities/iron_golem/normal"}
+execute if entity @s[tag=elite_mob,type=iron_golem] run data merge entity @s {DeathLootTable:"mobs:entities/iron_golem/elite"}
+execute if entity @s[tag=legend_mob,type=iron_golem] run data merge entity @s {DeathLootTable:"mobs:entities/iron_golem/legend"}
+
 
 execute if entity @s[tag=soldier] run tag @s add has_loot

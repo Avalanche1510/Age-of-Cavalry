@@ -6,11 +6,13 @@ execute if score @s period matches 3 run function main:period_detection/animals_
 execute if score @s period matches 5 run function main:period_detection/check_gifted
 execute if score @s period matches 7 run function main:period_detection/levelup
 execute if score @s period matches 9 run function main:period_detection/compass
+execute if score @s period matches 10 run function main:period_detection/tension
 execute if score @s period matches 11 run function main:period_detection/cavalry_check
 execute if score @s period matches 12 run function main:period_detection/cost
 execute if score @s period matches 13 run function main:period_detection/entity_spawning_feature
 execute if score @s period matches 15 run function main:period_detection/clear_arrows
 execute if score @s period matches 17 run function main:period_detection/team_clash
+execute if score @s period matches 18 run function main:period_detection/turbulence_stages
 execute if score @s period matches 19 run function main:period_detection/near_death_experience
 execute if score @s period matches 20 run scoreboard players set @s period 0
 # 320tick 计时检测
@@ -20,6 +22,7 @@ execute if score @s longPeriod matches 320 run scoreboard players set @s longPer
 # 1 min 计时检测
 scoreboard players add @s MinPeriod 1
 execute if score @s MinPeriod matches 1 run execute as @e[tag=captain] run function main:squad/recruit_teammate
+execute if score @s MinPeriod matches 301 run function main:period_detection/turbulence_changes
 execute if score @s MinPeriod matches 601 run execute as @e[tag=captain] run function main:squad/recruit_teammate
 execute if score @s MinPeriod matches 1200 run scoreboard players set @s MinPeriod 0
 

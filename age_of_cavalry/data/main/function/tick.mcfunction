@@ -14,3 +14,5 @@ execute if entity @e[type=armor_stand,tag=record] run execute if entity @e[type=
 
 execute as @e[type=armor_stand,tag=record] at @s if entity @p[distance=..16] run data merge entity @s {Invisible:0b,CustomNameVisible:1b}
 execute as @e[type=armor_stand,tag=record] at @s unless entity @p[distance=..16] run data merge entity @s {Invisible:1b,CustomNameVisible:0b}
+
+bossbar set world_turbulence players @a

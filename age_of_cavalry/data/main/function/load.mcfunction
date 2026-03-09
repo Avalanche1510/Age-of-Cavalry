@@ -28,6 +28,7 @@ scoreboard objectives add guardCD dummy "Guard CD"
 scoreboard objectives add splitCD dummy "Split CD"
 scoreboard objectives add lifeCD dummy "Life CD"
 scoreboard objectives add health dummy "Health"
+scoreboard objectives add maxHealth dummy "max health"
 scoreboard objectives add playerHealth health "Player Health"
 scoreboard objectives add ground dummy "Ground"
 scoreboard objectives add height dummy "height"
@@ -49,6 +50,16 @@ scoreboard objectives add SoldierType dummy "soldier type"
 scoreboard objectives add track dummy "success tracking?"
 scoreboard objectives add TrackCD dummy "tracking CD"
 scoreboard objectives add squadNum dummy "random squad"
+scoreboard objectives add turbulence dummy "turbulence level"
+scoreboard objectives add alarm dummy "alarm"
+
+scoreboard objectives add undead_tension dummy "undead tension"
+scoreboard objectives add illager_tension dummy "illager tension"
+scoreboard objectives add piglin_tension dummy "piglin tension"
+
+scoreboard objectives add undead_killed teamkill.dark_green "undead killed"
+scoreboard objectives add illager_killed teamkill.dark_blue "illager killed"
+scoreboard objectives add piglin_killed teamkill.gold "piglin killed"
 
 execute unless entity @e[type=armor_stand,tag=record] run say 数据包尚未完成手动初始化。
 execute unless entity @e[type=armor_stand,tag=record] run say 请在创造模式下输入 function main:initiate/create_bot 以完成初始化。
@@ -67,13 +78,3 @@ team modify illager_party color dark_blue
 team add piglin_party "piglin party"
 team modify piglin_party color gold
 
-# 世界动荡等级初始化
-bossbar add world_turbulence {text:"世界动荡等级",color:"white"}
-bossbar set world_turbulence max 600
-bossbar set world_turbulence style notched_6
-# 田园时代
-# 边疆来信
-# 风起云涌
-# 山雨欲来
-# 大厦将倾
-# 战争前夜

@@ -3,3 +3,7 @@ execute unless entity @e[type=armor_stand,tag=record] at @s run say 尚未部署
 execute as @e[type=armor_stand,tag=record] at @s run forceload remove ~-16 ~-16 ~16 ~16
 execute as @e[type=armor_stand,tag=record] at @s run kill @s
 scoreboard players set @e[type=armor_stand,tag=record] difficulty 0
+scoreboard players set @a undead_killed 0
+scoreboard players set @a illager_killed 0
+scoreboard players set @a piglin_killed 0
+bossbar remove world_turbulence
