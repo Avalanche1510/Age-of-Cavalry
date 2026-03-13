@@ -9,3 +9,5 @@ execute as @e[type=fireball,tag=explosive,tag=!momentum] at @s run kill @n[dista
 execute as @e[type=fireball,tag=explosive,tag=!momentum] at @s run tag @s add momentum
 
 execute as @e[type=spectral_arrow,name="穿甲箭",tag=!clear,nbt={item:{components:{"minecraft:rarity":"uncommon"}}}] at @s run particle minecraft:glow ~ ~ ~ 0 0 0 0 2 force
+
+# 
