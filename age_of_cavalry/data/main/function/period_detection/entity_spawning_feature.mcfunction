@@ -59,8 +59,11 @@ execute as @e[type=zombified_piglin,tag=!has_guard] at @s if dimension minecraft
 # execute as @e[type=zombified_piglin,tag=!has_guard] at @s if dimension minecraft:the_nether if score @s GuardRandom matches 1 run kill @s
 execute as @e[type=zombified_piglin,tag=!has_guard] at @s if dimension minecraft:the_nether if score @s GuardRandom matches 6..10 run tag @s add has_guard
 
+# 削弱恼鬼
+execute as @e[type=vex,tag=!weakened] at @s run data merge entity @s {life_ticks:400}
+execute as @e[type=vex,tag=!weakened] at @s run tag @s add weakened
 
 # 哨兵
-
 execute as @e[tag=overwatch,tag=!watching] at @s run data merge entity @s {PersistenceRequired:1b}
 execute as @e[tag=overwatch,tag=!watching] at @s run tag @s add watching
+

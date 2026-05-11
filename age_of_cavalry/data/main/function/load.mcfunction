@@ -53,9 +53,7 @@ scoreboard objectives add squadNum dummy "random squad"
 scoreboard objectives add turbulence dummy "turbulence level"
 scoreboard objectives add alarm dummy "alarm"
 
-scoreboard objectives add myX dummy "my X"
-scoreboard objectives add myY dummy "my Y"
-scoreboard objectives add myZ dummy "my Z"
+scoreboard objectives add Mxp teamkill.gold "multiplied xp"
 
 scoreboard objectives add undead_tension dummy "undead tension"
 scoreboard objectives add illager_tension dummy "illager tension"

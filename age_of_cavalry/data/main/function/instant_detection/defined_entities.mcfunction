@@ -10,4 +10,11 @@ execute as @e[type=fireball,tag=explosive,tag=!momentum] at @s run tag @s add mo
 
 execute as @e[type=spectral_arrow,name="穿甲箭",tag=!clear,nbt={item:{components:{"minecraft:rarity":"uncommon"}}}] at @s run particle minecraft:glow ~ ~ ~ 0 0 0 0 2 force
 
-# 
+# 混乱经验倍乘效果
+execute as @e[type=experience_orb,tag=!multiplied] if score @n[type=armor_stand,tag=record] difficulty matches 1 store result entity @s Value short 1.5 run data get entity @s Value 1
+execute as @e[type=experience_orb,tag=!multiplied] if score @n[type=armor_stand,tag=record] difficulty matches 2 store result entity @s Value short 2 run data get entity @s Value 1
+execute as @e[type=experience_orb,tag=!multiplied] if score @n[type=armor_stand,tag=record] difficulty matches 3 store result entity @s Value short 3 run data get entity @s Value 1
+execute as @e[type=experience_orb,tag=!multiplied] if score @n[type=armor_stand,tag=record] difficulty matches 4 store result entity @s Value short 4.5 run data get entity @s Value 1
+execute as @e[type=experience_orb,tag=!multiplied] if score @n[type=armor_stand,tag=record] difficulty matches 5 store result entity @s Value short 6.5 run data get entity @s Value 1
+execute as @e[type=experience_orb,tag=!multiplied] if score @n[type=armor_stand,tag=record] difficulty matches 6 store result entity @s Value short 9 run data get entity @s Value 1
+execute as @e[type=experience_orb,tag=!multiplied] run tag @s add multiplied
