@@ -19,6 +19,8 @@ execute as @e[type=armor_stand,tag=record] run bossbar set world_turbulence valu
 execute as @e[type=armor_stand,tag=record] run scoreboard players set @s turbulence 100
 execute as @e[type=armor_stand,tag=record] run function main:period_detection/turbulence_stages
 scoreboard players set @e[type=armor_stand,tag=record] difficulty 1
+scoreboard players set @e[type=armor_stand,tag=record] halt 0
+scoreboard players set @e[type=armor_stand,tag=record] last_stage 0
 execute as @e[type=armor_stand,tag=record] run scoreboard players set @s undead_tension 0
 execute as @e[type=armor_stand,tag=record] run scoreboard players set @s illager_tension 0
 execute as @e[type=armor_stand,tag=record] run scoreboard players set @s piglin_tension 0

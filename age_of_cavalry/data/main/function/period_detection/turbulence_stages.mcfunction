@@ -19,6 +19,18 @@ execute as @e[type=armor_stand,tag=record] if score @s turbulence matches 800..9
 execute as @e[type=armor_stand,tag=record] if score @s turbulence matches 1000..1199 run scoreboard players set @s difficulty 6
 
 
+execute as @e[type=armor_stand,tag=record] unless score @s last_stage = @s difficulty run scoreboard players set @s halt 300
+execute as @e[type=armor_stand,tag=record] unless score @s last_stage = @s difficulty run tellraw @a [{"text":"世界动荡等级发生变化，将暂时熔断！","color":"white"}]
+execute as @e[type=armor_stand,tag=record] unless score @s last_stage = @s difficulty run tellraw @a [{"text":"世界动荡值将于","color":"white"},{"score":{"name":"@s","objective":"halt"},"color":"red"},{"text":"秒后再次开始发生变化！","color":"white"}]
+
+execute as @e[type=armor_stand,tag=record] if score @s turbulence matches 0..199 run scoreboard players set @s last_stage 1
+execute as @e[type=armor_stand,tag=record] if score @s turbulence matches 200..399 run scoreboard players set @s last_stage 2
+execute as @e[type=armor_stand,tag=record] if score @s turbulence matches 400..599 run scoreboard players set @s last_stage 3
+execute as @e[type=armor_stand,tag=record] if score @s turbulence matches 600..799 run scoreboard players set @s last_stage 4
+execute as @e[type=armor_stand,tag=record] if score @s turbulence matches 800..999 run scoreboard players set @s last_stage 5
+execute as @e[type=armor_stand,tag=record] if score @s turbulence matches 1000..1199 run scoreboard players set @s last_stage 6
+
+
 execute as @e[type=armor_stand,tag=record] if score @s turbulence matches 0..199 run bossbar set world_turbulence color green
 execute as @e[type=armor_stand,tag=record] if score @s turbulence matches 200..399 run bossbar set world_turbulence color white
 execute as @e[type=armor_stand,tag=record] if score @s turbulence matches 400..599 run bossbar set world_turbulence color white
@@ -35,7 +47,7 @@ execute as @e[type=armor_stand,tag=record] if score @s turbulence matches 1000..
 # 战争前夜
 execute as @e[type=armor_stand,tag=record] if score @s turbulence matches 0..199 run bossbar set world_turbulence name {"text":"田园时代","color":"green"}
 execute as @e[type=armor_stand,tag=record] if score @s turbulence matches 200..399 run bossbar set world_turbulence name {"text":"边疆来信","color":"white"}
-execute as @e[type=armor_stand,tag=record] if score @s turbulence matches 400..599 run bossbar set world_turbulence name {"text":"风起云涌","color":"white"}
+execute as @e[type=armor_stand,tag=record] if score @s turbulence matches 400..599 run bossbar set world_turbulence name {"text":"风起云涌","color":"gray"}
 execute as @e[type=armor_stand,tag=record] if score @s turbulence matches 600..799 run bossbar set world_turbulence name {"text":"山雨欲来","color":"yellow"}
 execute as @e[type=armor_stand,tag=record] if score @s turbulence matches 800..999 run bossbar set world_turbulence name {"text":"大厦将倾","color":"red"}
 execute as @e[type=armor_stand,tag=record] if score @s turbulence matches 1000..1199 run bossbar set world_turbulence name {"text":"战争前夜","color":"dark_red"}

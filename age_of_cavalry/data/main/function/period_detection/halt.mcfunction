@@ -1,0 +1,1 @@
+execute as @n[type=armor_stand,tag=record] if score @s halt matches 1.. run scoreboard players remove @s halt 1
