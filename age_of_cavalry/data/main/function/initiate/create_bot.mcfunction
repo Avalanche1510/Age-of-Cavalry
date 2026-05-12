@@ -21,6 +21,7 @@ execute as @e[type=armor_stand,tag=record] run function main:period_detection/tu
 scoreboard players set @e[type=armor_stand,tag=record] difficulty 1
 scoreboard players set @e[type=armor_stand,tag=record] halt 0
 scoreboard players set @e[type=armor_stand,tag=record] last_stage 0
+scoreboard players set @e[type=armor_stand,tag=record] villager_count 0
 execute as @e[type=armor_stand,tag=record] run scoreboard players set @s undead_tension 0
 execute as @e[type=armor_stand,tag=record] run scoreboard players set @s illager_tension 0
 execute as @e[type=armor_stand,tag=record] run scoreboard players set @s piglin_tension 0

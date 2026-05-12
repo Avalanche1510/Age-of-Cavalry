@@ -24,6 +24,8 @@ execute as @e[type=snowball,tag=legend_snowball] at @s run effect give @e[distan
 
 
 execute as @e[type=snowball] at @s run particle snowflake ~ ~ ~ 0.15 0.15 0.15 0.01 1 force
+execute as @e[type=fireball] at @s run particle minecraft:lava ~ ~ ~ 0.15 0.15 0.15 0.01 1 force
+execute as @e[type=fireball] at @s run particle minecraft:flame ~ ~ ~ 0.15 0.15 0.15 0.01 2 force
 execute as @e[type=snowball,tag=thrown_by_golem] at @s run particle enchanted_hit ~ ~ ~ 0.05 0.05 0.05 0.01 4 force
 
 execute as @e[type=snowball,tag=thrown_by_golem,tag=!normal_snowball,tag=!elite_snowball,tag=!legend_snowball] at @s run execute as @e[distance=..2,team=!villager_party] run damage @s 1.0 minecraft:mob_attack by @n[type=snow_golem]

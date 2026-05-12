@@ -1,8 +1,8 @@
 # 加载提示
 title @a title {"text":"Age of Cavalry","color":"green","italic": 1b}
-say 已加载 骑兵时代 v1.0 数据包！
-say 作者: Avalanche1510
-say 需要调整怪物血量显示方式请按 I 键
+tellraw @a {"text":"已加载 骑兵时代 v1.0 数据包！","color":"green"}
+tellraw @a {"text":"作者: Avalanche1510","color":"yellow"}
+tellraw @a {"text":"需要调整怪物血量显示方式请按 I 键","color":"yellow"}
 execute as @a at @s run playsound entity.player.levelup master @s ~ ~ ~ 1 1 1
 
 # 初始化计分板
@@ -54,6 +54,12 @@ scoreboard objectives add turbulence dummy "turbulence level"
 scoreboard objectives add alarm dummy "alarm"
 scoreboard objectives add last_stage dummy "last stage"
 scoreboard objectives add halt dummy "halt"
+scoreboard objectives add last_region_type dummy "last region type"
+scoreboard objectives add region_random dummy "region random"
+scoreboard objectives add region_type dummy "region type"
+scoreboard objectives add region_id dummy "region id"
+scoreboard objectives add last_region_id dummy "last region id"
+scoreboard objectives add villager_count dummy "villager count"
 
 scoreboard objectives add Mxp teamkill.gold "multiplied xp"
 
@@ -65,8 +71,8 @@ scoreboard objectives add undead_killed teamkill.dark_green "undead killed"
 scoreboard objectives add illager_killed teamkill.dark_blue "illager killed"
 scoreboard objectives add piglin_killed teamkill.gold "piglin killed"
 
-execute unless entity @e[type=armor_stand,tag=record] run say 数据包尚未完成手动初始化。
-execute unless entity @e[type=armor_stand,tag=record] run say 请在创造模式下输入 function main:initiate/create_bot 以完成初始化。
+execute unless entity @e[type=armor_stand,tag=record] run tellraw @a {"text":"数据包尚未完成手动初始化。","color":"red"}
+execute unless entity @e[type=armor_stand,tag=record] run tellraw @a {"text":"请在创造模式下输入 function main:initiate/create_bot 以完成初始化。","color":"yellow"}
 
 
 
