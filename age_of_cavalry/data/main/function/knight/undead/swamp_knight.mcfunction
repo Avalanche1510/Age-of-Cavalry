@@ -1,1 +1,1 @@
-summon cave_spider ~ ~ ~ {Passengers:[{Tags:["battle_unit","notCaptain"],equipment:{mainhand:{id:"minecraft:bow",count:1b}},id:"minecraft:bogged"}]}
+summon cave_spider ~ ~ ~ {Passengers:[{Tags:["battle_unit","notCaptain"],equipment:{head:{id:"minecraft:copper_helmet",count:1},mainhand:{id:"minecraft:bow",count:1b}},id:"minecraft:bogged"}]}

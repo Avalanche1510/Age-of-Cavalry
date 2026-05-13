@@ -1,1 +1,1 @@
-summon husk ~ ~ ~ {Tags:["notCaptain","battle_unit"],equipment:{mainhand:{id:"minecraft:stone_spear",count:1b}}}
+summon husk ~ ~ ~ {Tags:["notCaptain","battle_unit"],equipment:{head:{id:"minecraft:golden_helmet",count:1},mainhand:{id:"minecraft:stone_spear",count:1b}}}

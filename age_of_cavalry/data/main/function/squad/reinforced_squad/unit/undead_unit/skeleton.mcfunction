@@ -1,1 +1,1 @@
-summon skeleton ~ ~ ~ {Tags:["notCaptain","battle_unit"],equipment:{mainhand:{id:"minecraft:bow",count:1b}}}
+summon skeleton ~ ~ ~ {Tags:["notCaptain","battle_unit"],equipment:{head:{id:"minecraft:iron_helmet",count:1},mainhand:{id:"minecraft:bow",count:1b}}}
