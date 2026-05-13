@@ -16,3 +16,5 @@ execute as @e[type=armor_stand,tag=record] at @s if entity @p[distance=..16] run
 execute as @e[type=armor_stand,tag=record] at @s unless entity @p[distance=..16] run data merge entity @s {Invisible:1b,CustomNameVisible:0b}
 
 bossbar set world_turbulence players @a
+
+execute if entity @e[type=armor_stand,tag=record] run execute as @e[type=armor_stand,tag=record] at @s run function main:musket_addon/bullet_particles

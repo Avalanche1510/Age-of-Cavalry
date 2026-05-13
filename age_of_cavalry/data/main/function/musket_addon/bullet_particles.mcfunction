@@ -1,0 +1,1 @@
+execute as @e[type=musketmod:bullet] at @s run particle minecraft:smoke ~ ~ ~ 0.2 0.2 0.2 0.01 5 force

@@ -28,10 +28,14 @@ execute as @e[type=fireball] at @s run particle minecraft:lava ~ ~ ~ 0.15 0.15 0
 execute as @e[type=fireball] at @s run particle minecraft:flame ~ ~ ~ 0.15 0.15 0.15 0.01 2 force
 execute as @e[type=snowball,tag=thrown_by_golem] at @s run particle enchanted_hit ~ ~ ~ 0.05 0.05 0.05 0.01 4 force
 
-execute as @e[type=snowball,tag=thrown_by_golem,tag=!normal_snowball,tag=!elite_snowball,tag=!legend_snowball] at @s run execute as @e[distance=..2,team=!villager_party] run damage @s 1.0 minecraft:mob_attack by @n[type=snow_golem]
-execute as @e[type=snowball,tag=normal_snowball] at @s run execute as @e[distance=..2,team=!villager_party] run damage @s 2.0 minecraft:mob_attack by @n[type=snow_golem]
-execute as @e[type=snowball,tag=elite_snowball] at @s run execute as @e[distance=..2,team=!villager_party] run damage @s 4.0 minecraft:mob_attack by @n[type=snow_golem]
-execute as @e[type=snowball,tag=legend_snowball] at @s run execute as @e[distance=..2,team=!villager_party] run damage @s 8.0 minecraft:mob_attack by @n[type=snow_golem]
+execute as @e[type=snowball,tag=thrown_by_golem,tag=!normal_snowball,tag=!elite_snowball,tag=!legend_snowball] at @s run execute as @e[distance=..2,team=!villager_party,type=!creeper] run damage @s 1.0 minecraft:mob_attack by @n[type=snow_golem]
+execute as @e[type=snowball,tag=normal_snowball] at @s run execute as @e[distance=..2,team=!villager_party,type=!creeper] run damage @s 2.0 minecraft:mob_attack by @n[type=snow_golem]
+execute as @e[type=snowball,tag=elite_snowball] at @s run execute as @e[distance=..2,team=!villager_party,type=!creeper] run damage @s 4.0 minecraft:mob_attack by @n[type=snow_golem]
+execute as @e[type=snowball,tag=legend_snowball] at @s run execute as @e[distance=..2,team=!villager_party,type=!creeper] run damage @s 8.0 minecraft:mob_attack by @n[type=snow_golem]
+execute as @e[type=snowball,tag=thrown_by_golem,tag=!normal_snowball,tag=!elite_snowball,tag=!legend_snowball] at @s run execute as @e[distance=..2,type=creeper] run damage @s 4.0 minecraft:mob_attack by @n[type=snow_golem]
+execute as @e[type=snowball,tag=normal_snowball] at @s run execute as @e[distance=..2,type=creeper] run damage @s 8.0 minecraft:mob_attack by @n[type=snow_golem]
+execute as @e[type=snowball,tag=elite_snowball] at @s run execute as @e[distance=..2,type=creeper] run damage @s 16.0 minecraft:mob_attack by @n[type=snow_golem]
+execute as @e[type=snowball,tag=legend_snowball] at @s run execute as @e[distance=..2,type=creeper] run damage @s 32.0 minecraft:mob_attack by @n[type=snow_golem]
 execute as @e[type=snow_golem,tag=temporary_golem] run scoreboard players add @s lifeCD 1
 execute as @e[type=snow_golem,tag=temporary_golem] if score @s lifeCD matches 3000.. run kill @s
 execute as @e[type=snow_golem] at @s run effect give @e[team=illager_party,distance=..16] glowing 2 0 true

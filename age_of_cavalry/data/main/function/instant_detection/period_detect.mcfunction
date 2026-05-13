@@ -21,6 +21,7 @@ execute if score @s period matches 20 run scoreboard players set @s period 0
 # 320tick 计时检测
 scoreboard players add @s longPeriod 1
 execute if score @s longPeriod matches 1 run function main:period_detection/better_witch
+execute if score @s longPeriod matches 160 run function main:period_detection/mob_spawn
 execute if score @s longPeriod matches 320 run scoreboard players set @s longPeriod 0
 # 1 min 计时检测
 scoreboard players add @s MinPeriod 1
