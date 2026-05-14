@@ -60,6 +60,7 @@ scoreboard objectives add region_type dummy "region type"
 scoreboard objectives add region_id dummy "region id"
 scoreboard objectives add last_region_id dummy "last region id"
 scoreboard objectives add villager_count dummy "villager count"
+scoreboard objectives add region_y dummy "region height"
 
 scoreboard objectives add illager_count dummy "illager count"
 scoreboard objectives add undead_count dummy "undead count"
