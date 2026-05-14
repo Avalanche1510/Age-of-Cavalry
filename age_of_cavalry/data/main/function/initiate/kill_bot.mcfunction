@@ -6,4 +6,5 @@ scoreboard players set @e[type=armor_stand,tag=record] difficulty 0
 scoreboard players set @a undead_killed 0
 scoreboard players set @a illager_killed 0
 scoreboard players set @a piglin_killed 0
+kill @e[type=marker,tag=region_center]
 bossbar remove world_turbulence

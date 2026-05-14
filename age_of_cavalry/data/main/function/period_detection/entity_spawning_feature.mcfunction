@@ -1,8 +1,8 @@
 # 坐骑动物获得更高属性，且需要在提高血量上限后设置完整的初始血量
-execute as @e[team=undead-arthropod_party,tag=!upgraded] run attribute @s minecraft:follow_range base set 24
-execute as @e[team=illager_party,tag=!upgraded] run attribute @s minecraft:follow_range base set 24
-execute as @e[team=villager_party,type=!villager,tag=!upgraded] run attribute @s minecraft:follow_range base set 24
-execute as @e[team=piglin_party,tag=!upgraded] run attribute @s minecraft:follow_range base set 24
+# execute as @e[team=undead-arthropod_party,tag=!upgraded] run attribute @s minecraft:follow_range base set 24
+# execute as @e[team=illager_party,tag=!upgraded] run attribute @s minecraft:follow_range base set 24
+# execute as @e[team=villager_party,type=!villager,tag=!upgraded] run attribute @s minecraft:follow_range base set 24
+# execute as @e[team=piglin_party,tag=!upgraded] run attribute @s minecraft:follow_range base set 24
 
 execute as @e[type=camel,tag=!upgraded] run attribute @s minecraft:movement_speed modifier add movement_speed 0.4 add_multiplied_total
 execute as @e[type=camel,tag=!upgraded] run attribute @s minecraft:max_health modifier add max_health 8 add_value
