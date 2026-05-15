@@ -1,5 +1,5 @@
 scoreboard players set @s undead_count 0
-execute as @e[team=undead-arthropod_party,distance=..192] run scoreboard players add @n[tag=region_center,tag=undead_owned] undead_count 1
+execute as @e[team=undead-arthropod_party,distance=..192] at @s run scoreboard players add @n[tag=region_center,tag=undead_owned] undead_count 1
 execute if score @s undead_count matches ..24 run summon marker ~ ~ ~ {Tags:["regional_undead"]}
 execute if score @s undead_count matches ..24 run summon marker ~ ~ ~ {Tags:["regional_undead"]}
 scoreboard players set @s undead_count 0

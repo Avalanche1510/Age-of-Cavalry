@@ -37,7 +37,7 @@ execute as @e[type=snowball,tag=normal_snowball] at @s run execute as @e[distanc
 execute as @e[type=snowball,tag=elite_snowball] at @s run execute as @e[distance=..2,type=creeper] run damage @s 16.0 minecraft:mob_attack by @n[type=snow_golem]
 execute as @e[type=snowball,tag=legend_snowball] at @s run execute as @e[distance=..2,type=creeper] run damage @s 32.0 minecraft:mob_attack by @n[type=snow_golem]
 execute as @e[type=snow_golem,tag=temporary_golem] run scoreboard players add @s lifeCD 1
-execute as @e[type=snow_golem,tag=temporary_golem] if score @s lifeCD matches 3000.. run kill @s
+execute as @e[type=snow_golem,tag=temporary_golem] if score @s lifeCD matches 3000.. run tp ~ -500 ~
 execute as @e[type=snow_golem] at @s run effect give @e[team=illager_party,distance=..16] glowing 2 0 true
 execute as @e[type=snow_golem] at @s run effect give @e[team=undead-arthropod_party,distance=..16] glowing 2 0 true
 execute as @e[type=snow_golem] at @s run effect give @e[team=piglin_party,distance=..16] glowing 2 0 true
