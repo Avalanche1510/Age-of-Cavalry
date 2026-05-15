@@ -27,6 +27,9 @@ execute as @e[type=snowball] at @s run particle snowflake ~ ~ ~ 0.15 0.15 0.15 0
 execute as @e[type=fireball] at @s run particle minecraft:lava ~ ~ ~ 0.15 0.15 0.15 0.01 1 force
 execute as @e[type=fireball] at @s run particle minecraft:flame ~ ~ ~ 0.15 0.15 0.15 0.01 2 force
 execute as @e[type=snowball,tag=thrown_by_golem] at @s run particle enchanted_hit ~ ~ ~ 0.05 0.05 0.05 0.01 4 force
+execute as @e[type=fireball,tag=explosive] store result score @s fire_ball_gravity run data get entity @s Motion[1] 1000
+execute as @e[type=fireball,tag=explosive] run scoreboard players remove @s fire_ball_gravity 32
+execute as @e[type=fireball,tag=explosive] store result entity @s Motion[1] double 0.001 run scoreboard players get @s fire_ball_gravity
 
 execute as @e[type=snowball,tag=thrown_by_golem,tag=!normal_snowball,tag=!elite_snowball,tag=!legend_snowball] at @s run execute as @e[distance=..2,team=!villager_party,type=!creeper] run damage @s 1.0 minecraft:mob_attack by @n[type=snow_golem]
 execute as @e[type=snowball,tag=normal_snowball] at @s run execute as @e[distance=..2,team=!villager_party,type=!creeper] run damage @s 2.0 minecraft:mob_attack by @n[type=snow_golem]
