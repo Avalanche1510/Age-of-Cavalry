@@ -6,5 +6,4 @@ execute if score @s golem_count matches ..16 run summon iron_golem ~ ~ ~ {Tags:[
 execute if score @s golem_count matches ..16 run summon iron_golem ~ ~ ~ {Tags:["regional_golem","limited"]}
 scoreboard players set @s golem_count 0
 spreadplayers ~ ~ 4 192 false @e[type=iron_golem,tag=regional_golem]
-execute as @e[type=iron_golem,tag=regional_golem,distance=..192] at @s run setblock ~ ~ ~ torch replace
 execute as @e[type=iron_golem,tag=regional_golem,distance=..192] run tag @s remove regional_golem
