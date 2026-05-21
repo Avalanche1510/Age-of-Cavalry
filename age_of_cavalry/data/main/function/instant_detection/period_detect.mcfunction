@@ -26,10 +26,12 @@ execute if score @s longPeriod matches 320 run scoreboard players set @s longPer
 scoreboard players add @s MinPeriod 1
 execute if score @s MinPeriod matches 1 run execute as @e[tag=captain] run function main:squad/recruit_teammate
 execute if score @s MinPeriod matches 301 run function main:period_detection/turbulence_changes
-execute if score @s MinPeriod matches 451 run function main:period_detection/mob_spawn
 execute if score @s MinPeriod matches 601 run execute as @e[tag=captain] run function main:squad/recruit_teammate
 execute if score @s MinPeriod matches 1200 run scoreboard players set @s MinPeriod 0
-
+# 5 min 计时检测
+scoreboard players add @s 5MinPeriod 1
+execute if score @s 5MinPeriod matches 1 run function main:period_detection/mob_spawn
+execute if score @s 5MinPeriod matches 6000 run scoreboard players set @s 5MinPeriod 0
 
 # 随机延时检测初始化
 execute as @e[team=undead-arthropod_party,tag=!cavalry,tag=!collecter,type=!spider,type=!cave_spider,type=!phantom] run tag @s add canRide
