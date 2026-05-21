@@ -75,9 +75,10 @@ scoreboard objectives add undead_tension dummy "undead tension"
 scoreboard objectives add illager_tension dummy "illager tension"
 scoreboard objectives add piglin_tension dummy "piglin tension"
 
-scoreboard objectives add undead_killed teamkill.dark_green "undead killed"
-scoreboard objectives add illager_killed teamkill.dark_blue "illager killed"
-scoreboard objectives add piglin_killed teamkill.gold "piglin killed"
+scoreboard objectives add reputation_in_piglin dummy "reputation in piglin"
+scoreboard objectives add reputation_in_undead dummy "reputation in undead"
+scoreboard objectives add reputation_in_illager dummy "reputation in illager"
+scoreboard objectives add reputation_in_villager dummy "reputation in villager"
 
 execute unless entity @n[type=armor_stand,tag=record] run tellraw @a {"text":"数据包尚未完成手动初始化。","color":"red"}
 execute unless entity @n[type=armor_stand,tag=record] run tellraw @a {"text":"请在创造模式下输入 function main:initiate/create_bot 以完成初始化。","color":"yellow"}

@@ -11,6 +11,5 @@ team join piglin_party @e[type=hoglin]
 team join piglin_party @e[type=piglin_brute]
 
 team join villager_party @e[type=villager]
-team join villager_party @e[type=wandering_trader]
 team join villager_party @e[type=iron_golem]
 team join villager_party @e[type=snow_golem]

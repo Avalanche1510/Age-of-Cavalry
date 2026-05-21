@@ -22,3 +22,5 @@ execute as @e[tag=!has_max_health,team=illager_party] unless score @s maxHealth 
 execute as @e[tag=!has_max_health,team=illager_party] unless score @s maxHealth matches -2147483648..2147483647 run tag @s add has_max_health
 execute as @e[tag=!has_max_health,team=piglin_party] unless score @s maxHealth matches -2147483648..2147483647 store result score @s maxHealth run data get entity @s Health 0.5
 execute as @e[tag=!has_max_health,team=piglin_party] unless score @s maxHealth matches -2147483648..2147483647 run tag @s add has_max_health
+execute as @e[tag=!has_max_health,team=villager_party] unless score @s maxHealth matches -2147483648..2147483647 store result score @s maxHealth run data get entity @s Health 0.5
+execute as @e[tag=!has_max_health,team=villager_party] unless score @s maxHealth matches -2147483648..2147483647 run tag @s add has_max_health
