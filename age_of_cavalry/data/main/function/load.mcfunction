@@ -62,7 +62,8 @@ scoreboard objectives add last_region_id dummy "last region id"
 scoreboard objectives add villager_count dummy "villager count"
 scoreboard objectives add region_y dummy "region height"
 scoreboard objectives add fire_ball_gravity dummy "fire ball gravity"
-
+scoreboard objectives add daytime dummy "day time"
+ 
 scoreboard objectives add illager_count dummy "illager count"
 scoreboard objectives add undead_count dummy "undead count"
 scoreboard objectives add golem_count dummy "golem count"
@@ -77,11 +78,11 @@ scoreboard objectives add undead_killed teamkill.dark_green "undead killed"
 scoreboard objectives add illager_killed teamkill.dark_blue "illager killed"
 scoreboard objectives add piglin_killed teamkill.gold "piglin killed"
 
-execute unless entity @e[type=armor_stand,tag=record] run tellraw @a {"text":"数据包尚未完成手动初始化。","color":"red"}
-execute unless entity @e[type=armor_stand,tag=record] run tellraw @a {"text":"请在创造模式下输入 function main:initiate/create_bot 以完成初始化。","color":"yellow"}
+execute unless entity @n[type=armor_stand,tag=record] run tellraw @a {"text":"数据包尚未完成手动初始化。","color":"red"}
+execute unless entity @n[type=armor_stand,tag=record] run tellraw @a {"text":"请在创造模式下输入 function main:initiate/create_bot 以完成初始化。","color":"yellow"}
 tellraw @a {"text":"可以创造模式下输入 function main:initiate/kill_bot 以解除，随后重新初始化。","color":"yellow"}
-execute unless entity @e[type=armor_stand,tag=record] run tellraw @a {"text":"这条提示可能由于单人模式下，重新进入世界时，处于非主世界的维度，而意外触发。","color":"white"}
-execute unless entity @e[type=armor_stand,tag=record] run tellraw @a {"text":"因此请确定真的没有初始化时再重新初始化！","color":"white"}
+execute unless entity @n[type=armor_stand,tag=record] run tellraw @a {"text":"这条提示可能由于单人模式下，重新进入世界时，处于非主世界的维度，而意外触发。","color":"white"}
+execute unless entity @n[type=armor_stand,tag=record] run tellraw @a {"text":"因此请确定真的没有初始化时再重新初始化！","color":"white"}
 
 
 team add rest "CD team"
