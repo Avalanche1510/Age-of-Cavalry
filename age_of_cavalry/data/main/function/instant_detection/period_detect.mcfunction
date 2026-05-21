@@ -1,6 +1,7 @@
 # 20tick 计时检测
 scoreboard players add @s period 1
 execute if score @s period matches 1 run function main:period_detection/items_refinement
+execute if score @s period matches 1 run function main:period_detection/disguise
 execute if score @s period matches 2 run function main:period_detection/cost
 execute if score @s period matches 3 run function main:period_detection/animals_effect
 execute if score @s period matches 4 run function main:period_detection/create_region
@@ -26,6 +27,7 @@ execute if score @s longPeriod matches 320 run scoreboard players set @s longPer
 # 1 min 计时检测
 scoreboard players add @s MinPeriod 1
 execute if score @s MinPeriod matches 1 run execute as @e[tag=captain] run function main:squad/recruit_teammate
+execute if score @s MinPeriod matches 151 run function main:period_detection/refresh_exposed
 execute if score @s MinPeriod matches 301 run function main:period_detection/turbulence_changes
 execute if score @s MinPeriod matches 601 run execute as @e[tag=captain] run function main:squad/recruit_teammate
 execute if score @s MinPeriod matches 901 run function main:period_detection/recover_reputation
