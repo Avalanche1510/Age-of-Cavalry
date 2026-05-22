@@ -64,6 +64,8 @@ scoreboard objectives add villager_count dummy "villager count"
 scoreboard objectives add region_y dummy "region height"
 scoreboard objectives add fire_ball_gravity dummy "fire ball gravity"
 scoreboard objectives add daytime dummy "day time"
+scoreboard objectives add trend_rate dummy "trend rate"
+
  
 scoreboard objectives add illager_count dummy "illager count"
 scoreboard objectives add undead_count dummy "undead count"

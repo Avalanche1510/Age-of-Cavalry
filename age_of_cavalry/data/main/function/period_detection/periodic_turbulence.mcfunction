@@ -1,0 +1,1 @@
+execute as @n[type=armor_stand,tag=record] if score @s halt matches 0 run execute if score @s turbulence matches 0..199 run scoreboard players remove @s turbulence 40

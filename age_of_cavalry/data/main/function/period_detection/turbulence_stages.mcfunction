@@ -19,9 +19,9 @@ execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 800..9
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 1000..1199 run scoreboard players set @s difficulty 6
 
 
-execute as @n[type=armor_stand,tag=record] if score @s last_stage < @s difficulty run scoreboard players set @s halt 300
-execute as @n[type=armor_stand,tag=record] if score @s last_stage < @s difficulty run tellraw @a [{"text":"世界动荡等级上升，将暂时熔断！","color":"white"}]
-execute as @n[type=armor_stand,tag=record] if score @s last_stage < @s difficulty run tellraw @a [{"text":"世界动荡值将于","color":"white"},{"score":{"name":"@s","objective":"halt"},"color":"red"},{"text":"秒后再次开始发生变化！","color":"white"}]
+execute as @n[type=armor_stand,tag=record] if score @s last_stage < @s difficulty if score @s difficulty matches 4..6 run scoreboard players set @s halt 300
+execute as @n[type=armor_stand,tag=record] if score @s last_stage < @s difficulty if score @s difficulty matches 4..6 run tellraw @a [{"text":"世界动荡等级上升，将暂时熔断！","color":"white"}]
+execute as @n[type=armor_stand,tag=record] if score @s last_stage < @s difficulty if score @s difficulty matches 4..6 run tellraw @a [{"text":"世界动荡值将于","color":"white"},{"score":{"name":"@s","objective":"halt"},"color":"red"},{"text":"秒后再次开始发生变化！","color":"white"}]
 
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 0..199 run scoreboard players set @s last_stage 1
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 200..399 run scoreboard players set @s last_stage 2
