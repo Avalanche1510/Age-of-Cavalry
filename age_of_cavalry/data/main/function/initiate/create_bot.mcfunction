@@ -25,3 +25,7 @@ execute as @n[type=armor_stand,tag=record] run scoreboard players set @n[type=ar
 execute as @n[type=armor_stand,tag=record] run scoreboard players set @s undead_tension 0
 execute as @n[type=armor_stand,tag=record] run scoreboard players set @s illager_tension 0
 execute as @n[type=armor_stand,tag=record] run scoreboard players set @s piglin_tension 0
+execute as @a run scoreboard players set @s reputation_in_illager 0
+execute as @a run scoreboard players set @s reputation_in_piglin 0
+execute as @a run scoreboard players set @s reputation_in_undead 0
+execute as @a run scoreboard players set @s reputation_in_villager 0
