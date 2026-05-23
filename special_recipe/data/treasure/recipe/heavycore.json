@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "A": "minecraft:gold_block",
-    "B": "minecraft:iron_block",
-    "C": "minecraft:ancient_debris"
+    "A": "minecraft:iron_block",
+    "B": "minecraft:netherite_ingot",
+    "C": "minecraft:gold_block"
   },
   "pattern": [
     "ABA",
