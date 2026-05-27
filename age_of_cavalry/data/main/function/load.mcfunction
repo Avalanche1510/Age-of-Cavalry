@@ -69,6 +69,7 @@ scoreboard objectives add trend_rate dummy "trend rate"
 scoreboard objectives add core_distance dummy "core distance"
 scoreboard objectives add tnt_num dummy "tnt num"
 scoreboard objectives add calculated_motion dummy "calculated motion"
+scoreboard objectives add tnt_depth dummy "tnt depth"
 scoreboard objectives add fishing_rod_usage minecraft.used:minecraft.fishing_rod "fishing rod usage"
  
 scoreboard objectives add illager_count dummy "illager count"

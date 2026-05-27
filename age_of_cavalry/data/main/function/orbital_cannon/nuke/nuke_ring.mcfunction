@@ -11,4 +11,4 @@ execute if score @s core_distance matches 8 as @n[type=tnt,tag=orbital] at @s ru
 execute if score @s core_distance matches 9 as @n[type=tnt,tag=orbital] at @s run tp ^ ^ ^8.1
 execute as @n[type=tnt,tag=orbital] run tag @s remove orbital
 execute if score @s tnt_num matches 1.. run scoreboard players remove @s tnt_num 1
-execute if score @s tnt_num matches 1.. run function main:orbital_cannon/nuke_ring
+execute if score @s tnt_num matches 1.. run function main:orbital_cannon/nuke/nuke_ring
