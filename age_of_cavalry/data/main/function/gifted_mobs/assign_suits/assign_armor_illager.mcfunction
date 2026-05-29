@@ -1,6 +1,6 @@
 execute if score @n[tag=record,type=armor_stand] difficulty matches 1..2 run scoreboard players set @s itemRandom 1
 execute if score @n[tag=record,type=armor_stand] difficulty matches 3..4 run scoreboard players set @s itemRandom 2
-execute if score @n[tag=record,type=armor_stand] difficulty matches 5..6 run scoreboard players set @s itemRandom 3
+execute if score @n[tag=record,type=armor_stand] difficulty matches 5..7 run scoreboard players set @s itemRandom 3
 # 2铜，2铁，2附魔铁
 # 附魔：保护1
 # 2铁，2附魔铁，2钻

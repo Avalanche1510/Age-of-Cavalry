@@ -3,21 +3,21 @@ execute if entity @s[tag=normal_mob] run execute if score @n[tag=record,type=arm
 execute if entity @s[tag=normal_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 3 store result score @s itemRandom run random value 1..70
 execute if entity @s[tag=normal_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 4 store result score @s itemRandom run random value 1..80
 execute if entity @s[tag=normal_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 5 store result score @s itemRandom run random value 1..90
-execute if entity @s[tag=normal_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 6 store result score @s itemRandom run random value 1..100
+execute if entity @s[tag=normal_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 6..7 store result score @s itemRandom run random value 1..100
 
 execute if entity @s[tag=elite_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 1 store result score @s itemRandom run random value 41..80
 execute if entity @s[tag=elite_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 2 store result score @s itemRandom run random value 41..90
 execute if entity @s[tag=elite_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 3 store result score @s itemRandom run random value 41..100
 execute if entity @s[tag=elite_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 4 store result score @s itemRandom run random value 41..110
 execute if entity @s[tag=elite_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 5 store result score @s itemRandom run random value 41..120
-execute if entity @s[tag=elite_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 6 store result score @s itemRandom run random value 41..130
+execute if entity @s[tag=elite_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 6..7 store result score @s itemRandom run random value 41..130
 
 execute if entity @s[tag=legend_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 1 store result score @s itemRandom run random value 81..100
 execute if entity @s[tag=legend_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 2 store result score @s itemRandom run random value 81..120
 execute if entity @s[tag=legend_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 3 store result score @s itemRandom run random value 81..140
 execute if entity @s[tag=legend_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 4 store result score @s itemRandom run random value 81..160
 execute if entity @s[tag=legend_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 5 store result score @s itemRandom run random value 81..180
-execute if entity @s[tag=legend_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 6 store result score @s itemRandom run random value 81..200
+execute if entity @s[tag=legend_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 6..7 store result score @s itemRandom run random value 81..200
 
 
 execute if entity @s[type=pillager] run tag @s add f1w

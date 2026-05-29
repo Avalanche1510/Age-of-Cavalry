@@ -5,7 +5,7 @@ execute if score @n[type=armor_stand,tag=record] difficulty matches 2 run execut
 execute if score @n[type=armor_stand,tag=record] difficulty matches 3 run execute if score @s isGifted matches 101..136 run scoreboard players set @s isGifted 1
 execute if score @n[type=armor_stand,tag=record] difficulty matches 4 run execute if score @s isGifted matches 101..148 run scoreboard players set @s isGifted 1
 execute if score @n[type=armor_stand,tag=record] difficulty matches 5 run execute if score @s isGifted matches 101..160 run scoreboard players set @s isGifted 1
-execute if score @n[type=armor_stand,tag=record] difficulty matches 6 run execute if score @s isGifted matches 101..200 run scoreboard players set @s isGifted 1
+execute if score @n[type=armor_stand,tag=record] difficulty matches 6..7 run execute if score @s isGifted matches 101..200 run scoreboard players set @s isGifted 1
 execute unless score @s isGifted matches -1..1 run scoreboard players set @s isGifted 0
 execute if score @s isGifted matches 1 if entity @s[tag=!diy_attributes] store result score @s skillRandom run random value 1..100
 execute if score @s isGifted matches 1 run execute if score @s skillRandom matches 1..70 run tag @s add normal_mob
@@ -31,7 +31,7 @@ execute if score @s isGifted matches 1 run scoreboard players set @s skillRandom
 execute if score @s isGifted matches 1 run scoreboard players set @s skillCD 0
 execute if score @s isGifted matches 1 run data merge entity @s {Health:1000.0f,drop_chances:{feet:0.5f,legs:0.5f,chest:0.5f,head:0.5f,mainhand:0.5f,offhand:0.5f},ArmorDropChances:[0.25f,0.25f,0.25f,0.25f]}
 execute if score @s isGifted matches 1 store result score @s maxHealth run data get entity @s Health 0.5
-execute if entity @s[tag=armor,tag=!collecter] run data merge entity @s {CanPickUpLoot:true}
+execute if entity @s[tag=armor,tag=!collecter,tag=!captain] run data merge entity @s {CanPickUpLoot:true}
 execute if entity @s[tag=collecter] run data merge entity @s {CanPickUpLoot:false}
 execute if score @s isGifted matches 1 run scoreboard players set @s isGifted -1
 

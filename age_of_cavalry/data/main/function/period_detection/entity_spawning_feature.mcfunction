@@ -67,3 +67,8 @@ execute as @e[type=vex,tag=!weakened] at @s run tag @s add weakened
 execute as @e[tag=overwatch,tag=!watching] at @s run data merge entity @s {PersistenceRequired:1b}
 execute as @e[tag=overwatch,tag=!watching] at @s run tag @s add watching
 
+
+execute as @e[team=undead-arthropod_party,tag=!existed] at @s if dimension minecraft:overworld if score @n[type=armor_stand,tag=record] difficulty matches 1..5 run tag @s add existed
+execute as @e[team=illager_party,tag=!existed] at @s if dimension minecraft:overworld if score @n[type=armor_stand,tag=record] difficulty matches 1..5 run tag @s add existed
+execute as @e[team=undead-arthropod_party,tag=!existed] at @s if dimension minecraft:overworld if score @n[type=armor_stand,tag=record] turbulence matches 1000..1199 run tp @s ~ -500 ~
+execute as @e[team=illager_party,tag=!existed] at @s if dimension minecraft:overworld if score @n[type=armor_stand,tag=record] turbulence matches 1000..1199 run tp @s ~ -500 ~

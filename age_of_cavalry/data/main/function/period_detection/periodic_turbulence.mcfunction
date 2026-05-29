@@ -4,7 +4,7 @@ execute as @n[type=armor_stand,tag=record] if score @s difficulty matches 2 stor
 execute as @n[type=armor_stand,tag=record] if score @s difficulty matches 3 store result score @s trend_rate run random value -5..1
 execute as @n[type=armor_stand,tag=record] if score @s difficulty matches 4 store result score @s trend_rate run random value -7..0
 execute as @n[type=armor_stand,tag=record] if score @s difficulty matches 5 store result score @s trend_rate run random value -9..-1
-execute as @n[type=armor_stand,tag=record] if score @s difficulty matches 6 store result score @s trend_rate run random value 0..3
+execute as @n[type=armor_stand,tag=record] if score @s difficulty matches 6 store result score @s trend_rate run random value 1..4
 
 # execute as @n[type=armor_stand,tag=record] if score @s halt matches 0 run execute if score @s turbulence matches 0..199 run scoreboard players remove @s turbulence 40
 # execute as @n[type=armor_stand,tag=record] if score @s halt matches 0 run execute if score @s turbulence matches 200..399 run scoreboard players remove @s turbulence 30

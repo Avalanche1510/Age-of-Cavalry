@@ -3,7 +3,7 @@ execute if entity @s[tag=normal_mob] run execute if score @n[tag=record,type=arm
 execute if entity @s[tag=normal_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 3 store result score @s itemRandom run random value 1..15
 execute if entity @s[tag=normal_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 4 store result score @s itemRandom run random value 1..16
 execute if entity @s[tag=normal_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 5 store result score @s itemRandom run random value 1..17
-execute if entity @s[tag=normal_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 6 store result score @s itemRandom run random value 1..18
+execute if entity @s[tag=normal_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 6..7 store result score @s itemRandom run random value 1..18
 # 皮革，铜，铁，金
 # 5 4 1 3-8
 execute if entity @s[tag=elite_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 1 store result score @s itemRandom run random value 1..9
@@ -11,7 +11,7 @@ execute if entity @s[tag=elite_mob] run execute if score @n[tag=record,type=armo
 execute if entity @s[tag=elite_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 3 store result score @s itemRandom run random value 1..11
 execute if entity @s[tag=elite_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 4 store result score @s itemRandom run random value 1..12
 execute if entity @s[tag=elite_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 5 store result score @s itemRandom run random value 1..13
-execute if entity @s[tag=elite_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 6 store result score @s itemRandom run random value 1..14
+execute if entity @s[tag=elite_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 6..7 store result score @s itemRandom run random value 1..14
 # 金，铜，铁
 # 3 3 3-8
 execute if entity @s[tag=legend_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 1 store result score @s itemRandom run random value 1..9
@@ -19,7 +19,7 @@ execute if entity @s[tag=legend_mob] run execute if score @n[tag=record,type=arm
 execute if entity @s[tag=legend_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 3 store result score @s itemRandom run random value 1..11
 execute if entity @s[tag=legend_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 4 store result score @s itemRandom run random value 1..12
 execute if entity @s[tag=legend_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 5 store result score @s itemRandom run random value 1..13
-execute if entity @s[tag=legend_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 6 store result score @s itemRandom run random value 1..14
+execute if entity @s[tag=legend_mob] run execute if score @n[tag=record,type=armor_stand] difficulty matches 6..7 store result score @s itemRandom run random value 1..14
 # 铁，金，下界合金
 # 6 2 1-6
 

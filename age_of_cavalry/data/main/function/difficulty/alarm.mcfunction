@@ -6,3 +6,4 @@ execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 400..5
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 600..799 run schedule function main:difficulty/alarm 20t
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 800..999 run schedule function main:difficulty/alarm 10t
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 1000..1199 run schedule function main:difficulty/alarm 30t
+

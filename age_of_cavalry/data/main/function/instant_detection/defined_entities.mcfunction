@@ -17,4 +17,5 @@ execute as @e[type=experience_orb,tag=!multiplied] if score @n[type=armor_stand,
 execute as @e[type=experience_orb,tag=!multiplied] if score @n[type=armor_stand,tag=record] difficulty matches 4 store result entity @s Value short 4.5 run data get entity @s Value 1
 execute as @e[type=experience_orb,tag=!multiplied] if score @n[type=armor_stand,tag=record] difficulty matches 5 store result entity @s Value short 6.5 run data get entity @s Value 1
 execute as @e[type=experience_orb,tag=!multiplied] if score @n[type=armor_stand,tag=record] difficulty matches 6 store result entity @s Value short 9 run data get entity @s Value 1
+execute as @e[type=experience_orb,tag=!multiplied] if score @n[type=armor_stand,tag=record] difficulty matches 7 store result entity @s Value short 16 run data get entity @s Value 1
 execute as @e[type=experience_orb,tag=!multiplied] run tag @s add multiplied

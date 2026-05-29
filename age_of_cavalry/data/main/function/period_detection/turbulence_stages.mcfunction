@@ -6,6 +6,7 @@ execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 400..5
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 600..799 unless score @s difficulty matches 4 run function main:difficulty/warn4
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 800..999 unless score @s difficulty matches 5 run function main:difficulty/warn5
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 1000..1199 unless score @s difficulty matches 6 run function main:difficulty/warn6
+execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 1200 unless score @s difficulty matches 7 run function main:difficulty/warn_of_war
 
 
 
@@ -17,6 +18,8 @@ execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 400..5
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 600..799 run scoreboard players set @s difficulty 4
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 800..999 run scoreboard players set @s difficulty 5
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 1000..1199 run scoreboard players set @s difficulty 6
+execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 1200 run scoreboard players set @s difficulty 7
+
 
 
 execute as @n[type=armor_stand,tag=record] if score @s last_stage < @s difficulty if score @s difficulty matches 4..6 run scoreboard players set @s halt 300
@@ -29,14 +32,14 @@ execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 400..5
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 600..799 run scoreboard players set @s last_stage 4
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 800..999 run scoreboard players set @s last_stage 5
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 1000..1199 run scoreboard players set @s last_stage 6
-
+execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 1200 run scoreboard players set @s last_stage 7
 
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 0..199 run bossbar set world_turbulence color green
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 200..399 run bossbar set world_turbulence color white
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 400..599 run bossbar set world_turbulence color white
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 600..799 run bossbar set world_turbulence color yellow
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 800..999 run bossbar set world_turbulence color yellow
-execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 1000..1199 run bossbar set world_turbulence color red
+execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 1000..1200 run bossbar set world_turbulence color red
 
 
 # 田园时代
@@ -51,3 +54,4 @@ execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 400..5
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 600..799 run bossbar set world_turbulence name {"text":"山雨欲来","color":"yellow"}
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 800..999 run bossbar set world_turbulence name {"text":"大厦将倾","color":"red"}
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 1000..1199 run bossbar set world_turbulence name {"text":"战争前夜","color":"dark_red"}
+execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 1200 run bossbar set world_turbulence name {"text":"战争爆发","color":"dark_red"}
