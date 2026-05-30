@@ -3,7 +3,7 @@ scoreboard players add @s period 1
 execute if score @s period matches 1 run function main:period_detection/items_refinement
 execute if score @s period matches 1 run function main:period_detection/disguise
 execute if score @s period matches 2 run function main:period_detection/cost
-execute if score @s period matches 3 run function main:period_detection/animals_effect
+
 execute if score @s period matches 5 run function main:period_detection/check_gifted
 execute if score @s period matches 6 run function main:period_detection/identify_region
 execute if score @s period matches 7 run function main:period_detection/levelup
@@ -22,6 +22,7 @@ execute if score @s period matches 20 run scoreboard players set @s period 0
 # 320tick 计时检测
 scoreboard players add @s longPeriod 1
 execute if score @s longPeriod matches 1 run function main:period_detection/better_witch
+execute if score @s longPeriod matches 2 run function main:period_detection/animals_effect
 execute if score @s longPeriod matches 80 run function main:period_detection/create_region
 execute if score @s longPeriod matches 160 run function main:period_detection/turbulence_changes
 execute if score @s longPeriod matches 240 run function main:period_detection/create_region

@@ -1,9 +1,9 @@
 scoreboard players set @s illager_count 0
 execute as @e[team=illager_party,distance=..192] at @s run scoreboard players add @n[tag=region_center,tag=illager_owned] illager_count 1
 # 白天增加掠夺者单次刷新数量，且白天的刷新数量上限更高
-execute unless score @n[type=armor_stand,tag=record] daytime matches 12800..23500 run execute if score @s illager_count matches ..24 run summon marker ~ ~ ~ {Tags:["regional_illager","g"]}
-execute unless score @n[type=armor_stand,tag=record] daytime matches 12800..23500 run execute if score @s illager_count matches ..24 run summon marker ~ ~ ~ {Tags:["regional_illager","g"]}
-execute if score @n[type=armor_stand,tag=record] daytime matches 12800..23500 run execute if score @s illager_count matches ..18 run summon marker ~ ~ ~ {Tags:["regional_illager","g"]}
+execute unless score @n[type=armor_stand,tag=record] daytime matches 12800..23500 run execute if score @s illager_count matches ..32 run summon marker ~ ~ ~ {Tags:["regional_illager","g"]}
+execute unless score @n[type=armor_stand,tag=record] daytime matches 12800..23500 run execute if score @s illager_count matches ..32 run summon marker ~ ~ ~ {Tags:["regional_illager","g"]}
+execute if score @n[type=armor_stand,tag=record] daytime matches 12800..23500 run execute if score @s illager_count matches ..24 run summon marker ~ ~ ~ {Tags:["regional_illager","g"]}
 scoreboard players set @s illager_count 0
 
 spreadplayers ~ ~ 16 96 false @e[type=marker,tag=regional_illager]

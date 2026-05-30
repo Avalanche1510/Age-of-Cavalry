@@ -74,7 +74,7 @@ scoreboard objectives add fishing_rod_usage minecraft.used:minecraft.fishing_rod
  
 scoreboard objectives add illager_count dummy "illager count"
 scoreboard objectives add undead_count dummy "undead count"
-scoreboard objectives add golem_count dummy "golem count"
+scoreboard objectives add village_guard_count dummy "village guard count"
 
 scoreboard objectives add Mxp teamkill.gold "multiplied xp"
 

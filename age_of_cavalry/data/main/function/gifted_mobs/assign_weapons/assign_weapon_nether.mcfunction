@@ -135,9 +135,9 @@ execute if entity @s[tag=spear] if score @s itemRandom matches 141..160 run data
 execute if entity @s[tag=spear] if score @s itemRandom matches 161..180 run data merge entity @s {equipment:{mainhand:{id:"minecraft:copper_spear",count:1b,components:{"minecraft:enchantments":{"minecraft:fire_aspect":2,"minecraft:sharpness":4,"minecraft:knockback":2,"minecraft:unbreaking":3}}}}}
 execute if entity @s[tag=spear] if score @s itemRandom matches 181..200 run data merge entity @s {equipment:{mainhand:{id:"minecraft:netherite_spear",count:1b,components:{"minecraft:enchantments":{"minecraft:fire_aspect":3,"minecraft:sharpness":4,"minecraft:knockback":3,"minecraft:unbreaking":3}}}}}
 
-execute if entity @s[tag=miner] run data merge entity @s {equipment:{offhand:{id:soul_torch,count:1b},mainhand:{id:"minecraft:iron_pickaxe",count:1b,components:{"minecraft:enchantments":{"minecraft:efficiency":2,"minecraft:unbreaking":1,"minecraft:fortune":1}}}}}
-execute if entity @s[tag=lumberjack] run data merge entity @s {equipment:{offhand:{id:warped_stem,count:1b},mainhand:{id:"minecraft:iron_axe",count:1b,components:{"minecraft:enchantments":{"minecraft:efficiency":3,"minecraft:unbreaking":1}}}}}
-execute if entity @s[tag=farmer] run data merge entity @s {equipment:{offhand:{id:mushroom_stew,count:1b},mainhand:{id:"minecraft:iron_hoe",count:1b,components:{"minecraft:enchantments":{"minecraft:efficiency":2,"minecraft:unbreaking":1,"minecraft:mending":1}}}}}
+execute if entity @s[tag=miner] run data merge entity @s {equipment:{offhand:{id:soul_torch,count:1b},mainhand:{id:"minecraft:golden_pickaxe",count:1b,components:{"minecraft:enchantments":{"minecraft:efficiency":2,"minecraft:unbreaking":1,"minecraft:fortune":1}}}}}
+execute if entity @s[tag=lumberjack] run data merge entity @s {equipment:{offhand:{id:warped_stem,count:1b},mainhand:{id:"minecraft:golden_axe",count:1b,components:{"minecraft:enchantments":{"minecraft:efficiency":3,"minecraft:unbreaking":1}}}}}
+execute if entity @s[tag=farmer] run data merge entity @s {equipment:{offhand:{id:mushroom_stew,count:1b},mainhand:{id:"minecraft:golden_hoe",count:1b,components:{"minecraft:enchantments":{"minecraft:efficiency":2,"minecraft:unbreaking":1,"minecraft:mending":1}}}}}
 execute if entity @s[tag=miner] run data merge entity @s {DeathLootTable:"mobs:entities/miner/nether"}
 execute if entity @s[tag=lumberjack] run data merge entity @s {DeathLootTable:"mobs:entities/lumberjack/nether"}
 execute if entity @s[tag=farmer] run data merge entity @s {DeathLootTable:"mobs:entities/farmer/nether"}

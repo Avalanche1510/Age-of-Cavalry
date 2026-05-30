@@ -1,0 +1,1 @@
+summon ravager ~ ~ ~ {Passengers:[{Tags:["battle_unit","notCaptain"],equipment:{mainhand:{id:"musketmod:musket",count:1b}},id:"minecraft:pillager"}]}

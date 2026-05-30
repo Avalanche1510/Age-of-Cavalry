@@ -12,18 +12,21 @@ execute if score @s isGifted matches 1 run execute if score @s skillRandom match
 execute if score @s isGifted matches 1 run execute if score @s skillRandom matches 71..95 run tag @s add elite_mob
 execute if score @s isGifted matches 1 run execute if score @s skillRandom matches 96..100 run tag @s add legend_mob
 
+
 execute if score @s isGifted matches 1 run function main:gifted_mobs/random_attribute
 execute if score @s[team=piglin_party,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_weapons/assign_weapon_nether
-execute if score @s[team=undead-arthropod_party,tag=armor,type=!zombified_piglin,type=!wither_skeleton,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_weapons/assign_weapon_undead
+execute if score @s[team=undead-arthropod_party,tag=armor,type=!zombie_villager,type=!zombified_piglin,type=!wither_skeleton,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_weapons/assign_weapon_undead
 execute if score @s[type=wither_skeleton,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_weapons/assign_weapon_nether
 execute if score @s[type=zombified_piglin,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_weapons/assign_weapon_nether
 execute if score @s[team=illager_party,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_weapons/assign_weapon_illager
+# execute if score @s[type=guardvillagers:guard,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_weapons/assign_weapon_villager
 
-execute if score @s[team=undead-arthropod_party,tag=armor,type=!zombified_piglin,type=!wither_skeleton,type=!spider,type=!cave_spider,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_suits/assign_armor_undead
+execute if score @s[team=undead-arthropod_party,tag=armor,type=!zombie_villager,type=!zombified_piglin,type=!wither_skeleton,type=!spider,type=!cave_spider,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_suits/assign_armor_undead
 execute if score @s[type=zombified_piglin,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_suits/assign_armor_nether
 execute if score @s[type=wither_skeleton,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_suits/assign_armor_nether
 execute if score @s[team=piglin_party,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_suits/assign_armor_nether
 execute if score @s[team=illager_party,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_suits/assign_armor_illager
+# execute if score @s[type=guardvillagers:guard,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_suits/assign_armor_villager
 function main:gifted_mobs/assign_suits/assign_horse_armor
 execute if entity @s[tag=captain] run function main:squad/flags
 
@@ -33,5 +36,6 @@ execute if score @s isGifted matches 1 run data merge entity @s {Health:1000.0f,
 execute if score @s isGifted matches 1 store result score @s maxHealth run data get entity @s Health 0.5
 execute if entity @s[tag=armor,tag=!collecter,tag=!captain] run data merge entity @s {CanPickUpLoot:true}
 execute if entity @s[tag=collecter] run data merge entity @s {CanPickUpLoot:false}
+execute if score @s isGifted matches 1 run tag @s add gifted
 execute if score @s isGifted matches 1 run scoreboard players set @s isGifted -1
 
