@@ -57,7 +57,7 @@ execute if entity @s[tag=!archer,tag=tank] if score @s itemRandom matches 1..30 
 execute if entity @s[tag=!archer,tag=tank] if score @s itemRandom matches 31..45 run item replace entity @s armor.head with chainmail_helmet
 execute if entity @s[tag=!archer,tag=tank] if score @s itemRandom matches 31..45 run item replace entity @s armor.chest with chainmail_chestplate
 execute if entity @s[tag=!archer,tag=tank] if score @s itemRandom matches 31..45 run item replace entity @s armor.legs with chainmail_leggings
-execute if entity @s[tag=!archer,tag=tank] if score @s itemRandom matches 31..60 run item replace entity @s armor.feet with chainmail_boots
+execute if entity @s[tag=!archer,tag=tank] if score @s itemRandom matches 31..45 run item replace entity @s armor.feet with chainmail_boots
 execute if entity @s[tag=!archer,tag=tank] if score @s itemRandom matches 46..60 run item replace entity @s armor.head with copper_helmet
 execute if entity @s[tag=!archer,tag=tank] if score @s itemRandom matches 46..60 run item replace entity @s armor.chest with copper_chestplate
 execute if entity @s[tag=!archer,tag=tank] if score @s itemRandom matches 46..60 run item replace entity @s armor.legs with copper_leggings
@@ -87,7 +87,7 @@ execute if entity @s[tag=!archer,tag=!berserker,tag=!tank] if score @s itemRando
 execute if entity @s[tag=!archer,tag=!berserker,tag=!tank] if score @s itemRandom matches 31..45 run item replace entity @s armor.head with chainmail_helmet
 execute if entity @s[tag=!archer,tag=!berserker,tag=!tank] if score @s itemRandom matches 31..45 run item replace entity @s armor.chest with chainmail_chestplate
 execute if entity @s[tag=!archer,tag=!berserker,tag=!tank] if score @s itemRandom matches 31..45 run item replace entity @s armor.legs with chainmail_leggings
-execute if entity @s[tag=!archer,tag=!berserker,tag=!tank] if score @s itemRandom matches 31..60 run item replace entity @s armor.feet with chainmail_boots
+execute if entity @s[tag=!archer,tag=!berserker,tag=!tank] if score @s itemRandom matches 31..45 run item replace entity @s armor.feet with chainmail_boots
 execute if entity @s[tag=!archer,tag=!berserker,tag=!tank] if score @s itemRandom matches 46..60 run item replace entity @s armor.head with chainmail_helmet
 execute if entity @s[tag=!archer,tag=!berserker,tag=!tank] if score @s itemRandom matches 46..60 run item replace entity @s armor.chest with iron_chestplate
 execute if entity @s[tag=!archer,tag=!berserker,tag=!tank] if score @s itemRandom matches 46..60 run item replace entity @s armor.legs with iron_leggings

@@ -19,14 +19,14 @@ execute if score @s[team=undead-arthropod_party,tag=armor,type=!zombie_villager,
 execute if score @s[type=wither_skeleton,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_weapons/assign_weapon_nether
 execute if score @s[type=zombified_piglin,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_weapons/assign_weapon_nether
 execute if score @s[team=illager_party,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_weapons/assign_weapon_illager
-# execute if score @s[type=guardvillagers:guard,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_weapons/assign_weapon_villager
+execute if score @s[type=guardvillagers:guard,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_weapons/assign_weapon_villager
 
 execute if score @s[team=undead-arthropod_party,tag=armor,type=!zombie_villager,type=!zombified_piglin,type=!wither_skeleton,type=!spider,type=!cave_spider,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_suits/assign_armor_undead
 execute if score @s[type=zombified_piglin,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_suits/assign_armor_nether
 execute if score @s[type=wither_skeleton,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_suits/assign_armor_nether
 execute if score @s[team=piglin_party,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_suits/assign_armor_nether
 execute if score @s[team=illager_party,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_suits/assign_armor_illager
-# execute if score @s[type=guardvillagers:guard,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_suits/assign_armor_villager
+execute if score @s[type=guardvillagers:guard,tag=armor,tag=!diy_tools] isGifted matches 1 run function main:gifted_mobs/assign_suits/assign_armor_villager
 function main:gifted_mobs/assign_suits/assign_horse_armor
 execute if entity @s[tag=captain] run function main:squad/flags
 
