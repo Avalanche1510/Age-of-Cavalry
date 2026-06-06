@@ -87,6 +87,12 @@ scoreboard objectives add reputation_in_undead dummy "reputation in undead"
 scoreboard objectives add reputation_in_illager dummy "reputation in illager"
 scoreboard objectives add reputation_in_villager dummy "reputation in villager"
 
+scoreboard objectives add need_revise dummy "need revise"
+scoreboard objectives add arrow_height dummy "arrow height"
+scoreboard objectives add last_arrow_height dummy "last arrow height"
+scoreboard objectives add arrow_gravity dummy "arrow gravity"
+
+
 execute unless entity @n[type=armor_stand,tag=record] run tellraw @a {"text":"数据包尚未完成手动初始化。","color":"red"}
 execute unless entity @n[type=armor_stand,tag=record] run tellraw @a {"text":"请在创造模式下输入 function main:initiate/create_bot 以完成初始化。","color":"yellow"}
 tellraw @a {"text":"可以创造模式下输入 function main:initiate/kill_bot 以解除，随后重新初始化。","color":"yellow"}

@@ -7,7 +7,7 @@ execute if score @s skillRandom matches 1 run attribute @s minecraft:attack_dama
 execute if score @s skillRandom matches 1 run attribute @s minecraft:attack_damage modifier add attack_damage 0.45 add_multiplied_total
 execute if score @s skillRandom matches 1 run attribute @s minecraft:attack_knockback modifier add attack_knockback 0.2 add_multiplied_total
 
-execute if score @s skillRandom matches 1 run attribute @s minecraft:movement_speed modifier add movement_speed 0.18 add_multiplied_total
+execute unless entity @s[type=guardvillagers:guard] if score @s skillRandom matches 1 run attribute @s minecraft:movement_speed modifier add movement_speed 0.18 add_multiplied_total
 execute if score @s skillRandom matches 1 run attribute @s minecraft:armor modifier add armor -0.1 add_multiplied_total
 
 execute if score @s skillRandom matches 1 run attribute @s minecraft:max_health modifier add max_health 0.20 add_multiplied_total
@@ -23,7 +23,7 @@ execute if score @s skillRandom matches 2 run attribute @s minecraft:attack_dama
 execute if score @s skillRandom matches 2 run attribute @s minecraft:attack_damage modifier add attack_damage 0.15 add_multiplied_total
 execute if score @s skillRandom matches 2 run attribute @s minecraft:attack_knockback modifier add attack_knockback 0.15 add_multiplied_total
 
-execute if score @s skillRandom matches 2 run attribute @s minecraft:movement_speed modifier add movement_speed 0.1 add_multiplied_total
+execute unless entity @s[type=guardvillagers:guard] if score @s skillRandom matches 2 run attribute @s minecraft:movement_speed modifier add movement_speed 0.1 add_multiplied_total
 execute if score @s skillRandom matches 2 run attribute @s minecraft:armor modifier add armor 0.15 add_multiplied_total
 
 execute if score @s skillRandom matches 2 run attribute @s minecraft:max_health modifier add max_health 0.15 add_multiplied_total
@@ -39,7 +39,7 @@ execute if score @s skillRandom matches 3 run attribute @s minecraft:attack_dama
 execute if score @s skillRandom matches 3 run attribute @s minecraft:attack_damage modifier add attack_damage -0.10 add_multiplied_total
 execute if score @s skillRandom matches 3 run attribute @s minecraft:attack_knockback modifier add attack_knockback -0.01 add_multiplied_total
 
-execute if score @s skillRandom matches 3 run attribute @s minecraft:movement_speed modifier add movement_speed -0.15 add_multiplied_total
+execute unless entity @s[type=guardvillagers:guard] if score @s skillRandom matches 3 run attribute @s minecraft:movement_speed modifier add movement_speed -0.15 add_multiplied_total
 execute if score @s skillRandom matches 3 run attribute @s minecraft:armor modifier add armor 0.25 add_multiplied_total
 
 execute if score @s skillRandom matches 3 run attribute @s minecraft:max_health modifier add max_health 0.45 add_multiplied_total
@@ -55,7 +55,7 @@ execute if score @s skillRandom matches 4 run attribute @s minecraft:attack_dama
 execute if score @s skillRandom matches 4 run attribute @s minecraft:attack_damage modifier add attack_damage 0.6 add_multiplied_total
 execute if score @s skillRandom matches 4 run attribute @s minecraft:attack_knockback modifier add attack_knockback 0.25 add_multiplied_total
 
-execute if score @s skillRandom matches 4 run attribute @s minecraft:movement_speed modifier add movement_speed 0.32 add_multiplied_total
+execute unless entity @s[type=guardvillagers:guard] if score @s skillRandom matches 4 run attribute @s minecraft:movement_speed modifier add movement_speed 0.32 add_multiplied_total
 execute if score @s skillRandom matches 4 run attribute @s minecraft:armor modifier add armor -0.05 add_multiplied_total
 
 execute if score @s skillRandom matches 4 run attribute @s minecraft:max_health modifier add max_health -0.05 add_multiplied_total
@@ -71,7 +71,7 @@ execute if score @s skillRandom matches 5 run attribute @s minecraft:attack_dama
 execute if score @s skillRandom matches 5 run attribute @s minecraft:attack_damage modifier add attack_damage -0.05 add_multiplied_total
 execute if score @s skillRandom matches 5 run attribute @s minecraft:attack_knockback modifier add attack_knockback 0.4 add_multiplied_total
 
-execute if score @s skillRandom matches 5 run attribute @s minecraft:movement_speed modifier add movement_speed 0.2 add_multiplied_total
+execute unless entity @s[type=guardvillagers:guard] if score @s skillRandom matches 5 run attribute @s minecraft:movement_speed modifier add movement_speed 0.2 add_multiplied_total
 execute if score @s skillRandom matches 5 run attribute @s minecraft:armor modifier add armor 0.2 add_multiplied_total
 
 execute if score @s skillRandom matches 5 run attribute @s minecraft:max_health modifier add max_health 0.2 add_multiplied_total
@@ -86,7 +86,7 @@ execute if entity @s[tag=archer] run attribute @s minecraft:attack_damage modifi
 execute if entity @s[tag=archer] run attribute @s minecraft:attack_damage modifier add attack_damage 0.05 add_multiplied_total
 execute if entity @s[tag=archer] run attribute @s minecraft:attack_knockback modifier add attack_knockback 0.05 add_multiplied_total
 
-execute if entity @s[tag=archer] run attribute @s minecraft:movement_speed modifier add movement_speed -0.1 add_multiplied_total
+execute unless entity @s[type=guardvillagers:guard] if entity @s[tag=archer] run attribute @s minecraft:movement_speed modifier add movement_speed -0.1 add_multiplied_total
 execute if entity @s[tag=archer] run attribute @s minecraft:armor modifier add armor -0.1 add_multiplied_total
 
 execute if entity @s[tag=archer] run attribute @s minecraft:max_health modifier add max_health 0.05 add_multiplied_total

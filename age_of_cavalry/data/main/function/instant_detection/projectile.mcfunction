@@ -45,3 +45,16 @@ execute as @e[type=fireball] at @s run particle minecraft:flame ~ ~ ~ 0.15 0.15 
 execute as @e[type=fireball,tag=explosive] store result score @s fire_ball_gravity run data get entity @s Motion[1] 1000
 execute as @e[type=fireball,tag=explosive] run scoreboard players remove @s fire_ball_gravity 32
 execute as @e[type=fireball,tag=explosive] store result entity @s Motion[1] double 0.001 run scoreboard players get @s fire_ball_gravity
+
+
+# 为村民守卫做箭矢的弹道修正
+
+execute as @e[type=arrow,tag=!revised] unless score @s need_revise matches -2147483648..2147483647 run scoreboard players set @s need_revise 0
+execute as @e[type=arrow,tag=!revised] store success score @s need_revise run execute on origin if entity @s[type=guardvillagers:guard] run scoreboard players set @s need_revise 1
+execute as @e[type=arrow,tag=!revised] if score @s need_revise matches 1 run tag @s add revised
+execute as @e[type=arrow,tag=revised,tag=!still_arrow] store result score @s last_arrow_height run scoreboard players get @s arrow_height
+execute as @e[type=arrow,tag=revised,tag=!still_arrow] store result score @s arrow_height run data get entity @s Pos[1] 1000
+execute as @e[type=arrow,tag=revised,tag=!still_arrow] if score @s last_arrow_height = @s arrow_height run tag @s add still_arrow
+execute as @e[type=arrow,tag=revised,tag=!still_arrow] store result score @s arrow_gravity run data get entity @s Motion[1] 1000
+execute as @e[type=arrow,tag=revised,tag=!still_arrow] run scoreboard players remove @s arrow_gravity 360
+execute as @e[type=arrow,tag=revised,tag=!still_arrow] store result entity @s Motion[1] double 0.001 run scoreboard players get @s arrow_gravity
