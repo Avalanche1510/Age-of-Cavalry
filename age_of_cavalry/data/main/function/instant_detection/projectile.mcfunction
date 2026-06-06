@@ -1,3 +1,4 @@
+# 雪傀儡和带伤害的雪球
 execute as @e[type=snow_golem] unless score @s snowballCD matches 0.. run scoreboard players set @s snowballCD 19
 execute as @e[type=snow_golem,tag=normal_mob,scores={snowballCD=0}] at @s run tag @n[distance=..2,type=snowball] add normal_snowball
 execute as @e[type=snow_golem,tag=elite_mob,scores={snowballCD=0}] at @s run tag @n[distance=..2,type=snowball] add elite_snowball
@@ -5,8 +6,6 @@ execute as @e[type=snow_golem,tag=legend_mob,scores={snowballCD=0}] at @s run ta
 execute as @e[type=snow_golem,scores={snowballCD=0}] at @s run tag @n[distance=..2,type=snowball] add thrown_by_golem
 
 execute as @e[type=snow_golem,scores={snowballCD=0}] if entity @e[type=snowball,tag=thrown_by_golem] run scoreboard players set @s snowballCD 19
-
-execute as @e[type=snow_golem,scores={snowballCD=0}] if entity @e[type=snowball,tag=thrown_by_golem] run say 1
 execute as @e[type=snow_golem,scores={snowballCD=1..}] run scoreboard players remove @s snowballCD 1
 
 execute as @e[type=snowball,tag=thrown_by_golem,tag=!normal_snowball,tag=!elite_snowball,tag=!legend_snowball] at @s run execute as @e[distance=..2,team=!villager_party] run data merge entity @s {TicksFrozen:300}
@@ -24,12 +23,7 @@ execute as @e[type=snowball,tag=legend_snowball] at @s run effect give @e[distan
 
 
 execute as @e[type=snowball] at @s run particle snowflake ~ ~ ~ 0.15 0.15 0.15 0.01 1 force
-execute as @e[type=fireball] at @s run particle minecraft:lava ~ ~ ~ 0.15 0.15 0.15 0.01 1 force
-execute as @e[type=fireball] at @s run particle minecraft:flame ~ ~ ~ 0.15 0.15 0.15 0.01 2 force
 execute as @e[type=snowball,tag=thrown_by_golem] at @s run particle enchanted_hit ~ ~ ~ 0.05 0.05 0.05 0.01 4 force
-execute as @e[type=fireball,tag=explosive] store result score @s fire_ball_gravity run data get entity @s Motion[1] 1000
-execute as @e[type=fireball,tag=explosive] run scoreboard players remove @s fire_ball_gravity 32
-execute as @e[type=fireball,tag=explosive] store result entity @s Motion[1] double 0.001 run scoreboard players get @s fire_ball_gravity
 
 execute as @e[type=snowball,tag=thrown_by_golem,tag=!normal_snowball,tag=!elite_snowball,tag=!legend_snowball] at @s run execute as @e[distance=..2,team=!villager_party,type=!creeper] run damage @s 1.0 minecraft:mob_attack by @n[type=snow_golem]
 execute as @e[type=snowball,tag=normal_snowball] at @s run execute as @e[distance=..2,team=!villager_party,type=!creeper] run damage @s 2.0 minecraft:mob_attack by @n[type=snow_golem]
@@ -41,6 +35,13 @@ execute as @e[type=snowball,tag=elite_snowball] at @s run execute as @e[distance
 execute as @e[type=snowball,tag=legend_snowball] at @s run execute as @e[distance=..2,type=creeper] run damage @s 32.0 minecraft:mob_attack by @n[type=snow_golem]
 execute as @e[type=snow_golem,tag=temporary_golem] run scoreboard players add @s lifeCD 1
 execute as @e[type=snow_golem,tag=temporary_golem] if score @s lifeCD matches 3000.. run tp ~ -500 ~
-execute as @e[type=snow_golem] at @s run effect give @e[team=illager_party,distance=..16] glowing 2 0 true
-execute as @e[type=snow_golem] at @s run effect give @e[team=undead-arthropod_party,distance=..16] glowing 2 0 true
-execute as @e[type=snow_golem] at @s run effect give @e[team=piglin_party,distance=..16] glowing 2 0 true
+# execute as @e[type=snow_golem] at @s run effect give @e[team=illager_party,distance=..16] glowing 2 0 true
+# execute as @e[type=snow_golem] at @s run effect give @e[team=undead-arthropod_party,distance=..16] glowing 2 0 true
+# execute as @e[type=snow_golem] at @s run effect give @e[team=piglin_party,distance=..16] glowing 2 0 true
+
+# 火焰弹粒子和重力效果
+execute as @e[type=fireball] at @s run particle minecraft:lava ~ ~ ~ 0.15 0.15 0.15 0.01 1 force
+execute as @e[type=fireball] at @s run particle minecraft:flame ~ ~ ~ 0.15 0.15 0.15 0.01 2 force
+execute as @e[type=fireball,tag=explosive] store result score @s fire_ball_gravity run data get entity @s Motion[1] 1000
+execute as @e[type=fireball,tag=explosive] run scoreboard players remove @s fire_ball_gravity 32
+execute as @e[type=fireball,tag=explosive] store result entity @s Motion[1] double 0.001 run scoreboard players get @s fire_ball_gravity

@@ -106,5 +106,5 @@ team modify illager_party color dark_blue
 team add piglin_party "piglin party"
 team modify piglin_party color gold
 
-
+effect clear @a darkness
 # give @a written_book[minecraft:written_book_content={pages: [{raw: "    SpearCraft服务器\n          启蒙之书\n-------------------\n目录：\n    1. 世界简史\n    2. 如何寻新"}, {raw: " ------世界简史------ \n第XXI纪末期，XI周期。\n纷争与变革之年，\n青铜与长矛之年，\n空气与火药之年，\n羽箭与战马之年，\n众帝国形成之年...\n\n大地上古老的已死之灵与节肢们结成同盟，\n四方游掠者们精进了技术，\n沉入地心多年的猪灵逐渐适应了诅咒..."}, {raw: "即便是永恒不变的村庄也为之改变，只求生存。村民将藏于钢铁与冰雪之下。\n\n变革，竞争。战争。\n\n连玩家也不能幸免。\n也许战争也能成为一种新的维生方式？而非千篇一律地膜拜机械。\n\n无人知晓。\n\n此纪元亦是实验之纪元。"}, {raw: " ------如何寻新------\n\n前往村庄，寻找一位没有羊驼的流浪商人。\n\n如不幸未能找到，丢给普通村民一块蓝冰亦可。\n\n另，给任意书本命名为启蒙之书，\n皆可以将其替换为此书。"}], resolved: 1b, title: {raw: "启蒙之书"}, author: "Avalanche1510"}] 1

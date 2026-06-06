@@ -100,17 +100,3 @@ execute if entity @s[tag=!archer,tag=!berserker,tag=!tank] if score @s itemRando
 
 
 
-
-
-execute if entity @s[tag=miner] run item replace entity @s weapon.offhand with torch 1
-execute if entity @s[tag=miner] run item replace entity @s weapon.mainhand with iron_pickaxe[enchantments={efficiency:2,unbreaking:1,fortune:1}] 1
-
-execute if entity @s[tag=lumberjack] run item replace entity @s weapon.offhand with oak_log 1
-execute if entity @s[tag=lumberjack] run item replace entity @s weapon.mainhand with iron_axe[enchantments={efficiency:3,unbreaking:1}] 1
-
-execute if entity @s[tag=farmer] run item replace entity @s weapon.offhand with wheat 1
-execute if entity @s[tag=farmer] run item replace entity @s weapon.mainhand with iron_hoe[enchantments={efficiency:2,unbreaking:1,mending:1}] 1
-
-execute if entity @s[tag=miner] run data merge entity @s {DeathLootTable:"mobs:entities/miner/overworld"}
-execute if entity @s[tag=lumberjack] run data merge entity @s {DeathLootTable:"mobs:entities/lumberjack/overworld"}
-execute if entity @s[tag=farmer] run data merge entity @s {DeathLootTable:"mobs:entities/farmer/overworld"}

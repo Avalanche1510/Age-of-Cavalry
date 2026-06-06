@@ -1,3 +1,0 @@
-function main:village_upgrade/snowball
-function main:village_upgrade/villager
-function main:village_upgrade/iron_golem

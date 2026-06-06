@@ -109,17 +109,3 @@ execute if entity @s[tag=!archer,tag=!berserker,tag=!tank] if score @s itemRando
 execute if entity @s[tag=!archer,tag=!berserker,tag=!tank] if score @s itemRandom matches 136..150 run item replace entity @s armor.legs with iron_leggings[enchantments={protection:5,unbreaking:3,thorns:3}]
 execute if entity @s[tag=!archer,tag=!berserker,tag=!tank] if score @s itemRandom matches 136..150 run item replace entity @s armor.feet with iron_boots[enchantments={protection:5,unbreaking:3,thorns:3}]
 
-execute if entity @s[tag=miner] run item replace entity @s armor.head with iron_helmet
-execute if entity @s[tag=miner] run item replace entity @s armor.chest with air
-execute if entity @s[tag=miner] run item replace entity @s armor.legs with air
-execute if entity @s[tag=miner] run item replace entity @s armor.feet with air
-
-execute if entity @s[tag=lumberjack] run item replace entity @s armor.head with iron_helmet
-execute if entity @s[tag=lumberjack] run item replace entity @s armor.chest with air
-execute if entity @s[tag=lumberjack] run item replace entity @s armor.legs with air
-execute if entity @s[tag=lumberjack] run item replace entity @s armor.feet with air
-
-execute if entity @s[tag=farmer] run item replace entity @s armor.head with iron_helmet
-execute if entity @s[tag=farmer] run item replace entity @s armor.chest with air
-execute if entity @s[tag=farmer] run item replace entity @s armor.legs with air
-execute if entity @s[tag=farmer] run item replace entity @s armor.feet with air
