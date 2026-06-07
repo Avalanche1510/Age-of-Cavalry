@@ -2,7 +2,7 @@
 title @a title {"text":"Age of Cavalry","color":"green","italic": 1b}
 tellraw @a {"text":"已加载 骑兵时代 v1.0 数据包！","color":"green"}
 tellraw @a {"text":"作者: Avalanche1510","color":"yellow"}
-tellraw @a {"text":"需要调整怪物血量显示方式请按 I 键","color":"yellow"}
+tellraw @a {"text":"需要调整怪物血量显示方式请按 Y 键","color":"yellow"}
 execute as @a at @s run playsound entity.player.levelup master @s ~ ~ ~ 1 1 1
 
 # 初始化计分板
