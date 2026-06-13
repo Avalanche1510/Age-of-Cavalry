@@ -1,0 +1,1 @@
+summon zombie ~ ~ ~ {Tags:["notCaptain","battle_unit"],equipment:{head:{id:"minecraft:leather_helmet",count:1},mainhand:{id:"minecraft:stone_sword",count:1b}}}

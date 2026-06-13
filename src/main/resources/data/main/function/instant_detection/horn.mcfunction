@@ -1,0 +1,3 @@
+execute as @a[level=3..] at @s if items entity @s weapon.* goat_horn[rarity=epic] unless score @s IsUsingGoatHorn matches 0 run function main:squad/assemble
+execute as @a[level=..2] at @s if items entity @s weapon.* goat_horn[rarity=epic] unless score @s IsUsingGoatHorn matches 0 run tellraw @s {"text":"无法支付集结号的代价！你需要至少3级经验才能使用它。","color":"red"}
+execute as @a run scoreboard players set @s IsUsingGoatHorn 0

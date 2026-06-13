@@ -1,0 +1,1 @@
+summon hoglin ~ ~ ~ {IsImmuneToZombification:1b,Passengers:[{equipment:{mainhand:{id:"minecraft:crossbow",count:1b}},id:"minecraft:piglin",Tags:["has_guard","battle_unit","notCaptain"],IsImmuneToZombification:1b}]}

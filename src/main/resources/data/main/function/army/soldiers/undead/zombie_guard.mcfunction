@@ -1,0 +1,1 @@
+summon zombie ~ ~ ~ {Tags:["soldier","normal_mob","balanced","zombie_guard"],CustomName:"僵尸戍卫"}

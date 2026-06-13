@@ -1,0 +1,140 @@
+{
+    "pools": [
+        {
+            "rolls": 4,
+            "conditions":[
+                {
+                    "condition":"entity_properties",
+                    "entity":"attacking_player",
+                    "predicate":{}
+                }
+            ],
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:gold_nugget",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 64,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 10
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:quartz",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 32,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 10
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:flint",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 24,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 10
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:gold_ingot",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 16,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 7
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:gold_block",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 8,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 3
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:ancient_debris",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 3,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 3
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:netherite_upgrade_smithing_template",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 3,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 3
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:netherite_ingot",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 1,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 1
+                },
+                {
+                    "type":"minecraft:empty",
+                    "weight":10
+                }
+            ]
+        }
+    ]
+}

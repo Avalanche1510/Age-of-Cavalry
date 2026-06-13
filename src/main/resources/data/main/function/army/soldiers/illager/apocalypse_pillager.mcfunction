@@ -1,0 +1,1 @@
+summon pillager ~ ~ ~ {Tags:["soldier","elite_mob","balanced","apocalypse_pillager"],CustomName:"重弩手"}

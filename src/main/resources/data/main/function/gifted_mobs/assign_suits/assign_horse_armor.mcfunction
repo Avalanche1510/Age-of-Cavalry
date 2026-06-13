@@ -1,0 +1,8 @@
+execute if items entity @s armor.chest leather_chestplate run execute on vehicle run data merge entity @s {equipment:{body:{id:"minecraft:leather_horse_armor"},saddle:{id:"minecraft:saddle"}}}
+execute if items entity @s armor.chest copper_chestplate run execute on vehicle run data merge entity @s {equipment:{body:{id:"minecraft:copper_horse_armor"},saddle:{id:"minecraft:saddle"}}}
+execute if items entity @s armor.chest golden_chestplate run execute on vehicle run data merge entity @s {equipment:{body:{id:"minecraft:golden_horse_armor"},saddle:{id:"minecraft:saddle"}}}
+execute if items entity @s armor.chest iron_chestplate run execute on vehicle run data merge entity @s {equipment:{body:{id:"minecraft:iron_horse_armor"},saddle:{id:"minecraft:saddle"}}}
+execute if items entity @s armor.chest chainmail_chestplate run execute on vehicle run data merge entity @s {equipment:{body:{id:"minecraft:iron_horse_armor"},saddle:{id:"minecraft:saddle"}}}
+execute if items entity @s armor.chest diamond_chestplate run execute on vehicle run data merge entity @s {equipment:{body:{id:"minecraft:diamond_horse_armor"},saddle:{id:"minecraft:saddle"}}}
+execute if items entity @s armor.chest netherite_chestplate run execute on vehicle run data merge entity @s {equipment:{body:{id:"minecraft:netherite_horse_armor"},saddle:{id:"minecraft:saddle"}}}
+execute on vehicle run tag @s add has_horse_armor

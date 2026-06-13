@@ -1,0 +1,1 @@
+summon pillager ~ ~ ~1 {Tags:["notCaptain"],equipment:{mainhand:{id:"minecraft:crossbow",count:1b}},Patrolling:1b}

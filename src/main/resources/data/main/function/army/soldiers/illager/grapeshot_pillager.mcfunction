@@ -1,0 +1,1 @@
+summon pillager ~ ~ ~ {Tags:["soldier","normal_mob","archer","grapeshot_pillager"],CustomName:"霰弩手"}

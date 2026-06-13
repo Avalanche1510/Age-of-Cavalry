@@ -1,0 +1,65 @@
+{
+    "pools": [
+        {
+            "rolls": 2,
+            "conditions":[
+                {
+                    "condition":"entity_properties",
+                    "entity":"attacking_player",
+                    "predicate":{}
+                }
+            ],
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:blaze_rod",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 2,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 40
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:blaze_rod",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 3,
+                                "min": 2
+                            }
+                        }
+                    ],
+                    "weight": 20
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:blaze_rod",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 4,
+                                "min": 3
+                            }
+                        }
+                    ],
+                    "weight": 1
+                },
+                {
+                    "type":"minecraft:empty",
+                    "weight":15
+                }
+            ]
+        }
+    ]
+}

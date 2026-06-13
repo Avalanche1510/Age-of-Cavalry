@@ -1,0 +1,1 @@
+summon vindicator ~ ~ ~ {Tags:["soldier","elite_mob","berserker","vindicator"],CustomName:"卫道武士"}

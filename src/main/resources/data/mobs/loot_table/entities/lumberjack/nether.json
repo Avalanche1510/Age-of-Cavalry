@@ -1,0 +1,80 @@
+{
+    "pools": [
+        {
+            "rolls": 5,
+            "conditions":[
+                {
+                    "condition":"entity_properties",
+                    "entity":"attacking_player",
+                    "predicate":{}
+                }
+            ],
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:crimson_stem",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 32,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 10
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:warped_stem",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 32,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 10
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:crimson_fungus",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 4,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 2
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:warped_fungus",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 4,
+                                "min": 1
+                            }
+                        }
+                    ],
+                    "weight": 2
+                },
+                {
+                    "type":"minecraft:empty",
+                    "weight":5
+                }
+            ]
+        }
+    ]
+}

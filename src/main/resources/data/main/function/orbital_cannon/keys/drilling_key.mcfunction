@@ -1,0 +1,1 @@
+give @s fishing_rod[enchantments={binding_curse:1},max_damage=1,damage=2,rarity=rare,repair_cost=99999,custom_name="穿刺引导器"] 1

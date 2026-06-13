@@ -1,0 +1,1 @@
+summon zombie_horse ~ ~ ~ {equipment:{body:{id:"minecraft:leather_horse_armor"},saddle:{id:"minecraft:saddle"}},Passengers:[{Tags:["battle_unit","notCaptain","spear"],equipment:{head:{id:"minecraft:leather_helmet",count:1},mainhand:{id:"minecraft:stone_spear",count:1b}},id:"minecraft:zombie"}]}

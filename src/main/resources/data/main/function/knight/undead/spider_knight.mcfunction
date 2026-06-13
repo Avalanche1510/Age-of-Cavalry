@@ -1,0 +1,1 @@
+summon spider ~ ~ ~ {Passengers:[{Tags:["battle_unit","notCaptain"],equipment:{head:{id:"minecraft:chainmail_helmet",count:1},mainhand:{id:"minecraft:bow",count:1b}},id:"minecraft:skeleton"}]}

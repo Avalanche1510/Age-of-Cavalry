@@ -1,0 +1,1 @@
+summon vindicator ~ ~ ~ {Tags:["soldier","elite_mob","assassin","zeolot"],CustomName:"狂热教士"}

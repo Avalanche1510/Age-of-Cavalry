@@ -1,0 +1,34 @@
+scoreboard players set @s AlreadySpawned 0
+execute if score @s AlreadySpawned matches 0 store result score @s height run data get entity @s Pos[1] 1.0
+# 地狱 - 1
+execute if dimension minecraft:the_nether run function main:squad/reinforced_squad/undead_region/nether
+
+# 冰雪群系 - 9
+execute if biome ~ ~ ~ minecraft:frozen_ocean run function main:squad/reinforced_squad/undead_region/north
+execute if biome ~ ~ ~ minecraft:deep_frozen_ocean run function main:squad/reinforced_squad/undead_region/north
+execute if biome ~ ~ ~ minecraft:frozen_peaks run function main:squad/reinforced_squad/undead_region/north
+execute if biome ~ ~ ~ minecraft:frozen_river run function main:squad/reinforced_squad/undead_region/north
+execute if biome ~ ~ ~ minecraft:ice_spikes run function main:squad/reinforced_squad/undead_region/north
+execute if biome ~ ~ ~ minecraft:snowy_beach run function main:squad/reinforced_squad/undead_region/north
+execute if biome ~ ~ ~ minecraft:snowy_plains run function main:squad/reinforced_squad/undead_region/north
+execute if biome ~ ~ ~ minecraft:snowy_slopes run function main:squad/reinforced_squad/undead_region/north
+execute if biome ~ ~ ~ minecraft:snowy_taiga run function main:squad/reinforced_squad/undead_region/north
+
+# 沙漠群系 - 4
+execute if biome ~ ~ ~ minecraft:desert run function main:squad/reinforced_squad/undead_region/desert
+execute if biome ~ ~ ~ minecraft:badlands run function main:squad/reinforced_squad/undead_region/desert
+execute if biome ~ ~ ~ minecraft:eroded_badlands run function main:squad/reinforced_squad/undead_region/desert
+execute if biome ~ ~ ~ minecraft:wooded_badlands run function main:squad/reinforced_squad/undead_region/desert
+
+
+# 沼泽群系 - 2
+execute if biome ~ ~ ~ minecraft:swamp run function main:squad/reinforced_squad/undead_region/swamp
+execute if biome ~ ~ ~ minecraft:mangrove_swamp run function main:squad/reinforced_squad/undead_region/swamp
+
+# terralith群系 - 27
+function main:squad/reinforced_squad/select_by_biome_terralith
+
+
+execute if score @s AlreadySpawned matches 0 if score @s height matches 63.. if dimension minecraft:overworld run function main:squad/reinforced_squad/undead_region/ground
+execute if score @s AlreadySpawned matches 0 if score @s height matches ..62 if dimension minecraft:overworld run function main:squad/reinforced_squad/undead_region/underground
+execute if score @s AlreadySpawned matches 1 run scoreboard players set @s AlreadySpawned 0

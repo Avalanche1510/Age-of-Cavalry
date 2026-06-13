@@ -1,0 +1,1 @@
+summon ravager ~ ~ ~ {Tags:["soldier","normal_mob","tank"],Passengers:[{id:"minecraft:pillager",Tags:["soldier","elite_mob","archer","firework_pillager"],CustomName:"炮弩手"}]}

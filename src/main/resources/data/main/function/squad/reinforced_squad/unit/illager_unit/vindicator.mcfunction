@@ -1,0 +1,1 @@
+summon vindicator ~-1 ~ ~ {Tags:["notCaptain"],equipment:{mainhand:{id:"minecraft:iron_axe",count:1b}},Patrolling:1b}

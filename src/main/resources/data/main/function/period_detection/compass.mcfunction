@@ -1,0 +1,1 @@
+execute as @a at @s if items entity @s weapon.* compass[rarity=epic] run effect give @e[distance=..24,type=!player] glowing 3 0

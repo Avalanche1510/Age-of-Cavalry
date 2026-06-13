@@ -1,0 +1,1 @@
+summon drowned ~ ~ ~ {Tags:["notCaptain","battle_unit"],equipment:{head:{id:"minecraft:copper_helmet",count:1},mainhand:{id:"minecraft:trident",count:1b}}}

@@ -1,0 +1,1 @@
+summon parched ~ ~ ~ {Tags:["notCaptain","battle_unit"],equipment:{head:{id:"minecraft:golden_helmet",count:1},mainhand:{id:"minecraft:bow",count:1b}}}

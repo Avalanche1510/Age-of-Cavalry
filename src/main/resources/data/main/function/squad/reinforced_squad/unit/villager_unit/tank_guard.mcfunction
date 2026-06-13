@@ -1,0 +1,2 @@
+# Inventory:[{Slot:0b,id:"head"},{Slot:1b,id:"chest"},{Slot:2b,id:"legs"},{Slot:3b,id:"feet"},{Slot:4b,id:"offhand"},{Slot:5b,id:"mainhand"}]
+summon guardvillagers:guard ~ ~ ~-1 {Inventory:[{Slot:4b,id:"minecraft:shield"},{Slot:5b,id:"minecraft:stone_axe"}]}

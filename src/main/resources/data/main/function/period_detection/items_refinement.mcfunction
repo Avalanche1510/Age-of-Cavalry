@@ -1,0 +1,19 @@
+# 检测是否存在可以升级格挡的剑和附近的材料
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:iron_sword"}}] at @s if entity @n[distance=..1,type=item,nbt={Item:{count:1,id:"minecraft:iron_ingot"}}] run function main:refinement/iron_sword
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:golden_sword"}}] at @s if entity @n[distance=..1,type=item,nbt={Item:{count:1,id:"minecraft:gold_ingot"}}] run function main:refinement/golden_sword
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:copper_sword"}}] at @s if entity @n[distance=..1,type=item,nbt={Item:{count:1,id:"minecraft:copper_ingot"}}] run function main:refinement/copper_sword
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:stone_sword"}}] at @s if entity @n[distance=..1,type=item,nbt={Item:{count:1,id:"minecraft:cobblestone"}}] run function main:refinement/stone_sword
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:wooden_sword"}}] at @s if entity @n[distance=..1,type=item,nbt={Item:{count:1,id:"minecraft:stick"}}] run function main:refinement/wooden_sword
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:diamond_sword"}}] at @s if entity @n[distance=..1,type=item,nbt={Item:{count:1,id:"minecraft:diamond"}}] run function main:refinement/diamond_sword
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:netherite_sword"}}] at @s if entity @n[distance=..1,type=item,nbt={Item:{count:1,id:"minecraft:netherite_scrap"}}] run function main:refinement/netherite_sword
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:iron_sword"}}] at @s if entity @n[distance=..1,type=item,nbt={Item:{count:1,id:"minecraft:nether_star"}}] run function main:refinement/easter
+# 检测是否存在可以升级猎人指南针的材料
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:compass"}}] at @s if entity @n[distance=..1,type=item,nbt={Item:{count:1,id:"minecraft:spectral_arrow"}}] run function main:refinement/hunter_compass
+# 检测是否存在可以升级集结号的材料
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:goat_horn"}}] at @s if entity @n[distance=..1,type=item,nbt={Item:{count:1,id:"minecraft:ender_pearl"}}] run function main:refinement/assembly_horn
+# 检测是否存在可以升级爆炸箭的材料
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:spectral_arrow"}}] at @s if entity @n[distance=..1,type=item,nbt={Item:{count:1,id:"minecraft:fire_charge"}}] run function main:refinement/explosive_arrow
+# 检测是否存在可以升级穿甲箭的材料
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:spectral_arrow"}}] at @s if entity @n[distance=..1,type=item,nbt={Item:{count:1,id:"minecraft:amethyst_shard"}}] run function main:refinement/crit_arrow
+# 检测是否存在可以升级弩炮散弹的材料
+execute as @e[type=item,nbt={Item:{count:1,id:"minecraft:firework_rocket"}}] at @s if entity @n[distance=..1,type=item,nbt={Item:{count:1,id:"minecraft:tnt"}}] run function main:refinement/shrapnel_rocket
