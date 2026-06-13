@@ -3,13 +3,13 @@
 	"id": "age-of-cavalry",
 	"version": "${version}",
 	"name": "Age Of Cavalry",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A mod based on datapacks that provides new vanilla-like gameplays reform by adding regions, turbulence system and mob teams rivalry.",
 	"authors": [
-		"Me!"
+		"Avalanche1510"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/Avalanche1510/Age-of-Cavalry/tree/26.1.1mod"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/age-of-cavalry/icon.png",
