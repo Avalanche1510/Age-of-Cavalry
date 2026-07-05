@@ -1,19 +1,19 @@
 # This project is still in early stage of development!
 # Age-of-Cavalry
-A relatively lightweight, vanilla-like modpacks in the lastest version of minecraft **26.1.1**. It is designed to provide the **BEST VANILLA EXPERIENCE** (in my own opinion). The core datapack **age_of_cavalry** improves many **disappointing vanilla features** and try to utilize more unpopular and mediocre items to create an interconnected mechanism for better playability. 
+A relatively lightweight, vanilla-like modpack for Minecraft **1.21.11**. It is designed to provide the **BEST VANILLA EXPERIENCE** (in my own opinion). The core datapack **age_of_cavalry** improves many **disappointing vanilla features** and tries to utilize more unpopular and mediocre items to create an interconnected mechanism for better playability.
 
- * Both players and mobs can get **more resources** to arm themselves, and hence the survival became more strategic and challenging. Those *unpopular items* now have a chance to **revive**.
+ * Both players and mobs can get **more resources** to arm themselves, and hence survival becomes more strategic and challenging. Those *unpopular items* now have a chance to **revive**.
  * Mobs form **3 main alliances**, and they are automatically *hostile* to each other now. Players are no longer fighting alone.
  * Not only the players can have much more **practical**, **enhanced** mounts like camels, horses, and happy ghast, but mobs can also have *various new cavalry units*. The combat mechanism of vanilla Minecraft will undergo a **drastic reform**!
 
 ## How to use
  * Datapacks **age_of_cavalry**, **special_loot_table**, and **special_recipe** MUST be enabled *at the same time*
- * Mod **Terralith** are *strongly reconmmended*, while doesn't affect the core function of datapack **age_of_cavalry** if not installed
+ * Mod **Terralith** is *strongly recommended*, while the core function of datapack **age_of_cavalry** still works if it is not installed
  * A *modpack in 1.21.11* is provided as recommendation. The compatibility with extra mods or datapacks has not yet been tested.
 
 ## Essential Dependencies
-1. java edition minecraft, 1.21.11 (not compatible with earlier version, but possibly for later version)
-2. other 2 datapacks **special_loot_table** & **special_recipe**
+1. Java Edition Minecraft, 1.21.11 (not compatible with earlier version, but possibly for later version)
+2. the other 2 datapacks **special_loot_table** & **special_recipe**
 
 ## Strongly-Recommended Dependencies
 1. **fabric & fabric api**
@@ -29,7 +29,7 @@ A relatively lightweight, vanilla-like modpacks in the lastest version of minecr
 ## About the datapacks
 ### functions added:
 1. any players with tag "need_light" can have moving light source implemented by command(has some bug with fluids)
-2. waited for completion...
+2. more functions are planned...
 
 ### recipes added:
 1. name tag
@@ -59,9 +59,9 @@ A relatively lightweight, vanilla-like modpacks in the lastest version of minecr
 * "enderman" for all enderman
      * can drop much more ender pearl.
 * "blaze" for all blaze
-     * can drop much more ender blaze_rod.
+     * can drop much more blaze_rod.
 * "breeze" for all breeze
-     * can drop much more ender breeze_rod.
+     * can drop much more breeze_rod.
 
 ### features added:
 1. item upgrading:
@@ -77,8 +77,8 @@ A relatively lightweight, vanilla-like modpacks in the lastest version of minecr
         * ??? sword + nether star
    * Also, the players can upgrade their compass to detect which team the mobs belong to. This can be seen from their color.
         * compass + spectral arrow
-   * Now, players can upgrade normal goat horn to **assembly horn**. It can teleport your horse, happy ghast or dogs(any entities named 'servant', except for players) from *any dimension*, *any where* to your current position, as long as they are **loaded**(so you need to build a simple ender pearl loader to maintain their loading).
-   * However, players need to pay experience as cost. The basic initiation cost are *3 levels*, and each entities being *recruited* will cost you extra *100 points experience*. If you paid 3 levels and run out of experience, your **servant** will still be teleported, but each of them will cost you **1 HEART(2 DAMAGE)**! 
+   * Now, players can upgrade normal goat horn to **assembly horn**. It can teleport your horse, happy ghast or dogs(any entities named 'servant', except for players) from *any dimension*, *anywhere* to your current position, as long as they are **loaded**(so you need to build a simple ender pearl loader to maintain their loading).
+   * However, players need to pay experience as cost. The basic initiation cost is *3 levels*, and each entity being *recruited* will cost you extra *100 points experience*. If you paid 3 levels and run out of experience, your **servant** will still be teleported, but each of them will cost you **1 HEART(2 DAMAGE)**!
         * goat horn + ender pearl
 2. experience system reform:
    * Now, **EXPERIENCE** indeed means **POWER**!
@@ -93,7 +93,7 @@ A relatively lightweight, vanilla-like modpacks in the lastest version of minecr
        * Horse has 160% speed and effect regeneration I.
        * Camel has 140% speed and 8 additional health, and effect regeneration I.
        * Camel husk has 120% speed, 16 additional health.
-       * Happy Ghast has 40 addtional health, and 180% flying speed.
+       * Happy Ghast has 40 additional health, and 180% flying speed.
    * Functions Modification:
        * **Now, all the mounts that can be ridden by players(except for pigs) can BREAK LEAVES! Forests are not obstacles now!**
        * Happy Ghast looks like a *gigantic balloon*, so it should be able to **be blown by wind charge**. If no one is standing or sitting on a happy ghast, it can achieve instantaneous rapid movement by using wind charge close to it. The recommended usage is to sit on a pig on a boat tied to a happy ghast and throw the wind charge to the direction you want to move.
