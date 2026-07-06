@@ -1,6 +1,6 @@
 # This project is still in early stage of development!
 # Age-of-Cavalry
-A relatively lightweight, vanilla-like modpacks in the lastest version of minecraft **26.1.1**. It is designed to provide the **BEST VANILLA EXPERIENCE** (in my own opinion). The core datapack **age_of_cavalry** improves many **disappointing vanilla features** and try to utilize more unpopular and mediocre items to create an interconnected mechanism for better playability. 
+A relatively lightweight, vanilla-like modpacks in the lastest version of minecraft. It is designed to provide the **BEST VANILLA EXPERIENCE** (in my own opinion). The core datapack **age_of_cavalry** improves many **disappointing vanilla features** and try to utilize more unpopular and mediocre items to create an interconnected mechanism for better playability. 
 
  * Both players and mobs can get **more resources** to arm themselves, and hence the survival became more strategic and challenging. Those *unpopular items* now have a chance to **revive**.
  * Mobs form **3 main alliances**, and they are automatically *hostile* to each other now. Players are no longer fighting alone.
