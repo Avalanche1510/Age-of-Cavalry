@@ -19,11 +19,27 @@ public class AbstractZombieModelAocShieldPoseMixin {
 	@Redirect(method = "setupAnim(Lnet/minecraft/client/renderer/entity/state/ZombieRenderState;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/model/AnimationUtils;animateZombieArms(Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;ZLnet/minecraft/client/renderer/entity/state/UndeadRenderState;)V"))
 	private void aoc$keepBlockingArmPose(ModelPart leftArm, ModelPart rightArm, boolean isAggressive,
 			UndeadRenderState state) {
-		if (aoc$isUsingBlockingItem(state)) {
+		if (!aoc$isUsingBlockingItem(state)) {
+			AnimationUtils.animateZombieArms(leftArm, rightArm, isAggressive, state);
 			return;
 		}
 
+		ModelPart blockingArm = aoc$usedItemArm(state) == HumanoidArm.RIGHT ? rightArm : leftArm;
+		float xRot = blockingArm.xRot;
+		float yRot = blockingArm.yRot;
+		float zRot = blockingArm.zRot;
+		float x = blockingArm.x;
+		float y = blockingArm.y;
+		float z = blockingArm.z;
+
 		AnimationUtils.animateZombieArms(leftArm, rightArm, isAggressive, state);
+
+		blockingArm.xRot = xRot;
+		blockingArm.yRot = yRot;
+		blockingArm.zRot = zRot;
+		blockingArm.x = x;
+		blockingArm.y = y;
+		blockingArm.z = z;
 	}
 
 	private static boolean aoc$isUsingBlockingItem(UndeadRenderState state) {
