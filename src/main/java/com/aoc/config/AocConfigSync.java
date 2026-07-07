@@ -16,7 +16,6 @@ public final class AocConfigSync {
 		set(server, "gifted_mobs", config.features.giftedMobs);
 		set(server, "regional_spawns", config.features.regionalSpawns);
 		set(server, "spawn_features", config.features.entitySpawnFeatures);
-		set(server, "dynamic_lights", config.features.dynamicLights);
 		set(server, "happy_ghast", config.features.happyGhastFeatures);
 		set(server, "orbital_cannon", config.features.orbitalCannon);
 		set(server, "start_turbulence", config.balance.startingTurbulence);

@@ -102,7 +102,6 @@ public final class AocConfig {
 		public boolean giftedMobs = true;
 		public boolean regionalSpawns = true;
 		public boolean entitySpawnFeatures = true;
-		public boolean dynamicLights = true;
 		public boolean happyGhastFeatures = true;
 		public boolean orbitalCannon = true;
 	}

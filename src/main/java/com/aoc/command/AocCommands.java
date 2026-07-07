@@ -37,8 +37,7 @@ public final class AocCommands {
 				+ ", giftedMobs=" + config.features.giftedMobs
 				+ ", regionalSpawns=" + config.features.regionalSpawns
 				+ ", entitySpawnFeatures=" + config.features.entitySpawnFeatures), false);
-		source.sendSuccess(() -> Component.literal("features: dynamicLights=" + config.features.dynamicLights
-				+ ", happyGhastFeatures=" + config.features.happyGhastFeatures
+		source.sendSuccess(() -> Component.literal("features: happyGhastFeatures=" + config.features.happyGhastFeatures
 				+ ", orbitalCannon=" + config.features.orbitalCannon), false);
 		source.sendSuccess(() -> Component.literal("balance: startingTurbulence=" + config.balance.startingTurbulence
 				+ ", happyGhastBombingCooldownTicks=" + config.balance.happyGhastBombingCooldownTicks), false);
