@@ -11,10 +11,10 @@ public class AocShieldAiData {
 
 	private static final float DEFAULT_RANGE = 8.0F;
 	private static final float DEFAULT_CHANCE = 0.35F;
-	private static final int DEFAULT_MIN_USE_TICKS = 20;
-	private static final int DEFAULT_MAX_USE_TICKS = 50;
+	private static final int DEFAULT_MIN_USE_TICKS = 80;
+	private static final int DEFAULT_MAX_USE_TICKS = 160;
 	private static final int DEFAULT_COOLDOWN_TICKS = 40;
-	private static final float DEFAULT_BLOCKING_ANGLE = 90.0F;
+	private static final float DEFAULT_BLOCKING_ANGLE = 30.0F;
 	private static final int DEFAULT_AXE_DISABLE_COOLDOWN_TICKS = 100;
 
 	private boolean configured;

@@ -28,7 +28,7 @@ public class ItemInHandLayerAocShieldTransformMixin {
 			return;
 		}
 
-		poseStack.mulPose(Axis.XP.rotationDegrees(65.0F));
+		poseStack.mulPose(Axis.XP.rotationDegrees(-50.0F));
 	}
 
 	@Unique
