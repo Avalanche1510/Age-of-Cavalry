@@ -3,7 +3,8 @@
 	"package": "com.aoc.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
-		"ExampleMixin"
+		"LivingEntityAocAiMixin",
+		"MobAocShieldMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
