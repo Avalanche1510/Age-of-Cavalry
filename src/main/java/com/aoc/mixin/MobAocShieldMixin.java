@@ -1,7 +1,7 @@
 package com.aoc.mixin;
 
-import com.aoc.ai.AocAiData;
 import com.aoc.ai.AocAiHolder;
+import com.aoc.ai.AocShieldAiData;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -26,64 +26,64 @@ public abstract class MobAocShieldMixin extends LivingEntity {
 		}
 
 		Mob mob = (Mob) (Object) this;
-		AocAiData aiData = ((AocAiHolder) this).aoc$getAiData();
-		aiData.tickShieldCooldown();
+		AocShieldAiData shieldAi = ((AocAiHolder) this).aoc$getAiData().shield();
+		shieldAi.tickCooldowns();
 
-		if (!aiData.canUseShield() || mob.isNoAi() || getOffhandItem().getItem() != Items.SHIELD) {
-			stopAocShield(aiData);
+		if (!shieldAi.canUse() || mob.isNoAi() || getOffhandItem().getItem() != Items.SHIELD) {
+			stopAocShield(shieldAi);
 			return;
 		}
 
 		LivingEntity target = mob.getTarget();
 		if (target == null || !target.isAlive()) {
-			stopAocShield(aiData);
+			stopAocShield(shieldAi);
 			return;
 		}
 
-		if (aiData.shieldUseTicks() > 0) {
-			continueAocShield(aiData);
+		if (shieldAi.useTicks() > 0) {
+			continueAocShield(shieldAi);
 			return;
 		}
 
 		if (isUsingItem() && getUsedItemHand() == InteractionHand.OFF_HAND) {
 			stopUsingItem();
-			aiData.setShieldCooldown(aiData.shieldCooldownTicks());
+			shieldAi.setCooldown(shieldAi.cooldownTicks());
 			return;
 		}
 
-		if (!shouldAocRaiseShield(aiData, target) || aiData.shieldCooldown() > 0) {
+		if (!shouldAocRaiseShield(shieldAi, target) || shieldAi.cooldown() > 0) {
 			return;
 		}
 
-		if (getRandom().nextFloat() <= aiData.shieldChance()) {
-			aiData.setShieldUseTicks(randomAocShieldDuration(aiData));
+		if (getRandom().nextFloat() <= shieldAi.chance()) {
+			shieldAi.setUseTicks(randomAocShieldDuration(shieldAi));
 			startUsingItem(InteractionHand.OFF_HAND);
 		} else {
-			aiData.setShieldCooldown(aiData.shieldCooldownTicks());
+			shieldAi.setCooldown(shieldAi.cooldownTicks());
 		}
 	}
 
-	private boolean shouldAocRaiseShield(AocAiData aiData, LivingEntity target) {
-		float range = aiData.shieldRange();
+	private boolean shouldAocRaiseShield(AocShieldAiData shieldAi, LivingEntity target) {
+		float range = shieldAi.range();
 		return distanceToSqr(target) <= range * range && hasLineOfSight(target);
 	}
 
-	private void continueAocShield(AocAiData aiData) {
+	private void continueAocShield(AocShieldAiData shieldAi) {
 		if (!isUsingItem()) {
 			startUsingItem(InteractionHand.OFF_HAND);
 		}
 
 		if (!isUsingItem() || getUsedItemHand() != InteractionHand.OFF_HAND) {
-			aiData.setShieldUseTicks(0);
+			shieldAi.setUseTicks(0);
 			return;
 		}
 
-		aiData.setShieldUseTicks(aiData.shieldUseTicks() - 1);
+		shieldAi.setUseTicks(shieldAi.useTicks() - 1);
 	}
 
-	private int randomAocShieldDuration(AocAiData aiData) {
-		int min = aiData.shieldMinUseTicks();
-		int max = aiData.shieldMaxUseTicks();
+	private int randomAocShieldDuration(AocShieldAiData shieldAi) {
+		int min = shieldAi.minUseTicks();
+		int max = shieldAi.maxUseTicks();
 		if (max <= min) {
 			return min;
 		}
@@ -91,12 +91,12 @@ public abstract class MobAocShieldMixin extends LivingEntity {
 		return min + getRandom().nextInt(max - min + 1);
 	}
 
-	private void stopAocShield(AocAiData aiData) {
+	private void stopAocShield(AocShieldAiData shieldAi) {
 		if (isUsingItem() && getUsedItemHand() == InteractionHand.OFF_HAND
-				&& (aiData.shieldUseTicks() > 0 || getOffhandItem().getItem() == Items.SHIELD)) {
+				&& (shieldAi.useTicks() > 0 || getOffhandItem().getItem() == Items.SHIELD)) {
 			stopUsingItem();
 		}
 
-		aiData.setShieldUseTicks(0);
+		shieldAi.setUseTicks(0);
 	}
 }
