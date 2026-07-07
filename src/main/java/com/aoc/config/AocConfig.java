@@ -66,6 +66,11 @@ public final class AocConfig {
 		write(defaultsPath(), defaults());
 	}
 
+	public static void save(AocConfig config) {
+		config.normalize();
+		write(configPath(), config);
+	}
+
 	private static void write(Path path, AocConfig config) {
 		try {
 			Files.createDirectories(path.getParent());
