@@ -2,7 +2,6 @@ execute if entity @n[type=armor_stand,tag=record] run execute as @n[type=armor_s
 execute if entity @n[type=armor_stand,tag=record] run execute as @n[type=armor_stand,tag=record] at @s run function main:instant_detection/team_join
 execute if entity @n[type=armor_stand,tag=record] run execute as @n[type=armor_stand,tag=record] at @s run function main:instant_detection/animals_break_leaves
 execute if entity @n[type=armor_stand,tag=record] run execute as @n[type=armor_stand,tag=record] at @s run function main:instant_detection/projectile
-execute if entity @n[type=armor_stand,tag=record] run execute as @n[type=armor_stand,tag=record] at @s run function main:instant_detection/lightsource_detect
 execute if entity @n[type=armor_stand,tag=record] run execute as @n[type=armor_stand,tag=record] at @s run function main:instant_detection/ride
 execute if entity @n[type=armor_stand,tag=record] run execute as @n[type=armor_stand,tag=record] at @s run function main:instant_detection/horn
 execute if entity @n[type=armor_stand,tag=record] run execute as @n[type=armor_stand,tag=record] at @s run function main:instant_detection/defined_entities
