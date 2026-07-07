@@ -15,8 +15,9 @@ execute unless entity @n[type=armor_stand,tag=record] run bossbar set world_turb
 
 
 execute unless entity @n[type=armor_stand,tag=record] run summon armor_stand ~ ~ ~ {CustomName:{"text":"Record","color":"green"}, Tags:["record"], Marker:1b,CustomNameVisible:1b}
-execute as @n[type=armor_stand,tag=record] run bossbar set world_turbulence value 100
 execute as @n[type=armor_stand,tag=record] run scoreboard players set @s turbulence 100
+execute as @n[type=armor_stand,tag=record] if score start_turbulence aoc_config matches 0..1200 run scoreboard players operation @s turbulence = start_turbulence aoc_config
+execute as @n[type=armor_stand,tag=record] store result bossbar world_turbulence value run scoreboard players get @s turbulence
 execute as @n[type=armor_stand,tag=record] run function main:period_detection/turbulence_stages
 execute as @n[type=armor_stand,tag=record] run scoreboard players set @n[type=armor_stand,tag=record] difficulty 1
 execute as @n[type=armor_stand,tag=record] run scoreboard players set @n[type=armor_stand,tag=record] halt 0

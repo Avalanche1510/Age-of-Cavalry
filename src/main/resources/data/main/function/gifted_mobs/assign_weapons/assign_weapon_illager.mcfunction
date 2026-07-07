@@ -61,6 +61,3 @@ execute if entity @s[tag=c2w] if score @s itemRandom matches 161..170 run data m
 execute if entity @s[tag=c2w] if score @s itemRandom matches 171..180 run data merge entity @s {equipment:{mainhand:{id:"minecraft:diamond_axe",count:1b,components:{"minecraft:enchantments":{"minecraft:sharpness":6,"minecraft:looting":3,"minecraft:unbreaking":3}}}}}
 execute if entity @s[tag=c2w] if score @s itemRandom matches 181..190 run data merge entity @s {equipment:{mainhand:{id:"minecraft:diamond_sword",count:1b,components:{"minecraft:enchantments":{"minecraft:knockback":5,"minecraft:smite":5,"minecraft:fire_aspect":2,"minecraft:unbreaking":3}}}}}
 execute if entity @s[tag=c2w] if score @s itemRandom matches 191..200 run data merge entity @s {equipment:{mainhand:{id:"minecraft:diamond_axe",count:1b,components:{"minecraft:enchantments":{"minecraft:sharpness":7,"minecraft:looting":4,"minecraft:unbreaking":3}}}}}
-
-
-
