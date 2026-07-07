@@ -130,10 +130,11 @@ execute if entity @s[tag=spear] if score @s itemRandom matches 201..206 run data
 
 
 
+
+
 execute if entity @s[tag=miner] run data merge entity @s {equipment:{offhand:{id:copper_torch,count:1b},mainhand:{id:"minecraft:iron_pickaxe",count:1b,components:{"minecraft:enchantments":{"minecraft:efficiency":2,"minecraft:unbreaking":1,"minecraft:fortune":1}}}}}
 execute if entity @s[tag=lumberjack] run data merge entity @s {equipment:{offhand:{id:oak_log,count:1b},mainhand:{id:"minecraft:iron_axe",count:1b,components:{"minecraft:enchantments":{"minecraft:efficiency":3,"minecraft:unbreaking":1}}}}}
 execute if entity @s[tag=farmer] run data merge entity @s {equipment:{offhand:{id:poisonous_potato,count:1b},mainhand:{id:"minecraft:iron_hoe",count:1b,components:{"minecraft:enchantments":{"minecraft:efficiency":2,"minecraft:unbreaking":1,"minecraft:mending":1}}}}}
 execute if entity @s[tag=miner] run data merge entity @s {DeathLootTable:"mobs:entities/miner/overworld"}
 execute if entity @s[tag=lumberjack] run data merge entity @s {DeathLootTable:"mobs:entities/lumberjack/overworld"}
 execute if entity @s[tag=farmer] run data merge entity @s {DeathLootTable:"mobs:entities/farmer/overworld"}
-

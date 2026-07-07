@@ -1,8 +1,3 @@
-execute as @e[type=!player,team=illager_party,type=!vex,type=!ravager] unless entity @s[tag=armor] run tag @s add armor
-execute as @e[type=!player,team=undead-arthropod_party,type=!phantom,type=!zoglin,type=!skeleton_horse,type=!zombie_horse,type=!camel_husk,type=!zombie_nautilus,type=!spider,type=!cave_spider] unless entity @s[tag=armor] run tag @s add armor
-execute as @e[type=!player,team=piglin_party,type=!magma_cube,type=!hoglin,type=!blaze] unless entity @s[tag=armor] run tag @s add armor
-execute as @e[team=villager_party,type=guardvillagers:guard] unless entity @s[tag=armor] run tag @s add armor
-
 execute as @e[type=creeper] at @s unless score @s isGifted matches -1..1 run function main:gifted_mobs/gifted_level
 execute as @e[type=enderman] at @s unless score @s isGifted matches -1..1 run function main:gifted_mobs/gifted_level
 execute as @e[type=ghast] at @s unless score @s isGifted matches -1..1 run function main:gifted_mobs/gifted_level
