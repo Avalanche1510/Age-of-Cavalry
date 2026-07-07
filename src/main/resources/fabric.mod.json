@@ -22,9 +22,6 @@
 			"com.aoc.AgeOfCavalryDataGenerator"
 		]
 	},
-	"mixins": [
-		"age-of-cavalry.mixins.json"
-	],
 	"depends": {
 		"fabricloader": ">=0.19.3",
 		"minecraft": "~26.1.1",
