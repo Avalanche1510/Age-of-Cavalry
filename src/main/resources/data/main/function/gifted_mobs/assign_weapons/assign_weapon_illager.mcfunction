@@ -64,9 +64,3 @@ execute if entity @s[tag=c2w] if score @s itemRandom matches 191..200 run data m
 
 
 
-execute if entity @s[tag=miner] run data merge entity @s {equipment:{offhand:{id:torch,count:1b},mainhand:{id:"minecraft:iron_pickaxe",count:1b,components:{"minecraft:enchantments":{"minecraft:efficiency":2,"minecraft:unbreaking":1,"minecraft:fortune":1}}}}}
-execute if entity @s[tag=lumberjack] run data merge entity @s {equipment:{offhand:{id:dark_oak_log,count:1b},mainhand:{id:"minecraft:iron_axe",count:1b,components:{"minecraft:enchantments":{"minecraft:efficiency":3,"minecraft:unbreaking":1}}}}}
-execute if entity @s[tag=farmer] run data merge entity @s {equipment:{offhand:{id:pumpkin_pie,count:1b},mainhand:{id:"minecraft:iron_hoe",count:1b,components:{"minecraft:enchantments":{"minecraft:efficiency":2,"minecraft:unbreaking":1,"minecraft:mending":1}}}}}
-execute if entity @s[tag=miner] run data merge entity @s {DeathLootTable:"mobs:entities/miner/overworld"}
-execute if entity @s[tag=lumberjack] run data merge entity @s {DeathLootTable:"mobs:entities/lumberjack/overworld"}
-execute if entity @s[tag=farmer] run data merge entity @s {DeathLootTable:"mobs:entities/farmer/overworld"}

@@ -104,7 +104,8 @@ execute if score @s[tag=legend_mob,tag=archer] itemRandom matches 7..8 run data 
 execute if score @s[tag=legend_mob,tag=archer] itemRandom matches 9..14 run data merge entity @s {equipment:{feet:{},legs:{},chest:{id:"minecraft:netherite_chestplate",count:1,components:{"minecraft:enchantments":{"minecraft:protection":3,"minecraft:unbreaking":3,"minecraft:fire_protection":4}}},head:{id:"minecraft:netherite_helmet",count:1,components:{"minecraft:enchantments":{"minecraft:protection":3,"minecraft:unbreaking":3,"minecraft:fire_protection":4}}}}}
 
 
+execute if entity @s[tag=miner] run data merge entity @s {equipment:{feet:{},legs:{},chest:{},head:{id:"minecraft:golden_helmet",count:1b}}}
+execute if entity @s[tag=lumberjack] run data merge entity @s {equipment:{feet:{},legs:{},chest:{},head:{id:"minecraft:golden_helmet",count:1b}}}
+execute if entity @s[tag=farmer] run data merge entity @s {equipment:{feet:{},legs:{},chest:{},head:{id:"minecraft:golden_helmet",count:1b}}}
 
-execute if entity @s[tag=miner] run data merge entity @s {equipment:{feet:{},legs:{},chest:{},head:{id:"minecraft:gold_helmet",count:1b}}}
-execute if entity @s[tag=lumberjack] run data merge entity @s {equipment:{feet:{},legs:{},chest:{},head:{id:"minecraft:gold_helmet",count:1b}}}
-execute if entity @s[tag=farmer] run data merge entity @s {equipment:{feet:{},legs:{},chest:{},head:{id:"minecraft:gold_helmet",count:1b}}}
+execute if entity @s[tag=collecter] run return fail

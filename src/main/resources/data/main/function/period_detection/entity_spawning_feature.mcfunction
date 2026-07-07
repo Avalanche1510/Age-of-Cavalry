@@ -4,6 +4,11 @@
 # execute as @e[team=villager_party,type=!villager,tag=!upgraded] run attribute @s minecraft:follow_range base set 24
 # execute as @e[team=piglin_party,tag=!upgraded] run attribute @s minecraft:follow_range base set 24
 
+execute as @e[type=!player,team=illager_party,type=!vex,type=!ravager] unless entity @s[tag=armor] run tag @s add armor
+execute as @e[type=!player,team=undead-arthropod_party,type=!phantom,type=!zoglin,type=!skeleton_horse,type=!zombie_horse,type=!camel_husk,type=!zombie_nautilus,type=!spider,type=!cave_spider] unless entity @s[tag=armor] run tag @s add armor
+execute as @e[type=!player,team=piglin_party,type=!magma_cube,type=!hoglin,type=!blaze] unless entity @s[tag=armor] run tag @s add armor
+execute as @e[team=villager_party,type=guardvillagers:guard] unless entity @s[tag=armor] run tag @s add armor
+
 execute as @e[type=camel,tag=!upgraded] run attribute @s minecraft:movement_speed modifier add movement_speed 0.4 add_multiplied_total
 execute as @e[type=camel,tag=!upgraded] run attribute @s minecraft:max_health modifier add max_health 8 add_value
 execute as @e[type=camel,tag=!upgraded] run data merge entity @s {Health:1000}
@@ -74,9 +79,25 @@ execute as @e[team=undead-arthropod_party,tag=!existed] at @s if dimension minec
 execute as @e[team=illager_party,tag=!existed] at @s if dimension minecraft:overworld if score @n[type=armor_stand,tag=record] turbulence matches 1000..1199 run tp @s ~ -500 ~
 
 # 10%的村民守卫会获得火把
-execute as @e[type=guardvillagers:guard,tag=!torch_holder,tag=!lantern_holder] at @s store result score @s torch_random run random value 1..100
-execute as @e[type=guardvillagers:guard,tag=torch_holder] if score @s torch_random matches 1..10 run item replace entity @s weapon.offhand with torch 1
-execute as @e[type=guardvillagers:guard,tag=!torch_holder,tag=!lantern_holder] if score @s torch_random matches 1..10 run tag @s add torch_holder
+execute as @e[tag=armor,tag=!checked_career] at @s store result score @s career_random run random value 1..100
+execute as @e[tag=!checked_career,type=guardvillagers:guard,tag=torch_holder] if score @s career_random matches 91..100 run item replace entity @s weapon.offhand with torch 1
+execute as @e[tag=!checked_career,type=guardvillagers:guard,tag=!torch_holder] if score @s career_random matches 91..100 run tag @s add torch_holder
 
+# 部分怪物会变成特定职业的变体，获得对应职业的标签，之后会根据标签获得特定的属性加成和装备
+execute as @e[tag=!checked_career,tag=armor,team=!illager_party,team=!villager_party,tag=!captain,tag=!battle_unit] store result score @s height run data get entity @s Pos[1] 1
 
+execute as @e[tag=!checked_career,tag=armor,team=!illager_party,team=!villager_party,tag=!captain,tag=!battle_unit] at @s if score @s career_random matches 1..15 if score @s height matches ..62 if dimension minecraft:overworld run tag @s add miner
+execute as @e[tag=!checked_career,tag=armor,team=!illager_party,team=!villager_party,tag=!captain,tag=!battle_unit] at @s if score @s career_random matches 16..18 if score @s height matches ..62 if dimension minecraft:overworld run tag @s add lumberjack
+execute as @e[tag=!checked_career,tag=armor,team=!illager_party,team=!villager_party,tag=!captain,tag=!battle_unit] at @s if score @s career_random matches 19..21 if score @s height matches ..62 if dimension minecraft:overworld run tag @s add farmer
+
+execute as @e[tag=!checked_career,tag=armor,team=!illager_party,team=!villager_party,tag=!captain,tag=!battle_unit] at @s if score @s career_random matches 1..3 if score @s height matches 63.. if dimension minecraft:overworld run tag @s add miner
+execute as @e[tag=!checked_career,tag=armor,team=!illager_party,team=!villager_party,tag=!captain,tag=!battle_unit] at @s if score @s career_random matches 4..14 if score @s height matches 63.. if dimension minecraft:overworld run tag @s add lumberjack
+execute as @e[tag=!checked_career,tag=armor,team=!illager_party,team=!villager_party,tag=!captain,tag=!battle_unit] at @s if score @s career_random matches 15..24 if score @s height matches 63.. if dimension minecraft:overworld run tag @s add farmer
+
+execute as @e[tag=!checked_career,tag=armor,team=!illager_party,team=!villager_party,tag=!captain,tag=!battle_unit] at @s if score @s career_random matches 1..7 if dimension minecraft:the_nether run tag @s add miner
+execute as @e[tag=!checked_career,tag=armor,team=!illager_party,team=!villager_party,tag=!captain,tag=!battle_unit] at @s if score @s career_random matches 8..14 if dimension minecraft:the_nether run tag @s add lumberjack
+execute as @e[tag=!checked_career,tag=armor,team=!illager_party,team=!villager_party,tag=!captain,tag=!battle_unit] at @s if score @s career_random matches 15..21 if dimension minecraft:the_nether run tag @s add farmer
+
+execute as @e[tag=!checked_career,tag=armor,team=!illager_party,team=!villager_party,tag=!captain,tag=!battle_unit] unless entity @s[tag=!miner,tag=!lumberjack,tag=!farmer] run tag @s add collecter
+execute as @e[tag=!checked_career,tag=armor,team=!illager_party,tag=!captain,tag=!battle_unit] run tag @s add checked_career
 
