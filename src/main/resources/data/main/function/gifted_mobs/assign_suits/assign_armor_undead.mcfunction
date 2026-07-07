@@ -120,3 +120,5 @@ execute if score @s[tag=legend_mob,tag=archer] itemRandom matches 8..19 run data
 execute if entity @s[tag=miner] run data merge entity @s {equipment:{feet:{},legs:{},chest:{},head:{id:"minecraft:copper_helmet",count:1b}}}
 execute if entity @s[tag=lumberjack] run data merge entity @s {equipment:{feet:{},legs:{},chest:{},head:{id:"minecraft:copper_helmet",count:1b}}}
 execute if entity @s[tag=farmer] run data merge entity @s {equipment:{feet:{},legs:{},chest:{},head:{id:"minecraft:copper_helmet",count:1b}}}
+
+execute if entity @s[tag=collecter] run return fail

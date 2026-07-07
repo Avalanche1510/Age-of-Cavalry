@@ -1,0 +1,1 @@
+$say $(name),$(things)牛逼！

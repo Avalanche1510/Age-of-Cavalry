@@ -4,6 +4,7 @@ execute if score @s period matches 1 run function main:period_detection/items_re
 execute if score @s period matches 1 run function main:period_detection/disguise
 execute if score @s period matches 2 run function main:period_detection/cost
 
+execute if score @s period matches 4 if score spawn_features aoc_config matches 1 run function main:period_detection/entity_spawning_feature
 execute if score @s period matches 5 if score gifted_mobs aoc_config matches 1 run function main:period_detection/check_gifted
 execute if score @s period matches 6 run function main:period_detection/identify_region
 execute if score @s period matches 7 if score exp_scaling aoc_config matches 1 run function main:period_detection/levelup
@@ -11,7 +12,7 @@ execute if score @s period matches 9 run function main:period_detection/compass
 execute if score @s period matches 10 if score regional_spawns aoc_config matches 1 run function main:period_detection/tension
 execute if score @s period matches 11 run function main:period_detection/cavalry_check
 execute if score @s period matches 12 run function main:period_detection/cost
-execute if score @s period matches 13 if score spawn_features aoc_config matches 1 run function main:period_detection/entity_spawning_feature
+
 execute if score @s period matches 14 run function main:period_detection/hurt_reputation
 execute if score @s period matches 15 run function main:period_detection/clear_arrows
 execute if score @s period matches 16 run function main:period_detection/halt

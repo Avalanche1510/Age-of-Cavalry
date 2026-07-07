@@ -1,0 +1,22 @@
+{
+  "values": [
+    "minecraft:evoker",
+    "minecraft:illusioner",
+    "minecraft:pillager",
+    "minecraft:vindicator",
+    "minecraft:ravager",
+    "minecraft:witch",
+    "minecraft:vex",
+    "illagerinvasion:alchemist",
+    "illagerinvasion:archivist",
+    "illagerinvasion:basher",
+    "illagerinvasion:firecaller",
+    "illagerinvasion:inquisitor",
+    "illagerinvasion:invoker",
+    "illagerinvasion:marauder",
+    "illagerinvasion:necromancer",
+    "illagerinvasion:provoker",
+    "illagerinvasion:sorcerer",
+    "illagerinvasion:surrendered"
+  ]
+}
