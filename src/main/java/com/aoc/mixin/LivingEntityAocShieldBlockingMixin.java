@@ -3,6 +3,8 @@ package com.aoc.mixin;
 import com.aoc.ai.AocAiHolder;
 import com.aoc.ai.AocShieldAiData;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.InteractionHand;
@@ -21,6 +23,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityAocShieldBlockingMixin {
+	private static final String GUARD_VILLAGERS_NAMESPACE = "guardvillagers";
+
 	@Shadow
 	public abstract ItemStack getItemBlockingWith();
 
@@ -29,6 +33,10 @@ public abstract class LivingEntityAocShieldBlockingMixin {
 
 	@Redirect(method = "applyItemBlocking", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/component/BlocksAttacks;resolveBlockedDamage(Lnet/minecraft/world/damagesource/DamageSource;FD)F"))
 	private float aoc$resolveBlockedDamage(BlocksAttacks blocksAttacks, DamageSource source, float amount, double angle) {
+		if (aoc$isGuardVillagersEntity()) {
+			return blocksAttacks.resolveBlockedDamage(source, amount, angle);
+		}
+
 		AocShieldAiData shieldAi = aoc$shieldAi();
 		if (!shieldAi.isConfigured() || !shieldAi.isEnabled()) {
 			return blocksAttacks.resolveBlockedDamage(source, amount, angle);
@@ -42,6 +50,10 @@ public abstract class LivingEntityAocShieldBlockingMixin {
 	@Inject(method = "applyItemBlocking", at = @At("RETURN"))
 	private void aoc$afterItemBlocking(ServerLevel level, DamageSource source, float amount,
 			CallbackInfoReturnable<Float> info) {
+		if (aoc$isGuardVillagersEntity()) {
+			return;
+		}
+
 		float blockedDamage = info.getReturnValue();
 		AocShieldAiData shieldAi = aoc$shieldAi();
 		if (blockedDamage <= 0.0F || !shieldAi.isConfigured() || !shieldAi.isEnabled()) {
@@ -103,6 +115,12 @@ public abstract class LivingEntityAocShieldBlockingMixin {
 	@Unique
 	private LivingEntity aoc$self() {
 		return (LivingEntity) (Object) this;
+	}
+
+	@Unique
+	private boolean aoc$isGuardVillagersEntity() {
+		Identifier id = BuiltInRegistries.ENTITY_TYPE.getKey(aoc$self().getType());
+		return GUARD_VILLAGERS_NAMESPACE.equals(id.getNamespace());
 	}
 
 	@Unique

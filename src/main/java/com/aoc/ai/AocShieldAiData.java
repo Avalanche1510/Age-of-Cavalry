@@ -16,6 +16,8 @@ public class AocShieldAiData {
 	private static final int DEFAULT_COOLDOWN_TICKS = 40;
 	private static final float DEFAULT_BLOCKING_ANGLE = 30.0F;
 	private static final int DEFAULT_AXE_DISABLE_COOLDOWN_TICKS = 100;
+	private static final float DEFAULT_SPEED_REDUCTION = 0.5F;
+	private static final int MAX_USE_TICKS = 72000;
 
 	private boolean configured;
 	private boolean enabled;
@@ -26,6 +28,7 @@ public class AocShieldAiData {
 	private int cooldownTicks = DEFAULT_COOLDOWN_TICKS;
 	private float blockingAngle = DEFAULT_BLOCKING_ANGLE;
 	private int axeDisableCooldownTicks = DEFAULT_AXE_DISABLE_COOLDOWN_TICKS;
+	private float speedReduction = DEFAULT_SPEED_REDUCTION;
 	private int useTicks;
 	private int cooldown;
 	private int disabledCooldown;
@@ -68,6 +71,10 @@ public class AocShieldAiData {
 
 	public int axeDisableCooldownTicks() {
 		return axeDisableCooldownTicks;
+	}
+
+	public float speedReduction() {
+		return speedReduction;
 	}
 
 	public int useTicks() {
@@ -123,6 +130,7 @@ public class AocShieldAiData {
 		output.putInt("cooldownTicks", cooldownTicks);
 		output.putFloat("blockingAngle", blockingAngle);
 		output.putInt("axeDisableCooldownTicks", axeDisableCooldownTicks);
+		output.putFloat("speedReduction", speedReduction);
 	}
 
 	public void clear() {
@@ -135,6 +143,7 @@ public class AocShieldAiData {
 		cooldownTicks = DEFAULT_COOLDOWN_TICKS;
 		blockingAngle = DEFAULT_BLOCKING_ANGLE;
 		axeDisableCooldownTicks = DEFAULT_AXE_DISABLE_COOLDOWN_TICKS;
+		speedReduction = DEFAULT_SPEED_REDUCTION;
 		useTicks = 0;
 		cooldown = 0;
 		disabledCooldown = 0;
@@ -143,7 +152,8 @@ public class AocShieldAiData {
 	private void readNested(ValueInput shieldInput) {
 		if (!hasAnyShieldField(shieldInput, "enable", "range", "shieldRange", "chance", "shieldChance",
 				"minUseTicks", "shieldMinUseTicks", "maxUseTicks", "shieldMaxUseTicks", "cooldownTicks",
-				"shieldCooldownTicks", "blockingAngle", "axeDisableCooldownTicks")) {
+				"shieldCooldownTicks", "blockingAngle", "axeDisableCooldownTicks", "speedReduction",
+				"shieldSpeedReduction", "movementSpeedReduction", "speedReductionPercent")) {
 			clear();
 			return;
 		}
@@ -152,14 +162,16 @@ public class AocShieldAiData {
 		enabled = getBooleanOr(shieldInput, "enable", false);
 		range = clamp(getFloatOr(shieldInput, DEFAULT_RANGE, "range", "shieldRange"), 0.0F, 64.0F);
 		chance = clamp(getFloatOr(shieldInput, DEFAULT_CHANCE, "shieldChance", "chance"), 0.0F, 1.0F);
-		minUseTicks = clamp(getIntOr(shieldInput, DEFAULT_MIN_USE_TICKS, "minUseTicks", "shieldMinUseTicks"), 1, 200);
+		minUseTicks = clamp(getIntOr(shieldInput, DEFAULT_MIN_USE_TICKS, "minUseTicks", "shieldMinUseTicks"), 1,
+				MAX_USE_TICKS);
 		maxUseTicks = clamp(getIntOr(shieldInput, DEFAULT_MAX_USE_TICKS, "maxUseTicks", "shieldMaxUseTicks"),
-				minUseTicks, 400);
+				minUseTicks, MAX_USE_TICKS);
 		cooldownTicks = clamp(getIntOr(shieldInput, DEFAULT_COOLDOWN_TICKS, "cooldownTicks", "shieldCooldownTicks"),
 				0, 400);
 		blockingAngle = clamp(getFloatOr(shieldInput, DEFAULT_BLOCKING_ANGLE, "blockingAngle"), 1.0F, 180.0F);
 		axeDisableCooldownTicks = clamp(getIntOr(shieldInput, DEFAULT_AXE_DISABLE_COOLDOWN_TICKS,
 				"axeDisableCooldownTicks"), 0, 600);
+		speedReduction = readSpeedReduction(shieldInput);
 		useTicks = 0;
 		cooldown = 0;
 		disabledCooldown = 0;
@@ -167,7 +179,8 @@ public class AocShieldAiData {
 
 	private void readLegacyFlat(ValueInput aiInput) {
 		if (!hasAnyShieldField(aiInput, "shield", "shieldRange", "shieldChance", "shieldMinUseTicks",
-				"shieldMaxUseTicks", "shieldCooldownTicks")) {
+				"shieldMaxUseTicks", "shieldCooldownTicks", "shieldSpeedReduction", "speedReduction",
+				"speedReductionPercent")) {
 			clear();
 			return;
 		}
@@ -176,11 +189,12 @@ public class AocShieldAiData {
 		enabled = getBooleanOr(aiInput, "shield", false);
 		range = clamp(getFloatOr(aiInput, DEFAULT_RANGE, "shieldRange"), 0.0F, 64.0F);
 		chance = clamp(getFloatOr(aiInput, DEFAULT_CHANCE, "shieldChance"), 0.0F, 1.0F);
-		minUseTicks = clamp(getIntOr(aiInput, DEFAULT_MIN_USE_TICKS, "shieldMinUseTicks"), 1, 200);
-		maxUseTicks = clamp(getIntOr(aiInput, DEFAULT_MAX_USE_TICKS, "shieldMaxUseTicks"), minUseTicks, 400);
+		minUseTicks = clamp(getIntOr(aiInput, DEFAULT_MIN_USE_TICKS, "shieldMinUseTicks"), 1, MAX_USE_TICKS);
+		maxUseTicks = clamp(getIntOr(aiInput, DEFAULT_MAX_USE_TICKS, "shieldMaxUseTicks"), minUseTicks, MAX_USE_TICKS);
 		cooldownTicks = clamp(getIntOr(aiInput, DEFAULT_COOLDOWN_TICKS, "shieldCooldownTicks"), 0, 400);
 		blockingAngle = DEFAULT_BLOCKING_ANGLE;
 		axeDisableCooldownTicks = DEFAULT_AXE_DISABLE_COOLDOWN_TICKS;
+		speedReduction = readSpeedReduction(aiInput);
 		useTicks = 0;
 		cooldown = 0;
 		disabledCooldown = 0;
@@ -253,6 +267,16 @@ public class AocShieldAiData {
 		}
 
 		return defaultValue;
+	}
+
+	private static float readSpeedReduction(ValueInput input) {
+		float value = getFloatOr(input, DEFAULT_SPEED_REDUCTION, "speedReduction", "shieldSpeedReduction",
+				"movementSpeedReduction", "speedReductionPercent");
+		if (value > 1.0F) {
+			value /= 100.0F;
+		}
+
+		return clamp(value, 0.0F, 1.0F);
 	}
 
 	private static int clamp(int value, int min, int max) {

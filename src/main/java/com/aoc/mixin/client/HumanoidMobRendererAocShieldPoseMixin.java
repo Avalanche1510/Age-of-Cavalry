@@ -3,6 +3,8 @@ package com.aoc.mixin.client;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.renderer.entity.HumanoidMobRenderer;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.entity.Mob;
@@ -14,9 +16,15 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(HumanoidMobRenderer.class)
 public class HumanoidMobRendererAocShieldPoseMixin {
+	private static final String GUARD_VILLAGERS_NAMESPACE = "guardvillagers";
+
 	@Inject(method = "getArmPose", at = @At("HEAD"), cancellable = true)
 	private void aoc$getBlockingArmPose(Mob mob, HumanoidArm arm,
 			CallbackInfoReturnable<HumanoidModel.ArmPose> info) {
+		if (aoc$isGuardVillagersEntity(mob)) {
+			return;
+		}
+
 		if (!mob.isUsingItem() || arm != aoc$usedItemArm(mob)) {
 			return;
 		}
@@ -33,5 +41,10 @@ public class HumanoidMobRendererAocShieldPoseMixin {
 		}
 
 		return mob.getMainArm().getOpposite();
+	}
+
+	private static boolean aoc$isGuardVillagersEntity(Mob mob) {
+		Identifier id = BuiltInRegistries.ENTITY_TYPE.getKey(mob.getType());
+		return GUARD_VILLAGERS_NAMESPACE.equals(id.getNamespace());
 	}
 }

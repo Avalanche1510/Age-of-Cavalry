@@ -41,7 +41,10 @@ public final class AocCommands {
 										.executes(context -> reload(context.getSource())))
 								.then(literal("write-defaults")
 										.requires(source -> source.permissions().hasPermission(Permissions.COMMANDS_GAMEMASTER))
-										.executes(context -> writeDefaults(context.getSource()))))
+										.executes(context -> writeDefaults(context.getSource())))
+								.then(literal("reset-defaults")
+										.requires(source -> source.permissions().hasPermission(Permissions.COMMANDS_GAMEMASTER))
+										.executes(context -> resetDefaults(context.getSource()))))
 		));
 	}
 
@@ -114,7 +117,15 @@ public final class AocCommands {
 
 	private static int writeDefaults(CommandSourceStack source) {
 		AocConfig.writeDefaultsCopy();
-		source.sendSuccess(() -> Component.literal("Wrote default config copy to " + AocConfig.defaultsPath()), false);
+		source.sendSuccess(() -> Component.literal("Wrote default config template to " + AocConfig.defaultsPath()
+				+ ". Active config was not changed."), false);
+		return Command.SINGLE_SUCCESS;
+	}
+
+	private static int resetDefaults(CommandSourceStack source) {
+		AocConfig config = AgeOfCavalry.resetConfigToDefaults();
+		AocConfigSync.sync(source.getServer(), config);
+		source.sendSuccess(() -> Component.literal("Reset Age of Cavalry config to code defaults and synced scoreboard values."), true);
 		return Command.SINGLE_SUCCESS;
 	}
 

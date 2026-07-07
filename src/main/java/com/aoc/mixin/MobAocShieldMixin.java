@@ -1,8 +1,14 @@
 package com.aoc.mixin;
 
+import com.aoc.AgeOfCavalry;
 import com.aoc.ai.AocAiHolder;
 import com.aoc.ai.AocShieldAiData;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.ai.attributes.AttributeInstance;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
@@ -15,6 +21,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(Mob.class)
 public abstract class MobAocShieldMixin extends LivingEntity {
+	private static final String GUARD_VILLAGERS_NAMESPACE = "guardvillagers";
+	private static final Identifier SHIELD_SPEED_REDUCTION_ID = Identifier.fromNamespaceAndPath(AgeOfCavalry.MOD_ID,
+			"shield_speed_reduction");
+
 	protected MobAocShieldMixin(EntityType<? extends LivingEntity> entityType, Level level) {
 		super(entityType, level);
 	}
@@ -26,8 +36,17 @@ public abstract class MobAocShieldMixin extends LivingEntity {
 		}
 
 		Mob mob = (Mob) (Object) this;
+		if (isGuardVillagersEntity(mob)) {
+			removeAocShieldSpeedModifier();
+			return;
+		}
+
 		AocShieldAiData shieldAi = ((AocAiHolder) this).aoc$getAiData().shield();
 		shieldAi.tickCooldowns();
+		if (!shieldAi.isConfigured()) {
+			removeAocShieldSpeedModifier();
+			return;
+		}
 
 		if (!shieldAi.canUse() || mob.isNoAi() || getOffhandItem().getItem() != Items.SHIELD) {
 			stopAocShield(shieldAi);
@@ -48,6 +67,7 @@ public abstract class MobAocShieldMixin extends LivingEntity {
 		if (isUsingItem() && getUsedItemHand() == InteractionHand.OFF_HAND) {
 			stopUsingItem();
 			shieldAi.setCooldown(shieldAi.cooldownTicks());
+			removeAocShieldSpeedModifier();
 			return;
 		}
 
@@ -58,9 +78,16 @@ public abstract class MobAocShieldMixin extends LivingEntity {
 		if (getRandom().nextFloat() <= shieldAi.chance()) {
 			shieldAi.setUseTicks(randomAocShieldDuration(shieldAi));
 			startUsingItem(InteractionHand.OFF_HAND);
+			updateAocShieldSpeedModifier(shieldAi);
 		} else {
 			shieldAi.setCooldown(shieldAi.cooldownTicks());
+			removeAocShieldSpeedModifier();
 		}
+	}
+
+	private boolean isGuardVillagersEntity(Mob mob) {
+		Identifier id = BuiltInRegistries.ENTITY_TYPE.getKey(mob.getType());
+		return GUARD_VILLAGERS_NAMESPACE.equals(id.getNamespace());
 	}
 
 	private boolean shouldAocRaiseShield(AocShieldAiData shieldAi, LivingEntity target) {
@@ -79,6 +106,7 @@ public abstract class MobAocShieldMixin extends LivingEntity {
 		}
 
 		shieldAi.setUseTicks(shieldAi.useTicks() - 1);
+		updateAocShieldSpeedModifier(shieldAi);
 	}
 
 	private int randomAocShieldDuration(AocShieldAiData shieldAi) {
@@ -98,5 +126,29 @@ public abstract class MobAocShieldMixin extends LivingEntity {
 		}
 
 		shieldAi.setUseTicks(0);
+		removeAocShieldSpeedModifier();
+	}
+
+	private void updateAocShieldSpeedModifier(AocShieldAiData shieldAi) {
+		AttributeInstance speed = getAttribute(Attributes.MOVEMENT_SPEED);
+		if (speed == null) {
+			return;
+		}
+
+		float reduction = shieldAi.speedReduction();
+		if (reduction <= 0.0F || !isUsingItem() || getUsedItemHand() != InteractionHand.OFF_HAND) {
+			speed.removeModifier(SHIELD_SPEED_REDUCTION_ID);
+			return;
+		}
+
+		speed.addOrUpdateTransientModifier(new AttributeModifier(SHIELD_SPEED_REDUCTION_ID, -reduction,
+				AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+	}
+
+	private void removeAocShieldSpeedModifier() {
+		AttributeInstance speed = getAttribute(Attributes.MOVEMENT_SPEED);
+		if (speed != null) {
+			speed.removeModifier(SHIELD_SPEED_REDUCTION_ID);
+		}
 	}
 }

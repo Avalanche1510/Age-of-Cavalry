@@ -31,4 +31,10 @@ public class AgeOfCavalry implements ModInitializer {
 		config = AocConfig.load();
 		return config;
 	}
+
+	public static AocConfig resetConfigToDefaults() {
+		config = AocConfig.defaults();
+		AocConfig.save(config);
+		return config;
+	}
 }
