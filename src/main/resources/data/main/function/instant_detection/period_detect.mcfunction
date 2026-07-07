@@ -4,12 +4,12 @@ execute if score @s period matches 1 run function main:period_detection/items_re
 execute if score @s period matches 1 run function main:period_detection/disguise
 execute if score @s period matches 2 run function main:period_detection/cost
 
-execute if score @s period matches 4 run function main:period_detection/entity_spawning_feature
-execute if score @s period matches 5 run function main:period_detection/check_gifted
+execute if score @s period matches 4 if score spawn_features aoc_config matches 1 run function main:period_detection/entity_spawning_feature
+execute if score @s period matches 5 if score gifted_mobs aoc_config matches 1 run function main:period_detection/check_gifted
 execute if score @s period matches 6 run function main:period_detection/identify_region
-execute if score @s period matches 7 run function main:period_detection/levelup
+execute if score @s period matches 7 if score exp_scaling aoc_config matches 1 run function main:period_detection/levelup
 execute if score @s period matches 9 run function main:period_detection/compass
-execute if score @s period matches 10 run function main:period_detection/tension
+execute if score @s period matches 10 if score regional_spawns aoc_config matches 1 run function main:period_detection/tension
 execute if score @s period matches 11 run function main:period_detection/cavalry_check
 execute if score @s period matches 12 run function main:period_detection/cost
 
@@ -25,7 +25,7 @@ scoreboard players add @s longPeriod 1
 execute if score @s longPeriod matches 1 run function main:period_detection/better_witch
 execute if score @s longPeriod matches 2 run function main:period_detection/animals_effect
 execute if score @s longPeriod matches 80 run function main:period_detection/create_region
-execute if score @s longPeriod matches 160 run function main:period_detection/turbulence_changes
+execute if score @s longPeriod matches 160 if score regional_spawns aoc_config matches 1 run function main:period_detection/turbulence_changes
 execute if score @s longPeriod matches 240 run function main:period_detection/create_region
 execute if score @s longPeriod matches 320.. run scoreboard players set @s longPeriod 0
 # 1 min 计时检测
@@ -37,8 +37,8 @@ execute if score @s MinPeriod matches 901 run function main:period_detection/rec
 execute if score @s MinPeriod matches 1200.. run scoreboard players set @s MinPeriod 0
 # 3 min 计时检测
 scoreboard players add @s 3MinPeriod 1
-execute if score @s 3MinPeriod matches 1 run function main:period_detection/mob_spawn
-execute if score @s 3MinPeriod matches 3001 run function main:period_detection/periodic_turbulence
+execute if score @s 3MinPeriod matches 1 if score regional_spawns aoc_config matches 1 run function main:period_detection/mob_spawn
+execute if score @s 3MinPeriod matches 3001 if score regional_spawns aoc_config matches 1 run function main:period_detection/periodic_turbulence
 execute if score @s 3MinPeriod matches 3600.. run scoreboard players set @s 3MinPeriod 0
 
 # 随机延时检测初始化

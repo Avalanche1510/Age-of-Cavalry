@@ -1,24 +1,34 @@
 package com.aoc;
 
+import com.aoc.command.AocCommands;
+import com.aoc.config.AocConfig;
+import com.aoc.config.AocConfigSync;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class AgeOfCavalry implements ModInitializer {
 	public static final String MOD_ID = "age-of-cavalry";
-
-	// This logger is used to write text to the console and the log file.
-	// It is considered best practice to use your mod id as the logger's name.
-	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+	private static AocConfig config = AocConfig.defaults();
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
+		config = AocConfig.load();
+		AocCommands.register();
+		ServerLifecycleEvents.SERVER_STARTED.register(server -> AocConfigSync.sync(server, config));
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Age of Cavalry loaded config from {}.", AocConfig.configPath());
+	}
+
+	public static AocConfig getConfig() {
+		return config;
+	}
+
+	public static AocConfig reloadConfig() {
+		config = AocConfig.load();
+		return config;
 	}
 }

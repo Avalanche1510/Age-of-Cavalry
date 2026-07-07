@@ -12,5 +12,3 @@ execute as @a[level=..6,scores={IsUsingGoatHorn=1},limit=1] run tellraw @s {"tex
 $execute as @e[type=!player,name=$(item_name)] at @s run playsound entity.enderman.teleport master @a[distance=..8] ~ ~ ~ 1 1 0.1
 $execute as @e[type=!player,name=$(item_name)] at @s run particle minecraft:dragon_breath ~ ~1 ~ 0.5 1 0.5 0.05 20 force
 scoreboard players set @s IsUsingGoatHorn 0
-
-
