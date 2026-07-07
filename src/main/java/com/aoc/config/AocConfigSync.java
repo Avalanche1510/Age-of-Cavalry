@@ -28,8 +28,8 @@ public final class AocConfigSync {
 		if (objectiveEnsured) {
 			return;
 		}
-		server.getCommandManager().executeWithPrefix(
-				server.getCommandSource(),
+		server.getCommands().performPrefixedCommand(
+				server.createCommandSourceStack(),
 				"scoreboard objectives add " + OBJECTIVE + " dummy \"AoC Config\""
 		);
 		objectiveEnsured = true;
@@ -40,8 +40,8 @@ public final class AocConfigSync {
 	}
 
 	private static void set(MinecraftServer server, String key, int value) {
-		server.getCommandManager().executeWithPrefix(
-				server.getCommandSource(),
+		server.getCommands().performPrefixedCommand(
+				server.createCommandSourceStack(),
 				"scoreboard players set " + key + " " + OBJECTIVE + " " + value
 		);
 	}
