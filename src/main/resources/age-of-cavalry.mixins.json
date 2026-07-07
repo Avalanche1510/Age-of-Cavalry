@@ -9,7 +9,8 @@
 	],
 	"client": [
 		"client.AbstractZombieModelAocShieldPoseMixin",
-		"client.HumanoidMobRendererAocShieldPoseMixin"
+		"client.HumanoidMobRendererAocShieldPoseMixin",
+		"client.ItemInHandLayerAocShieldTransformMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
