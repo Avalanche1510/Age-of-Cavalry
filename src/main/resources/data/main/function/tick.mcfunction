@@ -6,7 +6,7 @@ execute if entity @n[type=armor_stand,tag=record] run execute as @n[type=armor_s
 execute if entity @n[type=armor_stand,tag=record] run execute as @n[type=armor_stand,tag=record] at @s run function main:instant_detection/horn
 execute if entity @n[type=armor_stand,tag=record] run execute as @n[type=armor_stand,tag=record] at @s run function main:instant_detection/defined_entities
 execute if entity @n[type=armor_stand,tag=record] run execute as @n[type=armor_stand,tag=record] at @s run function main:instant_detection/set_daytime
-execute if entity @n[type=armor_stand,tag=record] if score orbital_cannon aoc_config matches 1 run execute as @n[type=armor_stand,tag=record] at @s run function main:instant_detection/trigger
+execute if entity @n[type=armor_stand,tag=record] run function main:instant_detection/trigger
 execute if entity @n[type=armor_stand,tag=record] if score happy_ghast aoc_config matches 1 run execute if entity @e[type=happy_ghast] as @n[type=armor_stand,tag=record] at @s run function main:instant_detection/happy_ghast
 #execute as @e[type=ender_pearl] at @s run data modify entity @s Owner[0] set from entity @n[type=!item,type=!ender_pearl,type=!armor_stand] UUID[0]
 #execute as @e[type=ender_pearl] at @s run data modify entity @s Owner[1] set from entity @n[type=!item,type=!ender_pearl,type=!armor_stand] UUID[1]
