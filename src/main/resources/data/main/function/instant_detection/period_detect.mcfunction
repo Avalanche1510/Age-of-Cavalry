@@ -16,7 +16,7 @@ execute if score @s period matches 12 run function main:period_detection/cost
 execute if score @s period matches 14 run function main:period_detection/hurt_reputation
 execute if score @s period matches 15 run function main:period_detection/clear_arrows
 execute if score @s period matches 16 run function main:period_detection/halt
-execute if score @s period matches 17 run function main:period_detection/team_clash
+# execute if score @s period matches 17 run function main:period_detection/team_clash
 execute if score @s period matches 18 run function main:period_detection/turbulence_stages
 execute if score @s period matches 19 run function main:period_detection/near_death_experience
 execute if score @s period matches 20.. run scoreboard players set @s period 0

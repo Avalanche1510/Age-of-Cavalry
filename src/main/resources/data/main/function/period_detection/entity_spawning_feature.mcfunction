@@ -80,8 +80,8 @@ execute as @e[team=illager_party,tag=!existed] at @s if dimension minecraft:over
 
 # 10%的村民守卫会获得火把
 execute as @e[tag=armor,tag=!checked_career] at @s store result score @s career_random run random value 1..100
-execute as @e[tag=!checked_career,type=guardvillagers:guard,tag=torch_holder] if score @s career_random matches 91..100 run item replace entity @s weapon.offhand with torch 1
-execute as @e[tag=!checked_career,type=guardvillagers:guard,tag=!torch_holder] if score @s career_random matches 91..100 run tag @s add torch_holder
+execute as @e[tag=!checked_career,type=guardvillagers:guard,tag=!torch_holder] if score @s career_random matches 1..100 run item replace entity @s weapon.offhand with torch 1
+execute as @e[tag=!checked_career,type=guardvillagers:guard,tag=!torch_holder] if score @s career_random matches 1..100 run tag @s add torch_holder
 
 # 部分怪物会变成特定职业的变体，获得对应职业的标签，之后会根据标签获得特定的属性加成和装备
 execute as @e[tag=!checked_career,tag=armor,team=!illager_party,team=!villager_party,tag=!captain,tag=!battle_unit] store result score @s height run data get entity @s Pos[1] 1
@@ -97,6 +97,10 @@ execute as @e[tag=!checked_career,tag=armor,team=!illager_party,team=!villager_p
 execute as @e[tag=!checked_career,tag=armor,team=!illager_party,team=!villager_party,tag=!captain,tag=!battle_unit] at @s if score @s career_random matches 1..7 if dimension minecraft:the_nether run tag @s add miner
 execute as @e[tag=!checked_career,tag=armor,team=!illager_party,team=!villager_party,tag=!captain,tag=!battle_unit] at @s if score @s career_random matches 8..14 if dimension minecraft:the_nether run tag @s add lumberjack
 execute as @e[tag=!checked_career,tag=armor,team=!illager_party,team=!villager_party,tag=!captain,tag=!battle_unit] at @s if score @s career_random matches 15..21 if dimension minecraft:the_nether run tag @s add farmer
+
+execute as @e[tag=farmer] run pmb faction member set harvester_union @s
+execute as @e[tag=lumberjack] run pmb faction member set greenwood_guild @s
+execute as @e[tag=miner] run pmb faction member set deepslate_guild @s
 
 execute as @e[tag=!checked_career,tag=armor,team=!illager_party,team=!villager_party,tag=!captain,tag=!battle_unit] unless entity @s[tag=!miner,tag=!lumberjack,tag=!farmer] run tag @s add collecter
 execute as @e[tag=!checked_career,tag=armor,team=!illager_party,tag=!captain,tag=!battle_unit] run tag @s add checked_career

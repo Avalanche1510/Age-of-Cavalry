@@ -71,7 +71,7 @@ scoreboard objectives add tnt_num dummy "tnt num"
 scoreboard objectives add calculated_motion dummy "calculated motion"
 scoreboard objectives add tnt_depth dummy "tnt depth"
 scoreboard objectives add fishing_rod_usage minecraft.used:minecraft.fishing_rod "fishing rod usage"
- 
+
 scoreboard objectives add illager_count dummy "illager count"
 scoreboard objectives add undead_count dummy "undead count"
 scoreboard objectives add village_guard_count dummy "village guard count"
@@ -112,5 +112,70 @@ team modify illager_party color dark_blue
 team add piglin_party "piglin party"
 team modify piglin_party color gold
 
-effect clear @a darkness
+# 来源于pmb的派系系统创建
+
+# 村民防卫军
+pmb faction create villager_guardforce
+# 村民平民
+pmb faction create villager_civilian
+# 绿宝石商团
+pmb faction create emerald_caravan
+
+# 灾厄之庭
+pmb faction create illager_empire
+
+# 猪灵部落
+pmb faction create piglin_clans
+
+# 亡灵联邦
+pmb faction create undead_federation
+
+# 地平线 探索者工会
+pmb faction create horizon
+# 深板岩 矿业协会
+pmb faction create deepslate_guild
+# 丰收者 农业联合会
+pmb faction create harvester_union
+# 苍林 伐木者协会
+pmb faction create greenwood_guild
+
+# 控制派系的规则
+pmb faction rule set groupRevenge illager_empire 1b
+pmb faction rule set groupRevenge villager_guardforce 1b
+pmb faction rule set groupRevenge emerald_caravan 1b
+pmb faction rule set groupRevenge piglin_clans 1b
+
+pmb faction rule set defaultAttitude villager_civilian passively_evasive
+pmb faction rule set defaultAttitude horizon passively_evasive
+pmb faction rule set defaultAttitude greenwood_guild passively_evasive
+pmb faction rule set defaultAttitude deepslate_guild passively_evasive
+pmb faction rule set defaultAttitude harvester_union passively_evasive
+
+pmb faction rule set evasiveSpeedMultiplier illager_empire 0.75
+pmb faction rule set evasiveSpeedMultiplier horizon 1.68
+pmb faction rule set evasiveSpeedMultiplier greenwood_guild 1.50
+pmb faction rule set evasiveSpeedMultiplier deepslate_guild 1.50
+pmb faction rule set evasiveSpeedMultiplier harvester_union 1.50
+
+# 派系的态度规则
+pmb faction relationship add illager_empire hostile {factions:["villager_guardforce", "villager_civilian", "emerald_caravan", "piglin_clans", "undead_federation", "greenwood_guild", "deepslate_guild", "harvester_union"]}
+
+pmb faction relationship add villager_guardforce hostile {factions:["illager_empire", "undead_federation", "horizon"]}
+
+pmb faction relationship add piglin_clans hostile {factions:["illager_empire", "undead_federation"]}
+
+pmb faction relationship add undead_federation hostile {factions:["villager_guardforce", "villager_civilian", "emerald_caravan", "illager_empire", "piglin_clans"]}
+
+pmb faction relationship add villager_civilian actively_evasive {factions:["illager_empire", "undead_federation"]}
+
+pmb faction relationship add emerald_caravan hostile {factions:["illager_empire", "undead_federation"]}
+
+pmb faction relationship add horizon actively_evasive {factions:["villager_guardforce"]}
+
+pmb faction relationship add greenwood_guild actively_evasive {factions:["illager_empire"]}
+
+pmb faction relationship add deepslate_guild actively_evasive {factions:["illager_empire"]}
+
+pmb faction relationship add harvester_union actively_evasive {factions:["illager_empire"]}
+
 # give @a written_book[minecraft:written_book_content={pages: [{raw: "    SpearCraft服务器\n          启蒙之书\n-------------------\n目录：\n    1. 世界简史\n    2. 如何寻新"}, {raw: " ------世界简史------ \n第XXI纪末期，XI周期。\n纷争与变革之年，\n青铜与长矛之年，\n空气与火药之年，\n羽箭与战马之年，\n众帝国形成之年...\n\n大地上古老的已死之灵与节肢们结成同盟，\n四方游掠者们精进了技术，\n沉入地心多年的猪灵逐渐适应了诅咒..."}, {raw: "即便是永恒不变的村庄也为之改变，只求生存。村民将藏于钢铁与冰雪之下。\n\n变革，竞争。战争。\n\n连玩家也不能幸免。\n也许战争也能成为一种新的维生方式？而非千篇一律地膜拜机械。\n\n无人知晓。\n\n此纪元亦是实验之纪元。"}, {raw: " ------如何寻新------\n\n前往村庄，寻找一位没有羊驼的流浪商人。\n\n如不幸未能找到，丢给普通村民一块蓝冰亦可。\n\n另，给任意书本命名为启蒙之书，\n皆可以将其替换为此书。"}], resolved: 1b, title: {raw: "启蒙之书"}, author: "Avalanche1510"}] 1

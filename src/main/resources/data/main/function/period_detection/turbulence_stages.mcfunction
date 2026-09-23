@@ -20,6 +20,10 @@ execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 800..9
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 1000..1199 run scoreboard players set @s difficulty 6
 execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 1200 run scoreboard players set @s difficulty 7
 
+# execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 0..599 run execute as @e if data entity @s PmbFaction run attribute @s minecraft:follow_range base set 24
+# execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 600..1199 run execute as @e if data entity @s PmbFaction run attribute @s minecraft:follow_range base set 36
+# execute as @n[type=armor_stand,tag=record] if score @s turbulence matches 1200 run execute as @e if data entity @s PmbFaction run attribute @s minecraft:follow_range base set 64
+
 
 execute as @n[type=armor_stand,tag=record] if score @s last_stage < @s difficulty unless score @s turbulence matches 1181.. run scoreboard players add @s turbulence 20
 execute as @n[type=armor_stand,tag=record] if score @s last_stage > @s difficulty unless score @s turbulence matches ..20 run scoreboard players remove @s turbulence 20
