@@ -76,7 +76,7 @@
                 {
                     "condition":"entity_properties",
                     "entity":"this",
-                    "predicate":{"team":"illager_party","type":"minecraft:evoker"}
+                    "predicate":{"team":"illager_party","minecraft:entity_type":"minecraft:evoker"}
                 },
                 {
                     "condition":"inverted",

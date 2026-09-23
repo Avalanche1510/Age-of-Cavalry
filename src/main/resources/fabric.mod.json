@@ -9,7 +9,7 @@
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/Avalanche1510/Age-of-Cavalry/tree/26.1.1mod"
+		"sources": "https://github.com/Avalanche1510/Age-of-Cavalry/tree/26.2mod"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/age-of-cavalry/icon.png",
@@ -23,8 +23,8 @@
 		]
 	},
 	"depends": {
-		"fabricloader": ">=0.19.3",
-		"minecraft": "~26.1.1",
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.2",
 		"java": ">=25",
 		"fabric-api": "*"
 	}
